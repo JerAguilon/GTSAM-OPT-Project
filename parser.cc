@@ -1,9 +1,11 @@
 #include<string>
 #include<vector>
+#include<llvm/IR/Value.h>
 
 class ExprAST {
     public:
         virtual ~ExprAST() {}
+        virtual Value *Codegen() = 0;
 };
 
 class NumberExprAST : public ExprAST {
@@ -37,3 +39,8 @@ public:
   CallExprAST(const std::string &callee, std::vector<ExprAST*> &args)
     : Callee(callee), Args(args) {}
 };
+
+int main() {
+    std::cout << "FOOBAR";
+    return -1;
+}
