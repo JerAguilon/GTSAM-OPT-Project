@@ -1,3 +1,4 @@
-/home/jeremy/Documents/repositories/llvm-basic-code-generation/CMakeFiles/rebuild_cache.dir
-/home/jeremy/Documents/repositories/llvm-basic-code-generation/CMakeFiles/simple-parser.dir
-/home/jeremy/Documents/repositories/llvm-basic-code-generation/CMakeFiles/edit_cache.dir
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles/rebuild_cache.dir
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles/edit_cache.dir
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles/intrinsics_gen.dir
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles/simple-parser.dir
