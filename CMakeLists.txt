@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.4.3)
-project(code-generator)
+project(SimpleProject)
 
 find_package(LLVM REQUIRED CONFIG)
 
