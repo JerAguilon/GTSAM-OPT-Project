@@ -4,19 +4,24 @@
 CMakeFiles/simple-parser.dir/parser.cc.o
  /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/KaleidoscopeJIT.h
  /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/parser.cc
+ /usr/local/include/llvm-c/DataTypes.h
+ /usr/local/include/llvm-c/Error.h
  /usr/local/include/llvm-c/ExecutionEngine.h
  /usr/local/include/llvm-c/Target.h
  /usr/local/include/llvm-c/TargetMachine.h
  /usr/local/include/llvm-c/Types.h
  /usr/local/include/llvm/ADT/APFloat.h
  /usr/local/include/llvm/ADT/APInt.h
+ /usr/local/include/llvm/ADT/Any.h
  /usr/local/include/llvm/ADT/ArrayRef.h
+ /usr/local/include/llvm/ADT/BitmaskEnum.h
  /usr/local/include/llvm/ADT/DenseMap.h
  /usr/local/include/llvm/ADT/DenseMapInfo.h
  /usr/local/include/llvm/ADT/DenseSet.h
  /usr/local/include/llvm/ADT/DepthFirstIterator.h
  /usr/local/include/llvm/ADT/EpochTracker.h
  /usr/local/include/llvm/ADT/FoldingSet.h
+ /usr/local/include/llvm/ADT/FunctionExtras.h
  /usr/local/include/llvm/ADT/GraphTraits.h
  /usr/local/include/llvm/ADT/Hashing.h
  /usr/local/include/llvm/ADT/MapVector.h
@@ -39,6 +44,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o
  /usr/local/include/llvm/ADT/TinyPtrVector.h
  /usr/local/include/llvm/ADT/Triple.h
  /usr/local/include/llvm/ADT/Twine.h
+ /usr/local/include/llvm/ADT/bit.h
  /usr/local/include/llvm/ADT/ilist.h
  /usr/local/include/llvm/ADT/ilist_base.h
  /usr/local/include/llvm/ADT/ilist_iterator.h
@@ -49,9 +55,11 @@ CMakeFiles/simple-parser.dir/parser.cc.o
  /usr/local/include/llvm/ADT/iterator_range.h
  /usr/local/include/llvm/ADT/simple_ilist.h
  /usr/local/include/llvm/Analysis/AliasAnalysis.h
+ /usr/local/include/llvm/Analysis/InstructionPrecedenceTracking.h
  /usr/local/include/llvm/Analysis/MemoryDependenceAnalysis.h
  /usr/local/include/llvm/Analysis/MemoryLocation.h
  /usr/local/include/llvm/Analysis/OrderedBasicBlock.h
+ /usr/local/include/llvm/Analysis/OrderedInstructions.h
  /usr/local/include/llvm/Analysis/TargetLibraryInfo.def
  /usr/local/include/llvm/Analysis/TargetLibraryInfo.h
  /usr/local/include/llvm/BinaryFormat/Dwarf.def
@@ -66,17 +74,22 @@ CMakeFiles/simple-parser.dir/parser.cc.o
  /usr/local/include/llvm/ExecutionEngine/ExecutionEngine.h
  /usr/local/include/llvm/ExecutionEngine/JITSymbol.h
  /usr/local/include/llvm/ExecutionEngine/ObjectCache.h
- /usr/local/include/llvm/ExecutionEngine/ObjectMemoryBuffer.h
  /usr/local/include/llvm/ExecutionEngine/Orc/CompileUtils.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/Core.h
  /usr/local/include/llvm/ExecutionEngine/Orc/IRCompileLayer.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/JITTargetMachineBuilder.h
  /usr/local/include/llvm/ExecutionEngine/Orc/LambdaResolver.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/Layer.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/Legacy.h
  /usr/local/include/llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/SymbolStringPool.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/ThreadSafeModule.h
  /usr/local/include/llvm/ExecutionEngine/RTDyldMemoryManager.h
  /usr/local/include/llvm/ExecutionEngine/RuntimeDyld.h
  /usr/local/include/llvm/ExecutionEngine/SectionMemoryManager.h
  /usr/local/include/llvm/IR/Argument.h
- /usr/local/include/llvm/IR/Attributes.gen
  /usr/local/include/llvm/IR/Attributes.h
+ /usr/local/include/llvm/IR/Attributes.inc
  /usr/local/include/llvm/IR/BasicBlock.h
  /usr/local/include/llvm/IR/CFG.h
  /usr/local/include/llvm/IR/CallSite.h
@@ -102,7 +115,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o
  /usr/local/include/llvm/IR/Instruction.def
  /usr/local/include/llvm/IR/Instruction.h
  /usr/local/include/llvm/IR/Instructions.h
- /usr/local/include/llvm/IR/Intrinsics.gen
+ /usr/local/include/llvm/IR/IntrinsicEnums.inc
  /usr/local/include/llvm/IR/Intrinsics.h
  /usr/local/include/llvm/IR/LLVMContext.h
  /usr/local/include/llvm/IR/LegacyPassManager.h
@@ -112,6 +125,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o
  /usr/local/include/llvm/IR/Module.h
  /usr/local/include/llvm/IR/OperandTraits.h
  /usr/local/include/llvm/IR/Operator.h
+ /usr/local/include/llvm/IR/PassInstrumentation.h
  /usr/local/include/llvm/IR/PassManager.h
  /usr/local/include/llvm/IR/PassManagerInternal.h
  /usr/local/include/llvm/IR/PredIteratorCache.h
@@ -141,6 +155,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o
  /usr/local/include/llvm/Support/Atomic.h
  /usr/local/include/llvm/Support/AtomicOrdering.h
  /usr/local/include/llvm/Support/CBindingWrapping.h
+ /usr/local/include/llvm/Support/CFGUpdate.h
  /usr/local/include/llvm/Support/Casting.h
  /usr/local/include/llvm/Support/Chrono.h
  /usr/local/include/llvm/Support/CodeGen.h
@@ -162,6 +177,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o
  /usr/local/include/llvm/Support/MD5.h
  /usr/local/include/llvm/Support/ManagedStatic.h
  /usr/local/include/llvm/Support/MathExtras.h
+ /usr/local/include/llvm/Support/MemAlloc.h
  /usr/local/include/llvm/Support/Memory.h
  /usr/local/include/llvm/Support/MemoryBuffer.h
  /usr/local/include/llvm/Support/Mutex.h
@@ -170,6 +186,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o
  /usr/local/include/llvm/Support/PointerLikeTypeTraits.h
  /usr/local/include/llvm/Support/RWMutex.h
  /usr/local/include/llvm/Support/ReverseIteration.h
+ /usr/local/include/llvm/Support/SmallVectorMemoryBuffer.h
  /usr/local/include/llvm/Support/SwapByteOrder.h
  /usr/local/include/llvm/Support/TargetSelect.h
  /usr/local/include/llvm/Support/Threading.h
@@ -178,6 +195,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o
  /usr/local/include/llvm/Support/type_traits.h
  /usr/local/include/llvm/Target/TargetMachine.h
  /usr/local/include/llvm/Target/TargetOptions.h
+ /usr/local/include/llvm/Transforms/InstCombine/InstCombine.h
+ /usr/local/include/llvm/Transforms/InstCombine/InstCombineWorklist.h
  /usr/local/include/llvm/Transforms/Scalar.h
  /usr/local/include/llvm/Transforms/Scalar/GVN.h
- /usr/local/include/llvm/Transforms/Utils/OrderedInstructions.h

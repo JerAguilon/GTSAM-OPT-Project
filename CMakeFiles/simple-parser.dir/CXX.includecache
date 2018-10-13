@@ -7,18 +7,14 @@
 #IncludeRegexTransform: 
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/KaleidoscopeJIT.h
-llvm/ADT/iterator_range.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ADT/iterator_range.h
 llvm/ADT/STLExtras.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ADT/STLExtras.h
+llvm/ADT/iterator_range.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ADT/iterator_range.h
 llvm/ExecutionEngine/ExecutionEngine.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ExecutionEngine/ExecutionEngine.h
 llvm/ExecutionEngine/JITSymbol.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ExecutionEngine/JITSymbol.h
-llvm/ExecutionEngine/RTDyldMemoryManager.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ExecutionEngine/RTDyldMemoryManager.h
-llvm/ExecutionEngine/SectionMemoryManager.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ExecutionEngine/SectionMemoryManager.h
 llvm/ExecutionEngine/Orc/CompileUtils.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ExecutionEngine/Orc/CompileUtils.h
 llvm/ExecutionEngine/Orc/IRCompileLayer.h
@@ -27,6 +23,10 @@ llvm/ExecutionEngine/Orc/LambdaResolver.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ExecutionEngine/Orc/LambdaResolver.h
 llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h
+llvm/ExecutionEngine/RTDyldMemoryManager.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ExecutionEngine/RTDyldMemoryManager.h
+llvm/ExecutionEngine/SectionMemoryManager.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ExecutionEngine/SectionMemoryManager.h
 llvm/IR/DataLayout.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/IR/DataLayout.h
 llvm/IR/Mangler.h
@@ -39,6 +39,8 @@ llvm/Target/TargetMachine.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/Target/TargetMachine.h
 algorithm
 -
+map
+-
 memory
 -
 string
@@ -47,6 +49,8 @@ vector
 -
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/parser.cc
+KaleidoscopeJIT.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/KaleidoscopeJIT.h
 llvm/ADT/APFloat.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/ADT/APFloat.h
 llvm/ADT/STLExtras.h
@@ -75,12 +79,12 @@ llvm/Support/TargetSelect.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/Support/TargetSelect.h
 llvm/Target/TargetMachine.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/Target/TargetMachine.h
+llvm/Transforms/InstCombine/InstCombine.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/Transforms/InstCombine/InstCombine.h
 llvm/Transforms/Scalar.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/Transforms/Scalar.h
 llvm/Transforms/Scalar/GVN.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/llvm/Transforms/Scalar/GVN.h
-KaleidoscopeJIT.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/KaleidoscopeJIT.h
 algorithm
 -
 cassert
@@ -101,6 +105,30 @@ string
 -
 vector
 -
+
+/usr/local/include/llvm-c/DataTypes.h
+cmath
+-
+math.h
+-
+inttypes.h
+-
+stdint.h
+-
+sys/types.h
+-
+cstddef
+-
+cstdlib
+-
+stddef.h
+-
+stdlib.h
+-
+sys/types.h
+-
+
+/usr/local/include/llvm-c/Error.h
 
 /usr/local/include/llvm-c/ExecutionEngine.h
 llvm-c/Target.h
@@ -147,8 +175,8 @@ llvm-c/Types.h
 /usr/local/include/llvm-c/llvm-c/Types.h
 
 /usr/local/include/llvm-c/Types.h
-llvm/Support/DataTypes.h
-/usr/local/include/llvm-c/llvm/Support/DataTypes.h
+llvm-c/DataTypes.h
+/usr/local/include/llvm-c/llvm-c/DataTypes.h
 
 /usr/local/include/llvm/ADT/APFloat.h
 llvm/ADT/APInt.h
@@ -172,6 +200,16 @@ climits
 cstring
 -
 string
+-
+
+/usr/local/include/llvm/ADT/Any.h
+llvm/ADT/STLExtras.h
+/usr/local/include/llvm/ADT/llvm/ADT/STLExtras.h
+cassert
+-
+memory
+-
+type_traits
 -
 
 /usr/local/include/llvm/ADT/ArrayRef.h
@@ -203,6 +241,16 @@ type_traits
 -
 vector
 -
+
+/usr/local/include/llvm/ADT/BitmaskEnum.h
+cassert
+-
+type_traits
+-
+utility
+-
+llvm/Support/MathExtras.h
+/usr/local/include/llvm/ADT/llvm/Support/MathExtras.h
 
 /usr/local/include/llvm/ADT/DenseMap.h
 llvm/ADT/DenseMapInfo.h
@@ -295,8 +343,6 @@ vector
 /usr/local/include/llvm/ADT/EpochTracker.h
 llvm/Config/abi-breaking.h
 /usr/local/include/llvm/ADT/llvm/Config/abi-breaking.h
-llvm/Config/llvm-config.h
-/usr/local/include/llvm/ADT/llvm/Config/llvm-config.h
 cstdint
 -
 
@@ -314,6 +360,16 @@ cstddef
 cstdint
 -
 utility
+-
+
+/usr/local/include/llvm/ADT/FunctionExtras.h
+llvm/ADT/PointerIntPair.h
+/usr/local/include/llvm/ADT/llvm/ADT/PointerIntPair.h
+llvm/ADT/PointerUnion.h
+/usr/local/include/llvm/ADT/llvm/ADT/PointerUnion.h
+llvm/Support/type_traits.h
+/usr/local/include/llvm/ADT/llvm/Support/type_traits.h
+memory
 -
 
 /usr/local/include/llvm/ADT/GraphTraits.h
@@ -407,6 +463,8 @@ limits
 -
 
 /usr/local/include/llvm/ADT/PointerSumType.h
+llvm/ADT/bit.h
+/usr/local/include/llvm/ADT/llvm/ADT/bit.h
 llvm/ADT/DenseMapInfo.h
 /usr/local/include/llvm/ADT/llvm/ADT/DenseMapInfo.h
 llvm/Support/PointerLikeTypeTraits.h
@@ -459,6 +517,8 @@ llvm/ADT/iterator.h
 /usr/local/include/llvm/ADT/llvm/ADT/iterator.h
 llvm/ADT/iterator_range.h
 /usr/local/include/llvm/ADT/llvm/ADT/iterator_range.h
+llvm/Config/abi-breaking.h
+/usr/local/include/llvm/ADT/llvm/Config/abi-breaking.h
 llvm/Support/ErrorHandling.h
 /usr/local/include/llvm/ADT/llvm/Support/ErrorHandling.h
 algorithm
@@ -486,6 +546,8 @@ tuple
 type_traits
 -
 utility
+-
+random
 -
 
 /usr/local/include/llvm/ADT/SetVector.h
@@ -547,6 +609,8 @@ llvm/Support/Compiler.h
 /usr/local/include/llvm/ADT/llvm/Support/Compiler.h
 llvm/Support/MathExtras.h
 /usr/local/include/llvm/ADT/llvm/Support/MathExtras.h
+llvm/Support/MemAlloc.h
+/usr/local/include/llvm/ADT/llvm/Support/MemAlloc.h
 llvm/Support/type_traits.h
 /usr/local/include/llvm/ADT/llvm/Support/type_traits.h
 llvm/Support/ErrorHandling.h
@@ -700,6 +764,14 @@ cstdint
 string
 -
 
+/usr/local/include/llvm/ADT/bit.h
+llvm/Support/Compiler.h
+/usr/local/include/llvm/ADT/llvm/Support/Compiler.h
+cstring
+-
+type_traits
+-
+
 /usr/local/include/llvm/ADT/ilist.h
 llvm/ADT/simple_ilist.h
 /usr/local/include/llvm/ADT/llvm/ADT/simple_ilist.h
@@ -741,8 +813,6 @@ llvm/ADT/PointerIntPair.h
 /usr/local/include/llvm/ADT/ilist_node_options.h
 llvm/Config/abi-breaking.h
 /usr/local/include/llvm/ADT/llvm/Config/abi-breaking.h
-llvm/Config/llvm-config.h
-/usr/local/include/llvm/ADT/llvm/Config/llvm-config.h
 type_traits
 -
 
@@ -822,6 +892,12 @@ memory
 vector
 -
 
+/usr/local/include/llvm/Analysis/InstructionPrecedenceTracking.h
+llvm/IR/Dominators.h
+/usr/local/include/llvm/Analysis/llvm/IR/Dominators.h
+llvm/Analysis/OrderedInstructions.h
+/usr/local/include/llvm/Analysis/llvm/Analysis/OrderedInstructions.h
+
 /usr/local/include/llvm/Analysis/MemoryDependenceAnalysis.h
 llvm/ADT/DenseMap.h
 /usr/local/include/llvm/Analysis/llvm/ADT/DenseMap.h
@@ -847,6 +923,8 @@ llvm/IR/PassManager.h
 /usr/local/include/llvm/Analysis/llvm/IR/PassManager.h
 llvm/IR/PredIteratorCache.h
 /usr/local/include/llvm/Analysis/llvm/IR/PredIteratorCache.h
+llvm/IR/ValueHandle.h
+/usr/local/include/llvm/Analysis/llvm/IR/ValueHandle.h
 llvm/Pass.h
 /usr/local/include/llvm/Analysis/llvm/Pass.h
 llvm/Support/ErrorHandling.h
@@ -875,6 +953,16 @@ llvm/ADT/DenseMap.h
 /usr/local/include/llvm/Analysis/llvm/ADT/DenseMap.h
 llvm/IR/BasicBlock.h
 /usr/local/include/llvm/Analysis/llvm/IR/BasicBlock.h
+
+/usr/local/include/llvm/Analysis/OrderedInstructions.h
+llvm/ADT/DenseMap.h
+/usr/local/include/llvm/Analysis/llvm/ADT/DenseMap.h
+llvm/Analysis/OrderedBasicBlock.h
+/usr/local/include/llvm/Analysis/llvm/Analysis/OrderedBasicBlock.h
+llvm/IR/Dominators.h
+/usr/local/include/llvm/Analysis/llvm/IR/Dominators.h
+llvm/IR/Operator.h
+/usr/local/include/llvm/Analysis/llvm/IR/Operator.h
 
 /usr/local/include/llvm/Analysis/TargetLibraryInfo.def
 
@@ -1003,8 +1091,16 @@ cstdint
 -
 functional
 -
+map
+-
+set
+-
 string
 -
+llvm/ADT/BitmaskEnum.h
+/usr/local/include/llvm/ExecutionEngine/llvm/ADT/BitmaskEnum.h
+llvm/ADT/StringRef.h
+/usr/local/include/llvm/ExecutionEngine/llvm/ADT/StringRef.h
 llvm/Support/Error.h
 /usr/local/include/llvm/ExecutionEngine/llvm/Support/Error.h
 
@@ -1014,21 +1110,13 @@ llvm/Support/MemoryBuffer.h
 memory
 -
 
-/usr/local/include/llvm/ExecutionEngine/ObjectMemoryBuffer.h
-llvm/ADT/SmallVector.h
-/usr/local/include/llvm/ExecutionEngine/llvm/ADT/SmallVector.h
-llvm/Support/MemoryBuffer.h
-/usr/local/include/llvm/ExecutionEngine/llvm/Support/MemoryBuffer.h
-llvm/Support/raw_ostream.h
-/usr/local/include/llvm/ExecutionEngine/llvm/Support/raw_ostream.h
-
 /usr/local/include/llvm/ExecutionEngine/Orc/CompileUtils.h
 llvm/ADT/SmallVector.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/ADT/SmallVector.h
 llvm/ExecutionEngine/ObjectCache.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/ObjectCache.h
-llvm/ExecutionEngine/ObjectMemoryBuffer.h
-/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/ObjectMemoryBuffer.h
+llvm/ExecutionEngine/Orc/JITTargetMachineBuilder.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/Orc/JITTargetMachineBuilder.h
 llvm/IR/LegacyPassManager.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/IR/LegacyPassManager.h
 llvm/Object/Binary.h
@@ -1041,6 +1129,8 @@ llvm/Support/ErrorHandling.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/ErrorHandling.h
 llvm/Support/MemoryBuffer.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/MemoryBuffer.h
+llvm/Support/SmallVectorMemoryBuffer.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/SmallVectorMemoryBuffer.h
 llvm/Support/raw_ostream.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/raw_ostream.h
 llvm/Target/TargetMachine.h
@@ -1050,16 +1140,64 @@ algorithm
 memory
 -
 
+/usr/local/include/llvm/ExecutionEngine/Orc/Core.h
+llvm/ADT/BitmaskEnum.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ADT/BitmaskEnum.h
+llvm/ExecutionEngine/JITSymbol.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/JITSymbol.h
+llvm/ExecutionEngine/Orc/SymbolStringPool.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/Orc/SymbolStringPool.h
+llvm/IR/Module.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/IR/Module.h
+llvm/Support/Debug.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/Debug.h
+list
+-
+map
+-
+memory
+-
+set
+-
+vector
+-
+
 /usr/local/include/llvm/ExecutionEngine/Orc/IRCompileLayer.h
 llvm/ADT/STLExtras.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/ADT/STLExtras.h
 llvm/ExecutionEngine/JITSymbol.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/JITSymbol.h
+llvm/ExecutionEngine/Orc/Layer.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/Orc/Layer.h
 llvm/Support/Error.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/Error.h
+llvm/Support/MemoryBuffer.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/MemoryBuffer.h
 memory
 -
 string
+-
+
+/usr/local/include/llvm/ExecutionEngine/Orc/JITTargetMachineBuilder.h
+llvm/ADT/Optional.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ADT/Optional.h
+llvm/ADT/Triple.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ADT/Triple.h
+llvm/MC/SubtargetFeature.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/MC/SubtargetFeature.h
+llvm/Support/CodeGen.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/CodeGen.h
+llvm/Support/Error.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/Error.h
+llvm/Target/TargetMachine.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/Target/TargetMachine.h
+llvm/Target/TargetOptions.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/Target/TargetOptions.h
+memory
+-
+string
+-
+vector
 -
 
 /usr/local/include/llvm/ExecutionEngine/Orc/LambdaResolver.h
@@ -1070,6 +1208,22 @@ llvm/ExecutionEngine/JITSymbol.h
 memory
 -
 
+/usr/local/include/llvm/ExecutionEngine/Orc/Layer.h
+llvm/ExecutionEngine/Orc/Core.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/Orc/Core.h
+llvm/ExecutionEngine/Orc/ThreadSafeModule.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/Orc/ThreadSafeModule.h
+llvm/IR/Module.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/IR/Module.h
+llvm/Support/MemoryBuffer.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/MemoryBuffer.h
+
+/usr/local/include/llvm/ExecutionEngine/Orc/Legacy.h
+llvm/ExecutionEngine/JITSymbol.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/JITSymbol.h
+llvm/ExecutionEngine/Orc/Core.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/Orc/Core.h
+
 /usr/local/include/llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h
 llvm/ADT/STLExtras.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/ADT/STLExtras.h
@@ -1079,6 +1233,12 @@ llvm/ADT/StringRef.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/ADT/StringRef.h
 llvm/ExecutionEngine/JITSymbol.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/JITSymbol.h
+llvm/ExecutionEngine/Orc/Core.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/Orc/Core.h
+llvm/ExecutionEngine/Orc/Layer.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/Orc/Layer.h
+llvm/ExecutionEngine/Orc/Legacy.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/Orc/Legacy.h
 llvm/ExecutionEngine/RuntimeDyld.h
 /usr/local/include/llvm/ExecutionEngine/Orc/llvm/ExecutionEngine/RuntimeDyld.h
 llvm/Object/ObjectFile.h
@@ -1100,6 +1260,28 @@ string
 utility
 -
 vector
+-
+
+/usr/local/include/llvm/ExecutionEngine/Orc/SymbolStringPool.h
+llvm/ADT/StringMap.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/ADT/StringMap.h
+atomic
+-
+mutex
+-
+
+/usr/local/include/llvm/ExecutionEngine/Orc/ThreadSafeModule.h
+llvm/IR/LLVMContext.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/IR/LLVMContext.h
+llvm/IR/Module.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/IR/Module.h
+llvm/Support/Compiler.h
+/usr/local/include/llvm/ExecutionEngine/Orc/llvm/Support/Compiler.h
+functional
+-
+memory
+-
+mutex
 -
 
 /usr/local/include/llvm/ExecutionEngine/RTDyldMemoryManager.h
@@ -1174,8 +1356,6 @@ llvm/IR/Attributes.h
 llvm/IR/Value.h
 /usr/local/include/llvm/IR/llvm/IR/Value.h
 
-/usr/local/include/llvm/IR/Attributes.gen
-
 /usr/local/include/llvm/IR/Attributes.h
 llvm-c/Types.h
 /usr/local/include/llvm/IR/llvm-c/Types.h
@@ -1189,6 +1369,8 @@ llvm/ADT/StringRef.h
 /usr/local/include/llvm/IR/llvm/ADT/StringRef.h
 llvm/ADT/iterator_range.h
 /usr/local/include/llvm/IR/llvm/ADT/iterator_range.h
+llvm/Config/llvm-config.h
+/usr/local/include/llvm/IR/llvm/Config/llvm-config.h
 llvm/Support/PointerLikeTypeTraits.h
 /usr/local/include/llvm/IR/llvm/Support/PointerLikeTypeTraits.h
 bitset
@@ -1203,8 +1385,10 @@ string
 -
 utility
 -
-llvm/IR/Attributes.gen
-/usr/local/include/llvm/IR/llvm/IR/Attributes.gen
+llvm/IR/Attributes.inc
+/usr/local/include/llvm/IR/llvm/IR/Attributes.inc
+
+/usr/local/include/llvm/IR/Attributes.inc
 
 /usr/local/include/llvm/IR/BasicBlock.h
 llvm-c/Types.h
@@ -1301,6 +1485,10 @@ iterator
 /usr/local/include/llvm/IR/CallingConv.h
 
 /usr/local/include/llvm/IR/Comdat.h
+llvm-c/Types.h
+/usr/local/include/llvm/IR/llvm-c/Types.h
+llvm/Support/CBindingWrapping.h
+/usr/local/include/llvm/IR/llvm/Support/CBindingWrapping.h
 
 /usr/local/include/llvm/IR/Constant.h
 llvm/IR/User.h
@@ -1625,8 +1813,6 @@ llvm/Support/CBindingWrapping.h
 /usr/local/include/llvm/IR/llvm/Support/CBindingWrapping.h
 llvm/Support/Casting.h
 /usr/local/include/llvm/IR/llvm/Support/Casting.h
-algorithm
--
 cassert
 -
 cstddef
@@ -1634,6 +1820,8 @@ cstddef
 cstdint
 -
 functional
+-
+utility
 -
 
 /usr/local/include/llvm/IR/InstrTypes.h
@@ -1655,6 +1843,8 @@ llvm/ADT/iterator_range.h
 /usr/local/include/llvm/IR/llvm/ADT/iterator_range.h
 llvm/IR/Attributes.h
 /usr/local/include/llvm/IR/llvm/IR/Attributes.h
+llvm/IR/Constants.h
+/usr/local/include/llvm/IR/llvm/IR/Constants.h
 llvm/IR/DerivedTypes.h
 /usr/local/include/llvm/IR/llvm/IR/DerivedTypes.h
 llvm/IR/Instruction.h
@@ -1794,7 +1984,7 @@ cstdint
 iterator
 -
 
-/usr/local/include/llvm/IR/Intrinsics.gen
+/usr/local/include/llvm/IR/IntrinsicEnums.inc
 
 /usr/local/include/llvm/IR/Intrinsics.h
 llvm/ADT/ArrayRef.h
@@ -1805,8 +1995,8 @@ llvm/ADT/Optional.h
 /usr/local/include/llvm/IR/llvm/ADT/Optional.h
 string
 -
-llvm/IR/Intrinsics.gen
-/usr/local/include/llvm/IR/llvm/IR/Intrinsics.gen
+llvm/IR/IntrinsicEnums.inc
+/usr/local/include/llvm/IR/llvm/IR/IntrinsicEnums.inc
 
 /usr/local/include/llvm/IR/LLVMContext.h
 llvm-c/Types.h
@@ -1903,6 +2093,8 @@ llvm/IR/Metadata.def
 /usr/local/include/llvm/IR/Module.h
 llvm-c/Types.h
 /usr/local/include/llvm/IR/llvm-c/Types.h
+llvm/ADT/Optional.h
+/usr/local/include/llvm/IR/llvm/ADT/Optional.h
 llvm/ADT/STLExtras.h
 /usr/local/include/llvm/IR/llvm/ADT/STLExtras.h
 llvm/ADT/StringMap.h
@@ -1968,6 +2160,18 @@ llvm/Support/Casting.h
 cstddef
 -
 
+/usr/local/include/llvm/IR/PassInstrumentation.h
+llvm/ADT/Any.h
+/usr/local/include/llvm/IR/llvm/ADT/Any.h
+llvm/ADT/FunctionExtras.h
+/usr/local/include/llvm/IR/llvm/ADT/FunctionExtras.h
+llvm/ADT/SmallVector.h
+/usr/local/include/llvm/IR/llvm/ADT/SmallVector.h
+llvm/Support/TypeName.h
+/usr/local/include/llvm/IR/llvm/Support/TypeName.h
+type_traits
+-
+
 /usr/local/include/llvm/IR/PassManager.h
 llvm/ADT/DenseMap.h
 /usr/local/include/llvm/IR/llvm/ADT/DenseMap.h
@@ -1981,6 +2185,8 @@ llvm/IR/Function.h
 /usr/local/include/llvm/IR/llvm/IR/Function.h
 llvm/IR/Module.h
 /usr/local/include/llvm/IR/llvm/IR/Module.h
+llvm/IR/PassInstrumentation.h
+/usr/local/include/llvm/IR/llvm/IR/PassInstrumentation.h
 llvm/IR/PassManagerInternal.h
 /usr/local/include/llvm/IR/llvm/IR/PassManagerInternal.h
 llvm/Support/Debug.h
@@ -2325,12 +2531,18 @@ cstddef
 -
 
 /usr/local/include/llvm/Support/Allocator.h
+llvm/ADT/Optional.h
+/usr/local/include/llvm/Support/llvm/ADT/Optional.h
 llvm/ADT/SmallVector.h
 /usr/local/include/llvm/Support/llvm/ADT/SmallVector.h
 llvm/Support/Compiler.h
 /usr/local/include/llvm/Support/llvm/Support/Compiler.h
+llvm/Support/ErrorHandling.h
+/usr/local/include/llvm/Support/llvm/Support/ErrorHandling.h
 llvm/Support/MathExtras.h
 /usr/local/include/llvm/Support/llvm/Support/MathExtras.h
+llvm/Support/MemAlloc.h
+/usr/local/include/llvm/Support/llvm/Support/MemAlloc.h
 algorithm
 -
 cassert
@@ -2361,6 +2573,20 @@ llvm-c/Types.h
 /usr/local/include/llvm/Support/llvm-c/Types.h
 llvm/Support/Casting.h
 /usr/local/include/llvm/Support/llvm/Support/Casting.h
+
+/usr/local/include/llvm/Support/CFGUpdate.h
+llvm/ADT/APInt.h
+/usr/local/include/llvm/Support/llvm/ADT/APInt.h
+llvm/ADT/DenseMap.h
+/usr/local/include/llvm/Support/llvm/ADT/DenseMap.h
+llvm/ADT/PointerIntPair.h
+/usr/local/include/llvm/Support/llvm/ADT/PointerIntPair.h
+llvm/Support/Compiler.h
+/usr/local/include/llvm/Support/llvm/Support/Compiler.h
+llvm/Support/Debug.h
+/usr/local/include/llvm/Support/llvm/Support/Debug.h
+llvm/Support/raw_ostream.h
+/usr/local/include/llvm/Support/llvm/Support/raw_ostream.h
 
 /usr/local/include/llvm/Support/Casting.h
 llvm/Support/Compiler.h
@@ -2407,6 +2633,8 @@ llvm/Support/ErrorHandling.h
 /usr/local/include/llvm/Support/llvm/Support/ErrorHandling.h
 llvm/Support/ManagedStatic.h
 /usr/local/include/llvm/Support/llvm/Support/ManagedStatic.h
+llvm/Support/raw_ostream.h
+/usr/local/include/llvm/Support/llvm/Support/raw_ostream.h
 cassert
 -
 climits
@@ -2427,6 +2655,10 @@ vector
 /usr/local/include/llvm/Support/Compiler.h
 llvm/Config/llvm-config.h
 /usr/local/include/llvm/Support/llvm/Config/llvm-config.h
+new
+-
+stddef.h
+-
 sal.h
 -
 sanitizer/msan_interface.h
@@ -2435,30 +2667,8 @@ sanitizer/asan_interface.h
 -
 
 /usr/local/include/llvm/Support/DataTypes.h
-cmath
--
-math.h
--
-cinttypes
--
-inttypes.h
--
-cstdint
--
-stdint.h
--
-sys/types.h
--
-cstddef
--
-cstdlib
--
-stddef.h
--
-stdlib.h
--
-sys/types.h
--
+llvm-c/DataTypes.h
+/usr/local/include/llvm/Support/llvm-c/DataTypes.h
 
 /usr/local/include/llvm/Support/Debug.h
 
@@ -2487,10 +2697,12 @@ type_traits
 -
 
 /usr/local/include/llvm/Support/Error.h
-llvm/ADT/SmallVector.h
-/usr/local/include/llvm/Support/llvm/ADT/SmallVector.h
+llvm-c/Error.h
+/usr/local/include/llvm/Support/llvm-c/Error.h
 llvm/ADT/STLExtras.h
 /usr/local/include/llvm/Support/llvm/ADT/STLExtras.h
+llvm/ADT/SmallVector.h
+/usr/local/include/llvm/Support/llvm/ADT/SmallVector.h
 llvm/ADT/StringExtras.h
 /usr/local/include/llvm/Support/llvm/ADT/StringExtras.h
 llvm/ADT/Twine.h
@@ -2507,6 +2719,8 @@ llvm/Support/ErrorHandling.h
 /usr/local/include/llvm/Support/llvm/Support/ErrorHandling.h
 llvm/Support/ErrorOr.h
 /usr/local/include/llvm/Support/llvm/Support/ErrorOr.h
+llvm/Support/Format.h
+/usr/local/include/llvm/Support/llvm/Support/Format.h
 llvm/Support/raw_ostream.h
 /usr/local/include/llvm/Support/llvm/Support/raw_ostream.h
 algorithm
@@ -2559,6 +2773,8 @@ llvm/ADT/StringRef.h
 /usr/local/include/llvm/Support/llvm/ADT/StringRef.h
 llvm/ADT/Twine.h
 /usr/local/include/llvm/Support/llvm/ADT/Twine.h
+llvm/Config/llvm-config.h
+/usr/local/include/llvm/Support/llvm/Config/llvm-config.h
 llvm/Support/Chrono.h
 /usr/local/include/llvm/Support/llvm/Support/Chrono.h
 llvm/Support/Error.h
@@ -2633,6 +2849,22 @@ type_traits
 -
 
 /usr/local/include/llvm/Support/GenericDomTree.h
+llvm/ADT/DenseMap.h
+/usr/local/include/llvm/Support/llvm/ADT/DenseMap.h
+llvm/ADT/GraphTraits.h
+/usr/local/include/llvm/Support/llvm/ADT/GraphTraits.h
+llvm/ADT/PointerIntPair.h
+/usr/local/include/llvm/Support/llvm/ADT/PointerIntPair.h
+llvm/ADT/STLExtras.h
+/usr/local/include/llvm/Support/llvm/ADT/STLExtras.h
+llvm/ADT/SmallPtrSet.h
+/usr/local/include/llvm/Support/llvm/ADT/SmallPtrSet.h
+llvm/ADT/SmallVector.h
+/usr/local/include/llvm/Support/llvm/ADT/SmallVector.h
+llvm/Support/CFGUpdate.h
+/usr/local/include/llvm/Support/llvm/Support/CFGUpdate.h
+llvm/Support/raw_ostream.h
+/usr/local/include/llvm/Support/llvm/Support/raw_ostream.h
 algorithm
 -
 cassert
@@ -2649,20 +2881,6 @@ utility
 -
 vector
 -
-llvm/ADT/DenseMap.h
-/usr/local/include/llvm/Support/llvm/ADT/DenseMap.h
-llvm/ADT/GraphTraits.h
-/usr/local/include/llvm/Support/llvm/ADT/GraphTraits.h
-llvm/ADT/PointerIntPair.h
-/usr/local/include/llvm/Support/llvm/ADT/PointerIntPair.h
-llvm/ADT/STLExtras.h
-/usr/local/include/llvm/Support/llvm/ADT/STLExtras.h
-llvm/ADT/SmallPtrSet.h
-/usr/local/include/llvm/Support/llvm/ADT/SmallPtrSet.h
-llvm/ADT/SmallVector.h
-/usr/local/include/llvm/Support/llvm/ADT/SmallVector.h
-llvm/Support/raw_ostream.h
-/usr/local/include/llvm/Support/llvm/Support/raw_ostream.h
 
 /usr/local/include/llvm/Support/Host.h
 llvm/ADT/StringMap.h
@@ -2713,9 +2931,15 @@ limits
 -
 type_traits
 -
-intrin.h
--
 android/api-level.h
+-
+
+/usr/local/include/llvm/Support/MemAlloc.h
+llvm/Support/Compiler.h
+/usr/local/include/llvm/Support/llvm/Support/Compiler.h
+llvm/Support/ErrorHandling.h
+/usr/local/include/llvm/Support/llvm/Support/ErrorHandling.h
+cstdlib
 -
 
 /usr/local/include/llvm/Support/Memory.h
@@ -2739,6 +2963,8 @@ llvm/Support/CBindingWrapping.h
 /usr/local/include/llvm/Support/llvm/Support/CBindingWrapping.h
 llvm/Support/ErrorOr.h
 /usr/local/include/llvm/Support/llvm/Support/ErrorOr.h
+llvm/Support/FileSystem.h
+/usr/local/include/llvm/Support/llvm/Support/FileSystem.h
 cstddef
 -
 cstdint
@@ -2747,6 +2973,8 @@ memory
 -
 
 /usr/local/include/llvm/Support/Mutex.h
+llvm/Config/llvm-config.h
+/usr/local/include/llvm/Support/llvm/Config/llvm-config.h
 llvm/Support/Compiler.h
 /usr/local/include/llvm/Support/llvm/Support/Compiler.h
 llvm/Support/Threading.h
@@ -2771,6 +2999,8 @@ llvm/Support/CommandLine.h
 /usr/local/include/llvm/Support/PointerLikeTypeTraits.h
 llvm/Support/DataTypes.h
 /usr/local/include/llvm/Support/llvm/Support/DataTypes.h
+assert.h
+-
 type_traits
 -
 
@@ -2787,6 +3017,14 @@ llvm/Config/abi-breaking.h
 /usr/local/include/llvm/Support/llvm/Config/abi-breaking.h
 llvm/Support/PointerLikeTypeTraits.h
 /usr/local/include/llvm/Support/llvm/Support/PointerLikeTypeTraits.h
+
+/usr/local/include/llvm/Support/SmallVectorMemoryBuffer.h
+llvm/ADT/SmallVector.h
+/usr/local/include/llvm/Support/llvm/ADT/SmallVector.h
+llvm/Support/MemoryBuffer.h
+/usr/local/include/llvm/Support/llvm/Support/MemoryBuffer.h
+llvm/Support/raw_ostream.h
+/usr/local/include/llvm/Support/llvm/Support/raw_ostream.h
 
 /usr/local/include/llvm/Support/SwapByteOrder.h
 llvm/Support/Compiler.h
@@ -2892,6 +3130,30 @@ string
 llvm/MC/MCTargetOptions.h
 /usr/local/include/llvm/Target/llvm/MC/MCTargetOptions.h
 
+/usr/local/include/llvm/Transforms/InstCombine/InstCombine.h
+llvm/IR/Function.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/IR/Function.h
+llvm/IR/PassManager.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/IR/PassManager.h
+llvm/Transforms/InstCombine/InstCombineWorklist.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/Transforms/InstCombine/InstCombineWorklist.h
+
+/usr/local/include/llvm/Transforms/InstCombine/InstCombineWorklist.h
+llvm/ADT/DenseMap.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/ADT/DenseMap.h
+llvm/ADT/STLExtras.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/ADT/STLExtras.h
+llvm/ADT/SmallVector.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/ADT/SmallVector.h
+llvm/IR/Instruction.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/IR/Instruction.h
+llvm/Support/Compiler.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/Support/Compiler.h
+llvm/Support/Debug.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/Support/Debug.h
+llvm/Support/raw_ostream.h
+/usr/local/include/llvm/Transforms/InstCombine/llvm/Support/raw_ostream.h
+
 /usr/local/include/llvm/Transforms/Scalar.h
 functional
 -
@@ -2909,6 +3171,8 @@ llvm/ADT/SmallVector.h
 /usr/local/include/llvm/Transforms/Scalar/llvm/ADT/SmallVector.h
 llvm/Analysis/AliasAnalysis.h
 /usr/local/include/llvm/Transforms/Scalar/llvm/Analysis/AliasAnalysis.h
+llvm/Analysis/InstructionPrecedenceTracking.h
+/usr/local/include/llvm/Transforms/Scalar/llvm/Analysis/InstructionPrecedenceTracking.h
 llvm/Analysis/MemoryDependenceAnalysis.h
 /usr/local/include/llvm/Transforms/Scalar/llvm/Analysis/MemoryDependenceAnalysis.h
 llvm/IR/Dominators.h
@@ -2921,22 +3185,10 @@ llvm/Support/Allocator.h
 /usr/local/include/llvm/Transforms/Scalar/llvm/Support/Allocator.h
 llvm/Support/Compiler.h
 /usr/local/include/llvm/Transforms/Scalar/llvm/Support/Compiler.h
-llvm/Transforms/Utils/OrderedInstructions.h
-/usr/local/include/llvm/Transforms/Scalar/llvm/Transforms/Utils/OrderedInstructions.h
 cstdint
 -
 utility
 -
 vector
 -
-
-/usr/local/include/llvm/Transforms/Utils/OrderedInstructions.h
-llvm/ADT/DenseMap.h
-/usr/local/include/llvm/Transforms/Utils/llvm/ADT/DenseMap.h
-llvm/Analysis/OrderedBasicBlock.h
-/usr/local/include/llvm/Transforms/Utils/llvm/Analysis/OrderedBasicBlock.h
-llvm/IR/Dominators.h
-/usr/local/include/llvm/Transforms/Utils/llvm/IR/Dominators.h
-llvm/IR/Operator.h
-/usr/local/include/llvm/Transforms/Utils/llvm/IR/Operator.h
 

@@ -3,19 +3,24 @@
 
 CMakeFiles/simple-parser.dir/parser.cc.o: KaleidoscopeJIT.h
 CMakeFiles/simple-parser.dir/parser.cc.o: parser.cc
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm-c/DataTypes.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm-c/Error.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm-c/ExecutionEngine.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm-c/Target.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm-c/TargetMachine.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm-c/Types.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/APFloat.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/APInt.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/Any.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/ArrayRef.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/BitmaskEnum.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/DenseMap.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/DenseMapInfo.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/DenseSet.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/DepthFirstIterator.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/EpochTracker.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/FoldingSet.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/FunctionExtras.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/GraphTraits.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/Hashing.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/MapVector.h
@@ -38,6 +43,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/StringSwit
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/TinyPtrVector.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/Triple.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/Twine.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/bit.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/ilist.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/ilist_base.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/ilist_iterator.h
@@ -48,9 +54,11 @@ CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/iterator.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/iterator_range.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ADT/simple_ilist.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Analysis/AliasAnalysis.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Analysis/InstructionPrecedenceTracking.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Analysis/MemoryDependenceAnalysis.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Analysis/MemoryLocation.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Analysis/OrderedBasicBlock.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Analysis/OrderedInstructions.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Analysis/TargetLibraryInfo.def
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Analysis/TargetLibraryInfo.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/BinaryFormat/Dwarf.def
@@ -65,17 +73,22 @@ CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/DebugInfo/DICo
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/ExecutionEngine.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/JITSymbol.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/ObjectCache.h
-CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/ObjectMemoryBuffer.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/CompileUtils.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/Core.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/IRCompileLayer.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/JITTargetMachineBuilder.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/LambdaResolver.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/Layer.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/Legacy.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/SymbolStringPool.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/Orc/ThreadSafeModule.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/RTDyldMemoryManager.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/RuntimeDyld.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/ExecutionEngine/SectionMemoryManager.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Argument.h
-CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Attributes.gen
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Attributes.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Attributes.inc
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/BasicBlock.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/CFG.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/CallSite.h
@@ -101,7 +114,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/InstrTypes.
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Instruction.def
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Instruction.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Instructions.h
-CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Intrinsics.gen
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/IntrinsicEnums.inc
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Intrinsics.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/LLVMContext.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/LegacyPassManager.h
@@ -111,6 +124,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Metadata.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Module.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/OperandTraits.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/Operator.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/PassInstrumentation.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/PassManager.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/PassManagerInternal.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/IR/PredIteratorCache.h
@@ -140,6 +154,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/Alloca
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/Atomic.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/AtomicOrdering.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/CBindingWrapping.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/CFGUpdate.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/Casting.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/Chrono.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/CodeGen.h
@@ -161,6 +176,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/Host.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/MD5.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/ManagedStatic.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/MathExtras.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/MemAlloc.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/Memory.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/MemoryBuffer.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/Mutex.h
@@ -169,6 +185,7 @@ CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/Option
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/PointerLikeTypeTraits.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/RWMutex.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/ReverseIteration.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/SmallVectorMemoryBuffer.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/SwapByteOrder.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/TargetSelect.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/Threading.h
@@ -177,7 +194,8 @@ CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/raw_os
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Support/type_traits.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Target/TargetMachine.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Target/TargetOptions.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Transforms/InstCombine/InstCombine.h
+CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Transforms/InstCombine/InstCombineWorklist.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Transforms/Scalar.h
 CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Transforms/Scalar/GVN.h
-CMakeFiles/simple-parser.dir/parser.cc.o: /usr/local/include/llvm/Transforms/Utils/OrderedInstructions.h
 

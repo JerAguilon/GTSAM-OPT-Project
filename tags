@@ -834,10 +834,11 @@ DEC	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	472;"	d	file:
 DEC	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	457;"	d	file:
 DL	KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 DL	include/KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
-DLLEXPORT	parser.cc	654;"	d	file:
-DLLEXPORT	parser.cc	656;"	d	file:
+DLLEXPORT	parser.cc	655;"	d	file:
+DLLEXPORT	parser.cc	657;"	d	file:
 EQUALS	Makefile	/^EQUALS = =$/;"	m
 EQUALS	Release/Makefile	/^EQUALS = =$/;"	m
+ES	KaleidoscopeJIT.h	/^  ExecutionSession ES;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 ES	include/KaleidoscopeJIT.h	/^  ExecutionSession ES;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 ExprAST	parser.cc	/^class ExprAST {$/;"	c	namespace:__anon1	file:
 FunctionAST	parser.cc	/^  FunctionAST(std::unique_ptr<PrototypeAST> Proto,$/;"	f	class:__anon1::FunctionAST
@@ -870,7 +871,7 @@ LogError	parser.cc	/^std::unique_ptr<ExprAST> LogError(const char *Str) {$/;"	f
 LogErrorP	parser.cc	/^std::unique_ptr<PrototypeAST> LogErrorP(const char *Str) {$/;"	f
 LogErrorV	parser.cc	/^Value *LogErrorV(const char *Str) {$/;"	f
 MainLoop	parser.cc	/^static void MainLoop() {$/;"	f	file:
-ModuleHandles	KaleidoscopeJIT.h	/^  std::vector<ModuleHandleT> ModuleHandles;$/;"	m	class:llvm::orc::KaleidoscopeJIT
+ModuleKeys	KaleidoscopeJIT.h	/^  std::vector<VModuleKey> ModuleKeys;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 ModuleKeys	include/KaleidoscopeJIT.h	/^  std::vector<VModuleKey> ModuleKeys;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 Name	parser.cc	/^  std::string Name;$/;"	m	class:__anon1::PrototypeAST	file:
 Name	parser.cc	/^  std::string Name;$/;"	m	class:__anon1::VariableExprAST	file:
@@ -1084,6 +1085,7 @@ PrototypeAST	parser.cc	/^class PrototypeAST {$/;"	c	namespace:__anon1	file:
 RHS	parser.cc	/^  std::unique_ptr<ExprAST> LHS, RHS;$/;"	m	class:__anon1::BinaryExprAST	file:
 RM	Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 RM	Release/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+Resolver	KaleidoscopeJIT.h	/^  std::shared_ptr<SymbolResolver> Resolver;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 Resolver	include/KaleidoscopeJIT.h	/^  std::shared_ptr<SymbolResolver> Resolver;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m
 SHELL	Release/Makefile	/^SHELL = \/bin\/sh$/;"	m
@@ -1166,7 +1168,7 @@ Token	parser.cc	/^enum Token {$/;"	g	file:
 Val	parser.cc	/^  double Val;$/;"	m	class:__anon1::NumberExprAST	file:
 VariableExprAST	parser.cc	/^  VariableExprAST(const std::string &Name) : Name(Name) {}$/;"	f	class:__anon1::VariableExprAST
 VariableExprAST	parser.cc	/^class VariableExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
-addModule	KaleidoscopeJIT.h	/^  ModuleHandleT addModule(std::unique_ptr<Module> M) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
+addModule	KaleidoscopeJIT.h	/^  VModuleKey addModule(std::unique_ptr<Module> M) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 addModule	include/KaleidoscopeJIT.h	/^  VModuleKey addModule(std::unique_ptr<Module> M) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 codegen	parser.cc	/^Function *FunctionAST::codegen() {$/;"	f	class:FunctionAST
 codegen	parser.cc	/^Function *PrototypeAST::codegen() {$/;"	f	class:PrototypeAST
@@ -1276,7 +1278,7 @@ qnxnto	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "I
 qnxnto	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
-removeModule	KaleidoscopeJIT.h	/^  void removeModule(ModuleHandleT H) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
+removeModule	KaleidoscopeJIT.h	/^  void removeModule(VModuleKey K) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 removeModule	include/KaleidoscopeJIT.h	/^  void removeModule(VModuleKey K) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 tok_def	lexer.cc	/^    tok_def = -2, tok_extern = -3,$/;"	e	enum:Token	file:
 tok_def	parser.cc	/^  tok_def = -2,$/;"	e	enum:Token	file:

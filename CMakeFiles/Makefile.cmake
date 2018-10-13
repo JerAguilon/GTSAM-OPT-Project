@@ -14,7 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/local/lib/cmake/llvm/LLVM-Config.cmake"
   "/usr/local/lib/cmake/llvm/LLVMConfig.cmake"
   "/usr/local/lib/cmake/llvm/LLVMConfigVersion.cmake"
-  "/usr/local/lib/cmake/llvm/LLVMExports-debug.cmake"
+  "/usr/local/lib/cmake/llvm/LLVMExports-release.cmake"
   "/usr/local/lib/cmake/llvm/LLVMExports.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
