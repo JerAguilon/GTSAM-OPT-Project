@@ -136,32 +136,32 @@ simple-parser/fast:
 	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/build
 .PHONY : simple-parser/fast
 
-parser.o: parser.cc.o
+main.o: main.cc.o
 
-.PHONY : parser.o
+.PHONY : main.o
 
 # target to build an object file
-parser.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/parser.cc.o
-.PHONY : parser.cc.o
+main.cc.o:
+	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/main.cc.o
+.PHONY : main.cc.o
 
-parser.i: parser.cc.i
+main.i: main.cc.i
 
-.PHONY : parser.i
+.PHONY : main.i
 
 # target to preprocess a source file
-parser.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/parser.cc.i
-.PHONY : parser.cc.i
+main.cc.i:
+	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/main.cc.i
+.PHONY : main.cc.i
 
-parser.s: parser.cc.s
+main.s: main.cc.s
 
-.PHONY : parser.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-parser.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/parser.cc.s
-.PHONY : parser.cc.s
+main.cc.s:
+	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/main.cc.s
+.PHONY : main.cc.s
 
 # Help Target
 help:
@@ -173,9 +173,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... intrinsics_gen"
 	@echo "... simple-parser"
-	@echo "... parser.o"
-	@echo "... parser.i"
-	@echo "... parser.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

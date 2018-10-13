@@ -834,8 +834,8 @@ DEC	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	472;"	d	file:
 DEC	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	457;"	d	file:
 DL	KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 DL	include/KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
-DLLEXPORT	parser.cc	655;"	d	file:
-DLLEXPORT	parser.cc	657;"	d	file:
+DLLEXPORT	parser.cc	585;"	d	file:
+DLLEXPORT	parser.cc	587;"	d	file:
 EQUALS	Makefile	/^EQUALS = =$/;"	m
 EQUALS	Release/Makefile	/^EQUALS = =$/;"	m
 ES	KaleidoscopeJIT.h	/^  ExecutionSession ES;$/;"	m	class:llvm::orc::KaleidoscopeJIT
@@ -857,8 +857,7 @@ HandleTopLevelExpression	parser.cc	/^static void HandleTopLevelExpression() {$/;
 ID_VOID_MAIN	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
 ID_VOID_MAIN	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
 ID_VOID_MAIN	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
-IdentifierStr	lexer.cc	/^static std::string IdentifierStr;$/;"	v	file:
-IdentifierStr	parser.cc	/^static std::string IdentifierStr; \/\/ Filled in if tok_identifier$/;"	v	file:
+IdentifierStr	lexer.cc	/^static std::string IdentifierStr; \/\/ Filled in if tok_identifier$/;"	v	file:
 InitializeModuleAndPassManager	parser.cc	/^static void InitializeModuleAndPassManager() {$/;"	f	file:
 KaleidoscopeJIT	KaleidoscopeJIT.h	/^  KaleidoscopeJIT()$/;"	f	class:llvm::orc::KaleidoscopeJIT
 KaleidoscopeJIT	KaleidoscopeJIT.h	/^class KaleidoscopeJIT {$/;"	c	namespace:llvm::orc
@@ -876,8 +875,7 @@ ModuleKeys	include/KaleidoscopeJIT.h	/^  std::vector<VModuleKey> ModuleKeys;$/;"
 Name	parser.cc	/^  std::string Name;$/;"	m	class:__anon1::PrototypeAST	file:
 Name	parser.cc	/^  std::string Name;$/;"	m	class:__anon1::VariableExprAST	file:
 NamedValues	parser.cc	/^static std::map<std::string, Value *> NamedValues;$/;"	v	file:
-NumVal	lexer.cc	/^static double NumVal;$/;"	v	file:
-NumVal	parser.cc	/^static double NumVal;             \/\/ Filled in if tok_number$/;"	v	file:
+NumVal	lexer.cc	/^static double NumVal;             \/\/ Filled in if tok_number$/;"	v	file:
 NumberExprAST	parser.cc	/^  NumberExprAST(double Val) : Val(Val) {}$/;"	f	class:__anon1::NumberExprAST
 NumberExprAST	parser.cc	/^class NumberExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
 ObjectLayer	KaleidoscopeJIT.h	/^  ObjLayerT ObjectLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
@@ -1164,7 +1162,6 @@ TheFPM	parser.cc	/^static std::unique_ptr<legacy::FunctionPassManager> TheFPM;$/
 TheJIT	parser.cc	/^static std::unique_ptr<KaleidoscopeJIT> TheJIT;$/;"	v	file:
 TheModule	parser.cc	/^static std::unique_ptr<Module> TheModule;$/;"	v	file:
 Token	lexer.cc	/^enum Token {$/;"	g	file:
-Token	parser.cc	/^enum Token {$/;"	g	file:
 Val	parser.cc	/^  double Val;$/;"	m	class:__anon1::NumberExprAST	file:
 VariableExprAST	parser.cc	/^  VariableExprAST(const std::string &Name) : Name(Name) {}$/;"	f	class:__anon1::VariableExprAST
 VariableExprAST	parser.cc	/^class VariableExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
@@ -1193,7 +1190,6 @@ getNextToken	parser.cc	/^static int getNextToken() { return CurTok = gettok(); }
 getTargetMachine	KaleidoscopeJIT.h	/^  TargetMachine &getTargetMachine() { return *TM; }$/;"	f	class:llvm::orc::KaleidoscopeJIT
 getTargetMachine	include/KaleidoscopeJIT.h	/^  TargetMachine &getTargetMachine() { return *TM; }$/;"	f	class:llvm::orc::KaleidoscopeJIT
 gettok	lexer.cc	/^static int gettok() {$/;"	f	file:
-gettok	parser.cc	/^static int gettok() {$/;"	f	file:
 info_arch	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_arch	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_arch	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
@@ -1261,7 +1257,7 @@ main	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/
 main	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f
 main	Release/CMakeFiles/feature_tests.c	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
 main	Release/CMakeFiles/feature_tests.cxx	/^int main(int argc, char** argv) { (void)argv; return features[argc]; }$/;"	f
-main	parser.cc	/^int main() {$/;"	f
+main	main.cc	/^int main() {$/;"	f
 mangle	KaleidoscopeJIT.h	/^  std::string mangle(const std::string &Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 mangle	include/KaleidoscopeJIT.h	/^  std::string mangle(const std::string &Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 orc	KaleidoscopeJIT.h	/^namespace orc {$/;"	n	namespace:llvm
@@ -1280,16 +1276,11 @@ qnxnto	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qn
 qnxnto	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 removeModule	KaleidoscopeJIT.h	/^  void removeModule(VModuleKey K) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 removeModule	include/KaleidoscopeJIT.h	/^  void removeModule(VModuleKey K) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
-tok_def	lexer.cc	/^    tok_def = -2, tok_extern = -3,$/;"	e	enum:Token	file:
-tok_def	parser.cc	/^  tok_def = -2,$/;"	e	enum:Token	file:
-tok_eof	lexer.cc	/^    tok_eof = -1,$/;"	e	enum:Token	file:
-tok_eof	parser.cc	/^  tok_eof = -1,$/;"	e	enum:Token	file:
-tok_extern	lexer.cc	/^    tok_def = -2, tok_extern = -3,$/;"	e	enum:Token	file:
-tok_extern	parser.cc	/^  tok_extern = -3,$/;"	e	enum:Token	file:
-tok_identifier	lexer.cc	/^    tok_identifier = -4, tok_number = -5,$/;"	e	enum:Token	file:
-tok_identifier	parser.cc	/^  tok_identifier = -4,$/;"	e	enum:Token	file:
-tok_number	lexer.cc	/^    tok_identifier = -4, tok_number = -5,$/;"	e	enum:Token	file:
-tok_number	parser.cc	/^  tok_number = -5$/;"	e	enum:Token	file:
+tok_def	lexer.cc	/^  tok_def = -2,$/;"	e	enum:Token	file:
+tok_eof	lexer.cc	/^  tok_eof = -1,$/;"	e	enum:Token	file:
+tok_extern	lexer.cc	/^  tok_extern = -3,$/;"	e	enum:Token	file:
+tok_identifier	lexer.cc	/^  tok_identifier = -4,$/;"	e	enum:Token	file:
+tok_number	lexer.cc	/^  tok_number = -5$/;"	e	enum:Token	file:
 volatile	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
 volatile	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
 volatile	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:

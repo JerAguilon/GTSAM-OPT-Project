@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/parser.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles/simple-parser.dir/parser.cc.o"
+  "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/main.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles/simple-parser.dir/main.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

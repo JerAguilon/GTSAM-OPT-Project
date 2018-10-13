@@ -10,7 +10,7 @@ message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
 message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
 
 # Now build our tools
-add_executable(simple-parser parser.cc KaleidoscopeJIT.h)
+add_executable(simple-parser main.cc KaleidoscopeJIT.h)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti")
 
