@@ -519,6 +519,17 @@ Function *FunctionAST::codegen() {
     return nullptr;
 }
 
+Value *IfExprAST::codegen() {
+    Value *CondV = Cond->codegen();
+    if (!CondV)
+        return nullptr;
+
+    // Convert the condition to a bool, compare non-equal to 0.0
+    CondV = Builder.CreateFCmpONE(CondV, ConstantFP::get(TheContext, APFloat(0.0)), "ifcond");
+
+    //TODO: Build the blocks
+}
+
 //===----------------------------------------------------------------------===//
 // "Library" functions that can be "extern'd" from user code.
 //===----------------------------------------------------------------------===//
