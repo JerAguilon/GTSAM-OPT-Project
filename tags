@@ -835,8 +835,8 @@ DEC	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	472;"	d	file:
 DEC	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	457;"	d	file:
 DL	KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 DL	include/KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
-DLLEXPORT	parser.cc	535;"	d	file:
-DLLEXPORT	parser.cc	537;"	d	file:
+DLLEXPORT	parser.cc	578;"	d	file:
+DLLEXPORT	parser.cc	580;"	d	file:
 EQUALS	Makefile	/^EQUALS = =$/;"	m
 EQUALS	Release/Makefile	/^EQUALS = =$/;"	m
 ES	KaleidoscopeJIT.h	/^  ExecutionSession ES;$/;"	m	class:llvm::orc::KaleidoscopeJIT
@@ -1288,8 +1288,10 @@ tok_def	lexer.cc	/^    tok_def = -2,$/;"	e	enum:Token	file:
 tok_else	lexer.cc	/^    tok_else = -8,$/;"	e	enum:Token	file:
 tok_eof	lexer.cc	/^    tok_eof = -1,$/;"	e	enum:Token	file:
 tok_extern	lexer.cc	/^    tok_extern = -3,$/;"	e	enum:Token	file:
+tok_for	lexer.cc	/^    tok_for = -9,$/;"	e	enum:Token	file:
 tok_identifier	lexer.cc	/^    tok_identifier = -4,$/;"	e	enum:Token	file:
 tok_if	lexer.cc	/^    tok_if = -6,$/;"	e	enum:Token	file:
+tok_in	lexer.cc	/^    tok_in = -10,$/;"	e	enum:Token	file:
 tok_number	lexer.cc	/^    tok_number = -5,$/;"	e	enum:Token	file:
 tok_then	lexer.cc	/^    tok_then = -7,$/;"	e	enum:Token	file:
 volatile	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
