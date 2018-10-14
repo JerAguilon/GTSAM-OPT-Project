@@ -509,6 +509,10 @@ Value *BinaryExprAST::codegen() {
             L = Builder.CreateFCmpULT(L, R, "cmptmp");
             // Convert bool 0/1 to double 0.0 or 1.0
             return Builder.CreateUIToFP(L, Type::getDoubleTy(TheContext), "booltmp");
+        case '>':
+            L = Builder.CreateFCmpULT(R, L, "cmptmp");
+            // Convert bool 0/1 to double 0.0 or 1.0
+            return Builder.CreateUIToFP(L, Type::getDoubleTy(TheContext), "booltmp");
         default:
             return LogErrorV("invalid binary operator");
     }
