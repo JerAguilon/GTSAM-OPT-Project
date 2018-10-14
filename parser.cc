@@ -527,7 +527,47 @@ Value *IfExprAST::codegen() {
     // Convert the condition to a bool, compare non-equal to 0.0
     CondV = Builder.CreateFCmpONE(CondV, ConstantFP::get(TheContext, APFloat(0.0)), "ifcond");
 
-    //TODO: Build the blocks
+    Function  *TheFunction = Builder.GetInsertBlock()->getParent();
+
+    // Create blocks for the if then else
+    BasicBlock *ThenBB = BasicBlock::Create(TheContext, "then", TheFunction);
+    BasicBlock *ElseBB = BasicBlock::Create(TheContext, "else", TheFunction);
+    BasicBlock *MergeBB = BasicBlock::Create(TheContext, "ifcont", TheFunction);
+
+    Builder.CreateCondBr(CondV, ThenBB, ElseBB);
+
+    Builder.SetInsertPoint(ThenBB);
+
+    Value *ThenV = Then->codegen();
+    if (!ThenV) return nullptr;
+
+    Builder.CreateBr(MergeBB);
+    // Codegen of 'Then' can change the current block
+    ThenBB = Builder.GetInsertBlock();
+    
+    // Emit else block
+    TheFunction->getBasicBlockList().push_back(ElseBB);
+    Builder.SetInsertPoint(ElseBB);
+
+    Value *ElseV = Else->codegen();
+    if (!ElseV)
+        return nullptr;
+
+    Builder.CreateBr(MergeBB);
+    // Codegen of 'Then' can change the current block'
+    ElseBB = Builder.GetInsertBlock();
+
+    TheFunction->getBasicBlockList().push_back(ElseBB);
+    Builder.SetInsertPoint(ElseBB);
+
+
+    TheFunction->getBasicBlockList().push_back(MergeBB);
+    Builder.SetInsertPoint(MergeBB);
+    PHINode *PN = Builder.CreatePHI(Type::getDoubleTy(TheContext), 2, "iftmp");
+
+    PN->addIncoming(ThenV, ThenBB);
+    PN->addIncoming(ElseV, ElseBB);
+    return PN;
 }
 
 //===----------------------------------------------------------------------===//
