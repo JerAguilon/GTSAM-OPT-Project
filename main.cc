@@ -121,6 +121,7 @@ int main() {
   BinopPrecedence['+'] = 20;
   BinopPrecedence['-'] = 20;
   BinopPrecedence['*'] = 40; // highest.
+  BinopPrecedence['/'] = 40; 
 
   // Prime the first token.
   fprintf(stderr, "ready> ");
