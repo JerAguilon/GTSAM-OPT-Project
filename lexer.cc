@@ -22,9 +22,12 @@ enum Token {
     tok_then = -7,
     tok_else = -8,
 
+    // TODO: custom control flows <= etc.
+
     // loop controls
     tok_for = -9,
     tok_in = -10,
+
 };
 
 static std::string IdentifierStr; // Filled in if tok_identifier
