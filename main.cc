@@ -119,6 +119,8 @@ int main() {
   // 1 is lowest precedence.
   BinopPrecedence['<'] = 10;
   BinopPrecedence['>'] = 10;
+  BinopPrecedence[tok_lessequal] = 10;
+  BinopPrecedence[tok_greatequal] = 10;
   BinopPrecedence['+'] = 20;
   BinopPrecedence['-'] = 20;
   BinopPrecedence['*'] = 40; // highest.

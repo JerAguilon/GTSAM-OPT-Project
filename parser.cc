@@ -1,6 +1,8 @@
 #include "KaleidoscopeJIT.h"
 #include "lexer.cc"
 
+#include <iostream>
+
 #include "llvm/ADT/APFloat.h"
 #include "llvm/ADT/STLExtras.h"
 #include "llvm/IR/BasicBlock.h"
@@ -68,11 +70,11 @@ namespace {
 
     /// BinaryExprAST - Expression class for a binary operator.
     class BinaryExprAST : public ExprAST {
-        char Op;
+        int Op;
         std::unique_ptr<ExprAST> LHS, RHS;
 
         public:
-        BinaryExprAST(char Op, std::unique_ptr<ExprAST> LHS,
+        BinaryExprAST(int Op, std::unique_ptr<ExprAST> LHS,
                 std::unique_ptr<ExprAST> RHS)
             : Op(Op), LHS(std::move(LHS)), RHS(std::move(RHS)) {}
 
@@ -165,14 +167,13 @@ static std::map<char, int> BinopPrecedence;
 
 /// GetTokPrecedence - Get the precedence of the pending binary operator token.
 static int GetTokPrecedence() {
-    if (!isascii(CurTok))
-        return -1;
-
     // Make sure it's a declared binop.
-    int TokPrec = BinopPrecedence[CurTok];
-    if (TokPrec <= 0)
+    auto TokPrec = BinopPrecedence.find(CurTok);
+    if (TokPrec == BinopPrecedence.end()) {
         return -1;
-    return TokPrec;
+    } else {
+        return TokPrec->second;
+    }
 }
 
 /// LogError* - These are little helper functions for error handling.
@@ -329,7 +330,10 @@ static std::unique_ptr<ExprAST> ParseForExpr() {
 static std::unique_ptr<ExprAST> ParsePrimary() {
     switch (CurTok) {
         default:
-            return LogError("unknown token when expecting an expression");
+        {
+            std::string error = "unknown token when expecting an expression: " + std::to_string(CurTok);
+            return LogError(error.c_str());
+        }
         case tok_identifier:
             return ParseIdentifierExpr();
         case tok_number:
@@ -385,6 +389,7 @@ static std::unique_ptr<ExprAST> ParseBinOpRHS(int ExprPrec,
 ///
 static std::unique_ptr<ExprAST> ParseExpression() {
     auto LHS = ParsePrimary();
+
     if (!LHS)
         return nullptr;
 
@@ -484,7 +489,7 @@ Value *VariableExprAST::codegen() {
     // Look this variable up in the function.
     Value *V = NamedValues[Name];
     if (!V)
-        return LogErrorV("Unknown variable name");
+        return LogErrorV(("Unknown variable name: " + Name).c_str());
     return V;
 }
 
@@ -510,6 +515,12 @@ Value *BinaryExprAST::codegen() {
         case '>':
             L = Builder.CreateFCmpULT(R, L, "cmptmp");
             // Convert bool 0/1 to double 0.0 or 1.0
+            return Builder.CreateUIToFP(L, Type::getDoubleTy(TheContext), "booltmp");
+        case tok_lessequal:
+            L = Builder.CreateFCmpULE(L, R, "cmptmp");
+            return Builder.CreateUIToFP(L, Type::getDoubleTy(TheContext), "booltmp");
+        case tok_greatequal:
+            L = Builder.CreateFCmpULE(R, L, "cmptmp");
             return Builder.CreateUIToFP(L, Type::getDoubleTy(TheContext), "booltmp");
         default:
             return LogErrorV("invalid binary operator");

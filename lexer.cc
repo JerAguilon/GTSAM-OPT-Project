@@ -1,4 +1,5 @@
 #include<string>
+#include<iostream>
 
 //===----------------------------------------------------------------------===//
 // Lexer
@@ -23,23 +24,50 @@ enum Token {
     tok_else = -8,
 
     // TODO: custom control flows <= etc.
+    tok_lessequal = -9,
+    tok_greatequal = -10,
 
     // loop controls
-    tok_for = -9,
-    tok_in = -10,
+    tok_for = -11,
+    tok_in = -12,
 
 };
 
 static std::string IdentifierStr; // Filled in if tok_identifier
 static double NumVal;             // Filled in if tok_number
 
+static bool iscmp(int c) {
+    return c == '<' || c == '>';
+}
+
+
+
 /// gettok - Return the next token from standard input.
 static int gettok() {
     static int LastChar = ' ';
 
     // Skip any whitespace.
-    while (isspace(LastChar))
+    while (isspace(LastChar)) {
         LastChar = getchar();
+    }
+
+    // Test for <= or >=
+    if (iscmp(LastChar)) {
+        IdentifierStr = LastChar;
+        LastChar = getchar();
+        if (LastChar == '=')
+            IdentifierStr += LastChar;
+            LastChar = getchar();
+
+        if (IdentifierStr == ">=")
+            return tok_greatequal;
+        if (IdentifierStr == "<=")
+            return tok_lessequal;
+        if (IdentifierStr ==  "<")
+            return '<';
+        if (IdentifierStr ==  ">")
+            return '>';
+    }
 
     if (isalpha(LastChar)) { // identifier: [a-zA-Z][a-zA-Z0-9]*
         IdentifierStr = LastChar;

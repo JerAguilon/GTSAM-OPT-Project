@@ -10,10 +10,10 @@ message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
 message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
 
 # Now build our tools
-add_executable(simple-parser main.cc KaleidoscopeJIT.h)
+add_executable(simple-parser main.cc)
 
 set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "r-dynamic")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -fno-rtti -g")
 
 # Find the libraries that correspond to the LLVM components
 # that we wish to use
