@@ -1,7 +1,7 @@
 #ifndef __EXPR_AST_H__
 #define __EXPR_AST_H__
 
-#include "llvm/IR/BasicBloc.h"
+#include "llvm/IR/BasicBlock.h"
 
 class ExprAST {
 public:
