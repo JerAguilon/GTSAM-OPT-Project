@@ -15,7 +15,7 @@ extern fprintf(x)
 
 def my_func(x) {
     x = cool_func_call()
-    for (i=0, i < 10, 1.0) {
+    for (i=0; i < 10; 1.0) {
         fprintf(x)
     }
 }
