@@ -1,48 +1,15 @@
-#include<string>
-#include<iostream>
+#include "lexer/lexer.h"
+#include "lexer/token.h"
 
-//===----------------------------------------------------------------------===//
-// Lexer
-//===----------------------------------------------------------------------===//
-
-// The lexer returns tokens [0-255] if it is an unknown character, otherwise one
-// of these for known things.
-enum Token {
-    tok_eof = -1,
-
-    // commands
-    tok_def = -2,
-    tok_extern = -3,
-
-    // primary
-    tok_identifier = -4,
-    tok_number = -5,
-
-    // control flows
-    tok_if = -6,
-    tok_then = -7,
-    tok_else = -8,
-
-    // TODO: custom control flows <= etc.
-    tok_lessequal = -9,
-    tok_greatequal = -10,
-
-    // loop controls
-    tok_for = -11,
-    tok_in = -12,
-};
-
-static std::string IdentifierStr; // Filled in if tok_identifier
-static double NumVal;             // Filled in if tok_number
+std::string IdentifierStr; // Filled in if tok_identifier
+double NumVal;             // Filled in if tok_number
 
 static bool iscmp(int c) {
     return c == '<' || c == '>';
 }
 
-
-
 /// gettok - Return the next token from standard input.
-static int gettok() {
+int gettok() {
     static int LastChar = ' ';
 
     // Skip any whitespace.
