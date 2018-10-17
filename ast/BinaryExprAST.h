@@ -3,8 +3,9 @@
 
 #include "llvm/IR/IRBuilder.h"
 #include "ast/ExprAST.h"
+#include "logger/logger.h"
 
-class BinaryExprAST : pulbic ExprAST {
+class BinaryExprAST : public ExprAST {
     char Op;
     std::unique_ptr<ExprAST> LHS, RHS;
 
