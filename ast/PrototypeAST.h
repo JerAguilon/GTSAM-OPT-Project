@@ -5,7 +5,7 @@
 #include "llvm/IR/IRBuilder.h"
 #include "utils/utils.h"
 
-using namespce llvm;
+using namespace llvm;
 
 class PrototypeAST {
     std::string Name;

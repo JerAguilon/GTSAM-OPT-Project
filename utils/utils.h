@@ -13,17 +13,19 @@
 #include "llvm/IR/Type.h"
 #include "llvm/IR/Verifier.h"
 
-// This is an object that owns LLVM core data structures
-extern llvm::LLVMContext TheContext;
+#include "ast/PrototypeAST.h"
+#include "KaleidoscopeJIT.h" //TODO(jeremy): Refactor the JIT
 
-// This is a helper object that makes easy to generate LLVM instructions
-extern llvm::IRBuilder<> Builder;
+using namespace llvm;
+using namespace llvm::orc;
 
-// This is an LLVM construct that contains functions and global variables
-extern std::unique_ptr<llvm::Module> TheModule;
+extern LLVMContext TheContext;
+extern IRBuilder<> Builder;
+extern std::unique_ptr<Module> TheModule;
+extern std::map<std::string, Value *> NamedValues;
+extern std::unique_ptr<legacy::FunctionPassManager> TheFPM;
+extern std::unique_ptr<KaleidoscopeJIT> TheJIT;
 
-// This map keeps track of which values are defined in the current scope
-extern std::map<std::string, llvm::Value *> NamedValues;
 
 #endif
 

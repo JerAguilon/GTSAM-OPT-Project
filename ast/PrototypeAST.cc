@@ -1,15 +1,15 @@
-#ifndef __PROTOTYPE_AST_H__
-#define __PROTOTYPE_AST_H__
+/* #ifndef PROTOTYPE_H */
+/* #define PROTOTYPE_H */
 
 #include "ast/ExprAST.h"
 #include "llvm/IR/IRBuilder.h"
 
 class PrototypeAST {
     std::string Name;
-    std::vector<std:;string> Args;
+    std::vector<std::string> Args;
 
 public:
-    PrototypeAST(const std::string &name, std::vector<std::string>> Args) :
+    PrototypeAST(const std::string &name, std::vector<std::string> Args) :
         Name(name), Args(Args)
     {}
 
@@ -20,4 +20,4 @@ public:
     }
 };
 
-#endif
+/* #endif */
