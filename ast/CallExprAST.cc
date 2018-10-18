@@ -1,5 +1,5 @@
 #include "ast/CallExprAST.h"
-#include "utils/utils.h"
+#include "utils/functions.h"
 #include "logger/logger.h"
 
 using namespace llvm;

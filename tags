@@ -99,11 +99,10 @@ ARCHITECTURE_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	4
 ARCHITECTURE_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	450;"	d	file:
 ARCHITECTURE_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	453;"	d	file:
 Args	ast/CallExprAST.h	/^    std::vector<std::unique_ptr<ExprAST>> Args;$/;"	m	class:CallExprAST
-Args	ast/PrototypeAST.cc	/^    std::vector<std::string> Args;$/;"	m	class:PrototypeAST	file:
 Args	ast/PrototypeAST.h	/^    std::vector<std::string> Args;$/;"	m	class:PrototypeAST
 Args	parser.cc	/^        std::vector<std::string> Args;$/;"	m	class:__anon1::PrototypeAST	file:
 Args	parser.cc	/^        std::vector<std::unique_ptr<ExprAST>> Args;$/;"	m	class:__anon1::CallExprAST	file:
-BinaryExprAST	ast/BinaryExprAST.h	/^        BinaryExprAST(char op, std::unique_ptr<ExprAST> LHS std::unique_ptr<ExprAST> RHS) :$/;"	f	class:BinaryExprAST
+BinaryExprAST	ast/BinaryExprAST.h	/^        BinaryExprAST(char op, std::unique_ptr<ExprAST> LHS, std::unique_ptr<ExprAST> RHS) :$/;"	f	class:BinaryExprAST
 BinaryExprAST	ast/BinaryExprAST.h	/^class BinaryExprAST : public ExprAST {$/;"	c
 BinaryExprAST	parser.cc	/^        BinaryExprAST(int Op, std::unique_ptr<ExprAST> LHS,$/;"	f	class:__anon1::BinaryExprAST
 BinaryExprAST	parser.cc	/^    class BinaryExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
@@ -896,7 +895,6 @@ LogErrorV	parser.cc	/^Value *LogErrorV(const char *Str) {$/;"	f
 MainLoop	main.cc	/^static void MainLoop() {$/;"	f	file:
 ModuleKeys	KaleidoscopeJIT.h	/^  std::vector<VModuleKey> ModuleKeys;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 ModuleKeys	include/KaleidoscopeJIT.h	/^  std::vector<VModuleKey> ModuleKeys;$/;"	m	class:llvm::orc::KaleidoscopeJIT
-Name	ast/PrototypeAST.cc	/^    std::string Name;$/;"	m	class:PrototypeAST	file:
 Name	ast/PrototypeAST.h	/^    std::string Name;$/;"	m	class:PrototypeAST
 Name	ast/VariableExprAST.h	/^    std::string Name;$/;"	m	class:VariableExprAST
 Name	parser.cc	/^        std::string Name;$/;"	m	class:__anon1::PrototypeAST	file:
@@ -904,10 +902,10 @@ Name	parser.cc	/^        std::string Name;$/;"	m	class:__anon1::VariableExprAST	
 NamedValues	parser.cc	/^static std::map<std::string, Value *> NamedValues;$/;"	v	file:
 NumVal	lexer.cc	/^static double NumVal;             \/\/ Filled in if tok_number$/;"	v	file:
 NumVal	lexer/lexer.cc	/^double NumVal;             \/\/ Filled in if tok_number$/;"	v
-NumberExprAST	ast/NumberExprAST.h	/^    NumberExprAST(double Val) : Val(Val) {}$/;"	f	class:NumbrExprAST
+NumberExprAST	ast/NumberExprAST.h	/^    NumberExprAST(double Val) : Val(Val) {}$/;"	f	class:NumberExprAST
+NumberExprAST	ast/NumberExprAST.h	/^class NumberExprAST : public ExprAST {$/;"	c
 NumberExprAST	parser.cc	/^        NumberExprAST(double Val) : Val(Val) {}$/;"	f	class:__anon1::NumberExprAST
 NumberExprAST	parser.cc	/^    class NumberExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
-NumbrExprAST	ast/NumberExprAST.h	/^class NumbrExprAST : public ExprAST {$/;"	c
 ObjectLayer	KaleidoscopeJIT.h	/^  ObjLayerT ObjectLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 ObjectLayer	include/KaleidoscopeJIT.h	/^  ObjLayerT ObjectLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 Op	ast/BinaryExprAST.h	/^    char Op;$/;"	m	class:BinaryExprAST
@@ -1099,7 +1097,6 @@ PLATFORM_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	383;"
 PLATFORM_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	386;"	d	file:
 PLATFORM_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	390;"	d	file:
 PROTOTYPE_AST_H	ast/PrototypeAST.h	2;"	d
-PROTOTYPE_H	ast/PrototypeAST.cc	2;"	d	file:
 ParseBinOpRHS	parser.cc	/^static std::unique_ptr<ExprAST> ParseBinOpRHS(int ExprPrec,$/;"	f	file:
 ParseDefinition	parser.cc	/^static std::unique_ptr<FunctionAST> ParseDefinition() {$/;"	f	file:
 ParseExpression	parser.cc	/^static std::unique_ptr<ExprAST> ParseExpression() {$/;"	f	file:
@@ -1114,8 +1111,6 @@ ParsePrototype	parser.cc	/^static std::unique_ptr<PrototypeAST> ParsePrototype()
 ParseTopLevelExpr	parser.cc	/^static std::unique_ptr<FunctionAST> ParseTopLevelExpr() {$/;"	f	file:
 Proto	ast/FunctionAST.h	/^    std::unique_ptr<PrototypeAST> Proto;$/;"	m	class:FunctionAST
 Proto	parser.cc	/^        std::unique_ptr<PrototypeAST> Proto;$/;"	m	class:__anon1::FunctionAST	file:
-PrototypeAST	ast/PrototypeAST.cc	/^    PrototypeAST(const std::string &name, std::vector<std::string> Args) :$/;"	f	class:PrototypeAST
-PrototypeAST	ast/PrototypeAST.cc	/^class PrototypeAST {$/;"	c	file:
 PrototypeAST	ast/PrototypeAST.h	/^    PrototypeAST(const std::string &Name, std::vector<std::string> Args)$/;"	f	class:PrototypeAST
 PrototypeAST	ast/PrototypeAST.h	/^class PrototypeAST {$/;"	c
 PrototypeAST	parser.cc	/^        PrototypeAST(const std::string &Name, std::vector<std::string> Args)$/;"	f	class:__anon1::PrototypeAST
@@ -1208,7 +1203,7 @@ Then	parser.cc	/^        std::unique_ptr<ExprAST> Cond, Then, Else;$/;"	m	class:
 Token	lexer.cc	/^enum Token {$/;"	g	file:
 Token	lexer/token.h	/^enum Token {$/;"	g
 UTILS_H	utils/utils.h	2;"	d
-Val	ast/NumberExprAST.h	/^    doubel Val;$/;"	m	class:NumbrExprAST
+Val	ast/NumberExprAST.h	/^    double Val;$/;"	m	class:NumberExprAST
 Val	parser.cc	/^        double Val;$/;"	m	class:__anon1::NumberExprAST	file:
 VarName	parser.cc	/^        std::string VarName;$/;"	m	class:__anon1::ForExprAST	file:
 VariableExprAST	ast/VariableExprAST.h	/^    VariableExprAST(const std::string &Name): Name(name) {}$/;"	f	class:VariableExprAST
@@ -1228,6 +1223,8 @@ addModule	include/KaleidoscopeJIT.h	/^  VModuleKey addModule(std::unique_ptr<Mod
 codegen	ast/BinaryExprAST.cc	/^Value *BinaryExprAST::codegen() {$/;"	f	class:BinaryExprAST
 codegen	ast/CallExprAST.cc	/^Value *CallExprAST::codegen() {$/;"	f	class:CallExprAST
 codegen	ast/FunctionAST.cc	/^llvm::Function *FunctionAST::codegen() {$/;"	f	class:FunctionAST
+codegen	ast/NumberExprAST.cc	/^llvm::Value *NumberExprAST::codegen() {$/;"	f	class:NumberExprAST
+codegen	ast/PrototypeAST.cc	/^Function *PrototypeAST::codegen() {$/;"	f	class:PrototypeAST
 codegen	parser.cc	/^Function *FunctionAST::codegen() {$/;"	f	class:FunctionAST
 codegen	parser.cc	/^Function *PrototypeAST::codegen() {$/;"	f	class:PrototypeAST
 codegen	parser.cc	/^Value *BinaryExprAST::codegen() {$/;"	f	class:BinaryExprAST
@@ -1247,9 +1244,9 @@ findMangledSymbol	KaleidoscopeJIT.h	/^  JITSymbol findMangledSymbol(const std::s
 findMangledSymbol	include/KaleidoscopeJIT.h	/^  JITSymbol findMangledSymbol(const std::string &Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 findSymbol	KaleidoscopeJIT.h	/^  JITSymbol findSymbol(const std::string Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 findSymbol	include/KaleidoscopeJIT.h	/^  JITSymbol findSymbol(const std::string Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
+getFunction	ast/FunctionAST.h	/^Function *getFunction(std::string Name) {$/;"	f
 getFunction	parser.cc	/^Function *getFunction(std::string Name) {$/;"	f
-getFunction	utils/utils.h	/^Function *getFunction(std::string Name) {$/;"	f
-getName	ast/PrototypeAST.cc	/^    const std::string &getName() const {$/;"	f	class:PrototypeAST
+getFunction	utils/functions.h	/^Function *getFunction(std::string Name) {$/;"	f
 getName	ast/PrototypeAST.h	/^    const std::string &getName() const { return Name; }$/;"	f	class:PrototypeAST
 getName	parser.cc	/^        const std::string &getName() const { return Name; }$/;"	f	class:__anon1::PrototypeAST
 getNextToken	parser.cc	/^static int getNextToken() { return CurTok = gettok(); }$/;"	f	file:
@@ -1332,8 +1329,7 @@ mangle	include/KaleidoscopeJIT.h	/^  std::string mangle(const std::string &Name)
 orc	KaleidoscopeJIT.h	/^namespace orc {$/;"	n	namespace:llvm
 orc	include/KaleidoscopeJIT.h	/^namespace orc {$/;"	n	namespace:llvm
 override	ast/BinaryExprAST.h	/^        llvm::Value *codegen() override;$/;"	m	class:BinaryExprAST
-override	ast/CallExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:CallExprAST
-override	ast/NumberExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:NumbrExprAST
+override	ast/NumberExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:NumberExprAST
 override	ast/VariableExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:VariableExprAST
 override	parser.cc	/^        Value *codegen() override;$/;"	m	class:__anon1::BinaryExprAST	file:
 override	parser.cc	/^        Value *codegen() override;$/;"	m	class:__anon1::CallExprAST	file:

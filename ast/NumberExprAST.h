@@ -3,8 +3,8 @@
 
 #include "ast/ExprAST.h"
 
-class NumbrExprAST : public ExprAST {
-    doubel Val;
+class NumberExprAST : public ExprAST {
+    double Val;
 
 public:
     NumberExprAST(double Val) : Val(Val) {}

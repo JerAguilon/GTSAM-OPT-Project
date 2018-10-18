@@ -1,7 +1,6 @@
 #ifndef PROTOTYPE_AST_H
 #define PROTOTYPE_AST_H
 
-#include "ast/ExprAST.h"
 #include "llvm/IR/IRBuilder.h"
 #include "utils/utils.h"
 

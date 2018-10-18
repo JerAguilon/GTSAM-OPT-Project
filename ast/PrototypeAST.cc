@@ -1,23 +1,21 @@
-/* #ifndef PROTOTYPE_H */
-/* #define PROTOTYPE_H */
+#include "ast/PrototypeAST.h"
+#include "utils/utils.h"
 
-#include "ast/ExprAST.h"
-#include "llvm/IR/IRBuilder.h"
+using namespace llvm;
 
-class PrototypeAST {
-    std::string Name;
-    std::vector<std::string> Args;
+Function *PrototypeAST::codegen() {
+    // Make the function type:  double(double,double) etc.
+    std::vector<Type *> Doubles(Args.size(), Type::getDoubleTy(TheContext));
+    FunctionType *FT =
+        FunctionType::get(Type::getDoubleTy(TheContext), Doubles, false);
 
-public:
-    PrototypeAST(const std::string &name, std::vector<std::string> Args) :
-        Name(name), Args(Args)
-    {}
+    Function *F =
+        Function::Create(FT, Function::ExternalLinkage, Name, TheModule.get());
 
-    llvm::Function *codegen();
+    // Set names for all arguments.
+    unsigned Idx = 0;
+    for (auto &Arg : F->args())
+        Arg.setName(Args[Idx++]);
 
-    const std::string &getName() const {
-        return Name;
-    }
-};
-
-/* #endif */
+    return F;
+}

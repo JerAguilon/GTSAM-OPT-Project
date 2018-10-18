@@ -1,6 +1,7 @@
 #include "ast/FunctionAST.h"
 #include "logger/logger.h"
 #include "utils/utils.h"
+#include "utils/functions.h"
 
 llvm::Function *FunctionAST::codegen() {
     // Transfer ownership of the prototype to the FunctionProtos map, but keep a

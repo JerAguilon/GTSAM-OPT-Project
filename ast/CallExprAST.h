@@ -2,7 +2,6 @@
 #define __CALL_EXPR_AST_H__
 
 #include "ast/ExprAST.h"
-#include "llvm/IR/IRBuilder.h"
 
 class CallExprAST : public ExprAst {
     std::string Callee;
@@ -10,10 +9,10 @@ class CallExprAST : public ExprAst {
 
 public:
     CallExprAST(const std::string &Callee, std::vector<std::unique_ptr<ExprAST>> Args):
-        Callee(Callee), Args(Args) 
+        Callee(Callee), Args(std::move(Args))
     {}
 
-    llvm::Value *codegen() override;
-}
+    llvm::Value *codegen();
+};
 
 #endif

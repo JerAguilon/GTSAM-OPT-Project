@@ -3,11 +3,11 @@
 
 #include "ast/ExprAST.h"
 
-class VariableExprAST : Public ExprAST {
+class VariableExprAST : public ExprAST {
     std::string Name;
 
 public:
-    VariableExprAST(const std::string &Name): Name(name) {}
+    VariableExprAST(const std::string &Name): Name(Name) {}
     llvm::Value *codegen() override;
 };
 
