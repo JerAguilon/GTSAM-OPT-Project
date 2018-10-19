@@ -30,7 +30,6 @@ enum Token {
     // loop controls
     tok_for = -11,
     tok_in = -12,
-
 };
 
 static std::string IdentifierStr; // Filled in if tok_identifier
