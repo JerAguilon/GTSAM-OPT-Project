@@ -19,6 +19,8 @@ static void InitializeModuleAndPassManager() {
   // Create a new pass manager attached to it.
   TheFPM = llvm::make_unique<legacy::FunctionPassManager>(TheModule.get());
 
+  // Promot allocas to registers.
+  TheFPM->add(createPromoteMemoryToRegisterPass());
   // Do simple "peephole" optimizations and bit-twiddling optzns.
   TheFPM->add(createInstructionCombiningPass());
   // Reassociate expressions.

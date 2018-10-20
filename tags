@@ -835,6 +835,7 @@ Callee	parser.cc	/^        std::string Callee;$/;"	m	class:__anon1::CallExprAST	
 CompileLayer	KaleidoscopeJIT.h	/^  CompileLayerT CompileLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 CompileLayer	include/KaleidoscopeJIT.h	/^  CompileLayerT CompileLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 Cond	parser.cc	/^        std::unique_ptr<ExprAST> Cond, Then, Else;$/;"	m	class:__anon1::IfExprAST	file:
+CreateEntryBlockAlloca	parser.cc	/^static AllocaInst *CreateEntryBlockAlloca(Function *TheFunction, const std::string &VarName) {$/;"	f	file:
 CurTok	parser.cc	/^static int CurTok;$/;"	v	file:
 DEC	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	472;"	d	file:
 DEC	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	457;"	d	file:
@@ -844,8 +845,8 @@ DEC	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	472;"	d	file:
 DEC	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	457;"	d	file:
 DL	KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 DL	include/KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
-DLLEXPORT	parser.cc	755;"	d	file:
-DLLEXPORT	parser.cc	757;"	d	file:
+DLLEXPORT	parser.cc	747;"	d	file:
+DLLEXPORT	parser.cc	749;"	d	file:
 EQUALS	Makefile	/^EQUALS = =$/;"	m
 EQUALS	Release/Makefile	/^EQUALS = =$/;"	m
 ES	KaleidoscopeJIT.h	/^  ExecutionSession ES;$/;"	m	class:llvm::orc::KaleidoscopeJIT
@@ -889,8 +890,11 @@ LHS	parser.cc	/^        std::unique_ptr<ExprAST> LHS, RHS;$/;"	m	class:__anon1::
 LLVM_EXECUTIONENGINE_ORC_KALEIDOSCOPEJIT_H	KaleidoscopeJIT.h	15;"	d
 LLVM_EXECUTIONENGINE_ORC_KALEIDOSCOPEJIT_H	include/KaleidoscopeJIT.h	15;"	d
 LOGGER_H	logger/logger.h	2;"	d
+LogError	logger/logger.cc	/^std::unique_ptr<ExprAST> LogError(const char* Str) {$/;"	f
 LogError	parser.cc	/^std::unique_ptr<ExprAST> LogError(const char *Str) {$/;"	f
+LogErrorP	logger/logger.cc	/^std::unique_ptr<PrototypeAST> LogErrorP(const char* Str) {$/;"	f
 LogErrorP	parser.cc	/^std::unique_ptr<PrototypeAST> LogErrorP(const char *Str) {$/;"	f
+LogErrorV	logger/logger.cc	/^llvm::Value *LogErrorV(const char* Str) {$/;"	f
 LogErrorV	parser.cc	/^Value *LogErrorV(const char *Str) {$/;"	f
 MainLoop	main.cc	/^static void MainLoop() {$/;"	f	file:
 ModuleKeys	KaleidoscopeJIT.h	/^  std::vector<VModuleKey> ModuleKeys;$/;"	m	class:llvm::orc::KaleidoscopeJIT
@@ -899,7 +903,7 @@ Name	ast/PrototypeAST.h	/^    std::string Name;$/;"	m	class:PrototypeAST
 Name	ast/VariableExprAST.h	/^    std::string Name;$/;"	m	class:VariableExprAST
 Name	parser.cc	/^        std::string Name;$/;"	m	class:__anon1::PrototypeAST	file:
 Name	parser.cc	/^        std::string Name;$/;"	m	class:__anon1::VariableExprAST	file:
-NamedValues	parser.cc	/^static std::map<std::string, Value *> NamedValues;$/;"	v	file:
+NamedValues	parser.cc	/^static std::map<std::string, AllocaInst*> NamedValues;$/;"	v	file:
 NumVal	lexer.cc	/^static double NumVal;             \/\/ Filled in if tok_number$/;"	v	file:
 NumVal	lexer/lexer.cc	/^double NumVal;             \/\/ Filled in if tok_number$/;"	v
 NumberExprAST	ast/NumberExprAST.h	/^    NumberExprAST(double Val) : Val(Val) {}$/;"	f	class:NumberExprAST
@@ -1206,8 +1210,8 @@ UTILS_H	utils/utils.h	2;"	d
 Val	ast/NumberExprAST.h	/^    double Val;$/;"	m	class:NumberExprAST
 Val	parser.cc	/^        double Val;$/;"	m	class:__anon1::NumberExprAST	file:
 VarName	parser.cc	/^        std::string VarName;$/;"	m	class:__anon1::ForExprAST	file:
-VariableExprAST	ast/VariableExprAST.h	/^    VariableExprAST(const std::string &Name): Name(name) {}$/;"	f	class:VariableExprAST
-VariableExprAST	ast/VariableExprAST.h	/^class VariableExprAST : Public ExprAST {$/;"	c
+VariableExprAST	ast/VariableExprAST.h	/^    VariableExprAST(const std::string &Name): Name(Name) {}$/;"	f	class:VariableExprAST
+VariableExprAST	ast/VariableExprAST.h	/^class VariableExprAST : public ExprAST {$/;"	c
 VariableExprAST	parser.cc	/^        VariableExprAST(const std::string &Name) : Name(Name) {}$/;"	f	class:__anon1::VariableExprAST
 VariableExprAST	parser.cc	/^    class VariableExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
 __BINARY_EXPR_AST_H__	ast/BinaryExprAST.h	2;"	d
@@ -1225,6 +1229,7 @@ codegen	ast/CallExprAST.cc	/^Value *CallExprAST::codegen() {$/;"	f	class:CallExp
 codegen	ast/FunctionAST.cc	/^llvm::Function *FunctionAST::codegen() {$/;"	f	class:FunctionAST
 codegen	ast/NumberExprAST.cc	/^llvm::Value *NumberExprAST::codegen() {$/;"	f	class:NumberExprAST
 codegen	ast/PrototypeAST.cc	/^Function *PrototypeAST::codegen() {$/;"	f	class:PrototypeAST
+codegen	ast/VariableExprAST.cc	/^Value *VariableExprAST::codegen() {$/;"	f	class:VariableExprAST
 codegen	parser.cc	/^Function *FunctionAST::codegen() {$/;"	f	class:FunctionAST
 codegen	parser.cc	/^Function *PrototypeAST::codegen() {$/;"	f	class:PrototypeAST
 codegen	parser.cc	/^Value *BinaryExprAST::codegen() {$/;"	f	class:BinaryExprAST
@@ -1244,7 +1249,6 @@ findMangledSymbol	KaleidoscopeJIT.h	/^  JITSymbol findMangledSymbol(const std::s
 findMangledSymbol	include/KaleidoscopeJIT.h	/^  JITSymbol findMangledSymbol(const std::string &Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 findSymbol	KaleidoscopeJIT.h	/^  JITSymbol findSymbol(const std::string Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 findSymbol	include/KaleidoscopeJIT.h	/^  JITSymbol findSymbol(const std::string Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
-getFunction	ast/FunctionAST.h	/^Function *getFunction(std::string Name) {$/;"	f
 getFunction	parser.cc	/^Function *getFunction(std::string Name) {$/;"	f
 getFunction	utils/functions.h	/^Function *getFunction(std::string Name) {$/;"	f
 getName	ast/PrototypeAST.h	/^    const std::string &getName() const { return Name; }$/;"	f	class:PrototypeAST
