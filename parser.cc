@@ -68,6 +68,9 @@ namespace {
         VariableExprAST(const std::string &Name) : Name(Name) {}
 
         Value *codegen() override;
+        std::string getName() {
+            return Name;
+        }
     };
 
     /// BinaryExprAST - Expression class for a binary operator.
@@ -502,6 +505,22 @@ Value *VariableExprAST::codegen() {
 }
 
 Value *BinaryExprAST::codegen() {
+    // If the operator is '=', then we don't want to emit the LHS as an expression
+    if (Op == '=') {
+        VariableExprAST *LHSE = dynamic_cast<VariableExprAST*>(LHS.get());
+        if (!LHSE) return LogErrorV("destination of '=' must be a variable");
+
+        Value *Val = RHS->codegen();
+        if (!Val) return nullptr;
+
+        Value *Variable = NamedValues[LHSE->getName()];
+        if (!Variable) return LogErrorV("Unknown variable name");
+        
+        Builder.CreateStore(Val, Variable);
+        return Val;
+    }
+
+    
     Value *L = LHS->codegen();
     Value *R = RHS->codegen();
     if (!L || !R)
