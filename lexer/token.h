@@ -1,7 +1,9 @@
 #ifndef __TOKEN_H__
 #define __TOKEN_H__
 
-enum Token {
+#include<string>
+
+enum class TokenType {
     tok_eof = -1,
 
     // commands
@@ -24,6 +26,24 @@ enum Token {
     // loop controls
     tok_for = -11,
     tok_in = -12,
+
+    tok_type_name = -13,
+};
+
+struct Token {
+    TokenType type;
+
+    bool is_float;
+
+    union {
+        float float_value;
+        int int_value;
+    };
+
+    std::string str_content;
+    char *filename;
+    int line_number;
+    int column_number;
 };
 
 #endif

@@ -1,90 +1,72 @@
-#include "lexer/lexer.h"
-#include "lexer/token.h"
+#include<vector>
+#include<iostream>
 
-std::string IdentifierStr; // Filled in if tok_identifier
-double NumVal;             // Filled in if tok_number
+#include  "lexer/lexer.h"
 
-static bool iscmp(int c) {
-    return c == '<' || c == '>';
+
+namespace lexer {   
+
+    Token& make_token(
+        std::vector<Token>& tokens, const char *filename, TokenType tok_type, int line, int col
+    ) {
+        tokens.emplace_back();
+        Token &tok = tokens.back();
+        tok.type = tok_type;
+        tok.filename = (char *) filename;
+        tok.line_number = line;
+        tok.column_number = col;
+        return tok;
+    }
+
+    int tokenize_stream(std::istream& file, const char*fname, std::vector<Token>& tokens) {
+        std::string line;
+        int line_number = 0;
+
+        while (std::getline(file, line)) {
+            line_number++; 
+            int i = 0;
+            bool in_line_comment = false;
+
+            while (i < line.size()) {
+                char ch = line[i];
+                if (std::isspace(ch)) {
+                    i++;
+                    continue;
+                }
+
+                // comment
+                if (ch == '/' && line[i + 1] == '/') {
+                    i += 2;
+                    in_line_comment = true;
+                    continue;
+                }
+
+                if (in_line_comment) {
+                    i++; //ignore comments
+                }
+
+
+                // identifier or keyword
+                if ((!std::ispunct(ch) && !std::isdigit(ch)) ||  ch == '_') {
+                    Token& tok = make_token(tokens, fname, TokenType::tok_type_name, line_number, i + 1);
+                    int name_start_index = i;
+
+                    while(true) {
+                        i++;
+                        if (i >= line.size()) break;
+
+                        char name_ch = line[i];
+                        if (std::isspace(name_ch)) break;
+                        if (name_ch == '_' || !std::ispunct(name_ch)) continue;
+                        break;
+                    }
+                    int name_len = i - name_start_index;
+                    tok.str_content = line.substr(name_start_index, name_len);
+                }
+            }
+
+            // TODO: numbers
+
+        }
+    }
 }
-
-/// gettok - Return the next token from standard input.
-int gettok() {
-    static int LastChar = ' ';
-
-    // Skip any whitespace.
-    while (isspace(LastChar)) {
-        LastChar = getchar();
-    }
-
-    // Test for <= or >=
-    if (iscmp(LastChar)) {
-        IdentifierStr = LastChar;
-        LastChar = getchar();
-        if (LastChar == '=')
-            IdentifierStr += LastChar;
-            LastChar = getchar();
-
-        if (IdentifierStr == ">=")
-            return tok_greatequal;
-        if (IdentifierStr == "<=")
-            return tok_lessequal;
-        if (IdentifierStr ==  "<")
-            return '<';
-        if (IdentifierStr ==  ">")
-            return '>';
-    }
-
-    if (isalpha(LastChar)) { // identifier: [a-zA-Z][a-zA-Z0-9]*
-        IdentifierStr = LastChar;
-        while (isalnum((LastChar = getchar())))
-            IdentifierStr += LastChar;
-
-        if (IdentifierStr == "def")
-            return tok_def;
-        if (IdentifierStr == "extern")
-            return tok_extern;
-        if (IdentifierStr == "if")
-            return tok_if;
-        if (IdentifierStr == "then")
-            return tok_then;
-        if (IdentifierStr == "else")
-            return tok_else;
-        if (IdentifierStr == "for")
-            return tok_for;
-        if (IdentifierStr == "in")
-            return tok_in;
-        return tok_identifier;
-    }
-
-    if (isdigit(LastChar) || LastChar == '.') { // Number: [0-9.]+
-        std::string NumStr;
-        do {
-            NumStr += LastChar;
-            LastChar = getchar();
-        } while (isdigit(LastChar) || LastChar == '.');
-
-        NumVal = strtod(NumStr.c_str(), nullptr);
-        return tok_number;
-    }
-
-    if (LastChar == '#') {
-        // Comment until end of line.
-        do
-            LastChar = getchar();
-        while (LastChar != EOF && LastChar != '\n' && LastChar != '\r');
-
-        if (LastChar != EOF)
-            return gettok();
-    }
-
-    // Check for end of file.  Don't eat the EOF.
-    if (LastChar == EOF)
-        return tok_eof;
-
-    // Otherwise, just return the character as its ascii value.
-    int ThisChar = LastChar;
-    LastChar = getchar();
-    return ThisChar;
-}
-
