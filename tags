@@ -100,22 +100,37 @@ ARCHITECTURE_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	4
 ARCHITECTURE_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	453;"	d	file:
 Args	ast/CallExprAST.h	/^    std::vector<std::unique_ptr<ExprAST>> Args;$/;"	m	class:CallExprAST
 Args	ast/PrototypeAST.h	/^    std::vector<std::string> Args;$/;"	m	class:PrototypeAST
-Args	parser.cc	/^        std::vector<std::string> Args;$/;"	m	class:__anon1::PrototypeAST	file:
-Args	parser.cc	/^        std::vector<std::unique_ptr<ExprAST>> Args;$/;"	m	class:__anon1::CallExprAST	file:
 BinaryExprAST	ast/BinaryExprAST.h	/^        BinaryExprAST(char op, std::unique_ptr<ExprAST> LHS, std::unique_ptr<ExprAST> RHS) :$/;"	f	class:BinaryExprAST
 BinaryExprAST	ast/BinaryExprAST.h	/^class BinaryExprAST : public ExprAST {$/;"	c
-BinaryExprAST	parser.cc	/^        BinaryExprAST(int Op, std::unique_ptr<ExprAST> LHS,$/;"	f	class:__anon1::BinaryExprAST
-BinaryExprAST	parser.cc	/^    class BinaryExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
-BinopPrecedence	parser.cc	/^static std::map<char, int> BinopPrecedence;$/;"	v	file:
+BinopPrecedence	parser/parser.cc	/^std::map<char, int> BinopPrecedence;$/;"	v
 Body	ast/FunctionAST.h	/^    std::unique_ptr<ExprAST> Body;$/;"	m	class:FunctionAST
-Body	parser.cc	/^        std::unique_ptr<ExprAST> Body;$/;"	m	class:__anon1::FunctionAST	file:
-Body	parser.cc	/^        std::unique_ptr<ExprAST> Start, End, Step, Body;$/;"	m	class:__anon1::ForExprAST	file:
 CMAKE_BINARY_DIR	Makefile	/^CMAKE_BINARY_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
 CMAKE_BINARY_DIR	Release/Makefile	/^CMAKE_BINARY_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation\/Release$/;"	m
+CMAKE_BINARY_DIR	ast/Makefile	/^CMAKE_BINARY_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_BINARY_DIR	include/Makefile	/^CMAKE_BINARY_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_BINARY_DIR	kaleidoscope/Makefile	/^CMAKE_BINARY_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_BINARY_DIR	lexer/Makefile	/^CMAKE_BINARY_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_BINARY_DIR	logger/Makefile	/^CMAKE_BINARY_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_BINARY_DIR	parser/Makefile	/^CMAKE_BINARY_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_BINARY_DIR	utils/Makefile	/^CMAKE_BINARY_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
 CMAKE_COMMAND	Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
 CMAKE_COMMAND	Release/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	ast/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	include/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	kaleidoscope/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	lexer/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	logger/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	parser/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	utils/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
 CMAKE_SOURCE_DIR	Makefile	/^CMAKE_SOURCE_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
 CMAKE_SOURCE_DIR	Release/Makefile	/^CMAKE_SOURCE_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_SOURCE_DIR	ast/Makefile	/^CMAKE_SOURCE_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_SOURCE_DIR	include/Makefile	/^CMAKE_SOURCE_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_SOURCE_DIR	kaleidoscope/Makefile	/^CMAKE_SOURCE_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_SOURCE_DIR	lexer/Makefile	/^CMAKE_SOURCE_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_SOURCE_DIR	logger/Makefile	/^CMAKE_SOURCE_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_SOURCE_DIR	parser/Makefile	/^CMAKE_SOURCE_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
+CMAKE_SOURCE_DIR	utils/Makefile	/^CMAKE_SOURCE_DIR = \/home\/jeremy\/Documents\/repositories\/LLVM-Basic-Code-Generation$/;"	m
 COMPILER_ID	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	101;"	d	file:
 COMPILER_ID	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	108;"	d	file:
 COMPILER_ID	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	115;"	d	file:
@@ -827,16 +842,11 @@ C_DIALECT	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	555;"	d	file:
 C_DIALECT	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	557;"	d	file:
 C_DIALECT	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	559;"	d	file:
 CallExprAST	ast/CallExprAST.h	/^    CallExprAST(const std::string &Callee, std::vector<std::unique_ptr<ExprAST>> Args):$/;"	f	class:CallExprAST
-CallExprAST	ast/CallExprAST.h	/^class CallExprAST : public ExprAst {$/;"	c
-CallExprAST	parser.cc	/^        CallExprAST(const std::string &Callee,$/;"	f	class:__anon1::CallExprAST
-CallExprAST	parser.cc	/^    class CallExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
+CallExprAST	ast/CallExprAST.h	/^class CallExprAST : public ExprAST {$/;"	c
 Callee	ast/CallExprAST.h	/^    std::string Callee;$/;"	m	class:CallExprAST
-Callee	parser.cc	/^        std::string Callee;$/;"	m	class:__anon1::CallExprAST	file:
 CompileLayer	KaleidoscopeJIT.h	/^  CompileLayerT CompileLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 CompileLayer	include/KaleidoscopeJIT.h	/^  CompileLayerT CompileLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
-Cond	parser.cc	/^        std::unique_ptr<ExprAST> Cond, Then, Else;$/;"	m	class:__anon1::IfExprAST	file:
-CreateEntryBlockAlloca	parser.cc	/^static AllocaInst *CreateEntryBlockAlloca(Function *TheFunction, const std::string &VarName) {$/;"	f	file:
-CurTok	parser.cc	/^static int CurTok;$/;"	v	file:
+CurTok	lexer/lexer.cc	/^int CurTok;$/;"	v
 DEC	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	472;"	d	file:
 DEC	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	457;"	d	file:
 DEC	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	453;"	d	file:
@@ -845,25 +855,25 @@ DEC	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	472;"	d	file:
 DEC	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	457;"	d	file:
 DL	KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 DL	include/KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
-DLLEXPORT	parser.cc	747;"	d	file:
-DLLEXPORT	parser.cc	749;"	d	file:
 EQUALS	Makefile	/^EQUALS = =$/;"	m
 EQUALS	Release/Makefile	/^EQUALS = =$/;"	m
+EQUALS	ast/Makefile	/^EQUALS = =$/;"	m
+EQUALS	include/Makefile	/^EQUALS = =$/;"	m
+EQUALS	kaleidoscope/Makefile	/^EQUALS = =$/;"	m
+EQUALS	lexer/Makefile	/^EQUALS = =$/;"	m
+EQUALS	logger/Makefile	/^EQUALS = =$/;"	m
+EQUALS	parser/Makefile	/^EQUALS = =$/;"	m
+EQUALS	utils/Makefile	/^EQUALS = =$/;"	m
 ES	KaleidoscopeJIT.h	/^  ExecutionSession ES;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 ES	include/KaleidoscopeJIT.h	/^  ExecutionSession ES;$/;"	m	class:llvm::orc::KaleidoscopeJIT
-Else	parser.cc	/^        std::unique_ptr<ExprAST> Cond, Then, Else;$/;"	m	class:__anon1::IfExprAST	file:
-End	parser.cc	/^        std::unique_ptr<ExprAST> Start, End, Step, Body;$/;"	m	class:__anon1::ForExprAST	file:
+EXPR_AST_H	ast/ExprAST.h	2;"	d
 ExprAST	ast/ExprAST.h	/^class ExprAST {$/;"	c
-ExprAST	parser.cc	/^    class ExprAST {$/;"	c	namespace:__anon1	file:
+FUNCTIONS_H	utils/functions.h	2;"	d
 FUNCTION_AST_H	ast/FunctionAST.h	2;"	d
-ForExprAST	parser.cc	/^        ForExprAST(const std::string &VarName, std::unique_ptr<ExprAST> Start,$/;"	f	class:__anon1::ForExprAST
-ForExprAST	parser.cc	/^    class ForExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
 FunctionAST	ast/FunctionAST.h	/^    FunctionAST(std::unique_ptr<PrototypeAST> Proto,$/;"	f	class:FunctionAST
 FunctionAST	ast/FunctionAST.h	/^class FunctionAST {$/;"	c
-FunctionAST	parser.cc	/^        FunctionAST(std::unique_ptr<PrototypeAST> Proto,$/;"	f	class:__anon1::FunctionAST
-FunctionAST	parser.cc	/^    class FunctionAST {$/;"	c	namespace:__anon1	file:
-FunctionProtos	parser.cc	/^static std::map<std::string, std::unique_ptr<PrototypeAST>> FunctionProtos;$/;"	v	file:
-GetTokPrecedence	parser.cc	/^static int GetTokPrecedence() {$/;"	f	file:
+FunctionProtos	utils/functions.cc	/^std::map<std::string, std::unique_ptr<PrototypeAST>> FunctionProtos;$/;"	v
+GetTokPrecedence	parser/parser.cc	/^static int GetTokPrecedence() {$/;"	f	file:
 HEX	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	483;"	d	file:
 HEX	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	468;"	d	file:
 HEX	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	464;"	d	file:
@@ -876,44 +886,32 @@ HandleTopLevelExpression	main.cc	/^static void HandleTopLevelExpression() {$/;"	
 ID_VOID_MAIN	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
 ID_VOID_MAIN	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
 ID_VOID_MAIN	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	6;"	d	file:
-IdentifierStr	lexer.cc	/^static std::string IdentifierStr; \/\/ Filled in if tok_identifier$/;"	v	file:
 IdentifierStr	lexer/lexer.cc	/^std::string IdentifierStr; \/\/ Filled in if tok_identifier$/;"	v
-IfExprAST	parser.cc	/^        IfExprAST(std::unique_ptr<ExprAST> Cond, std::unique_ptr<ExprAST> Then,$/;"	f	class:__anon1::IfExprAST
-IfExprAST	parser.cc	/^    class IfExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
-InitializeModuleAndPassManager	main.cc	/^static void InitializeModuleAndPassManager() {$/;"	f	file:
+KALEIDOSCOPE_H	kaleidoscope/kaleidoscope.h	2;"	d
 KaleidoscopeJIT	KaleidoscopeJIT.h	/^  KaleidoscopeJIT()$/;"	f	class:llvm::orc::KaleidoscopeJIT
 KaleidoscopeJIT	KaleidoscopeJIT.h	/^class KaleidoscopeJIT {$/;"	c	namespace:llvm::orc
 KaleidoscopeJIT	include/KaleidoscopeJIT.h	/^  KaleidoscopeJIT()$/;"	f	class:llvm::orc::KaleidoscopeJIT
 KaleidoscopeJIT	include/KaleidoscopeJIT.h	/^class KaleidoscopeJIT {$/;"	c	namespace:llvm::orc
 LHS	ast/BinaryExprAST.h	/^    std::unique_ptr<ExprAST> LHS, RHS;$/;"	m	class:BinaryExprAST
-LHS	parser.cc	/^        std::unique_ptr<ExprAST> LHS, RHS;$/;"	m	class:__anon1::BinaryExprAST	file:
 LLVM_EXECUTIONENGINE_ORC_KALEIDOSCOPEJIT_H	KaleidoscopeJIT.h	15;"	d
 LLVM_EXECUTIONENGINE_ORC_KALEIDOSCOPEJIT_H	include/KaleidoscopeJIT.h	15;"	d
 LOGGER_H	logger/logger.h	2;"	d
 LogError	logger/logger.cc	/^std::unique_ptr<ExprAST> LogError(const char* Str) {$/;"	f
-LogError	parser.cc	/^std::unique_ptr<ExprAST> LogError(const char *Str) {$/;"	f
 LogErrorP	logger/logger.cc	/^std::unique_ptr<PrototypeAST> LogErrorP(const char* Str) {$/;"	f
-LogErrorP	parser.cc	/^std::unique_ptr<PrototypeAST> LogErrorP(const char *Str) {$/;"	f
 LogErrorV	logger/logger.cc	/^llvm::Value *LogErrorV(const char* Str) {$/;"	f
-LogErrorV	parser.cc	/^Value *LogErrorV(const char *Str) {$/;"	f
 MainLoop	main.cc	/^static void MainLoop() {$/;"	f	file:
 ModuleKeys	KaleidoscopeJIT.h	/^  std::vector<VModuleKey> ModuleKeys;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 ModuleKeys	include/KaleidoscopeJIT.h	/^  std::vector<VModuleKey> ModuleKeys;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 Name	ast/PrototypeAST.h	/^    std::string Name;$/;"	m	class:PrototypeAST
 Name	ast/VariableExprAST.h	/^    std::string Name;$/;"	m	class:VariableExprAST
-Name	parser.cc	/^        std::string Name;$/;"	m	class:__anon1::PrototypeAST	file:
-Name	parser.cc	/^        std::string Name;$/;"	m	class:__anon1::VariableExprAST	file:
-NamedValues	parser.cc	/^static std::map<std::string, AllocaInst*> NamedValues;$/;"	v	file:
-NumVal	lexer.cc	/^static double NumVal;             \/\/ Filled in if tok_number$/;"	v	file:
+NamedValues	kaleidoscope/kaleidoscope.cc	/^std::map<std::string, llvm::Value *> NamedValues;$/;"	v
 NumVal	lexer/lexer.cc	/^double NumVal;             \/\/ Filled in if tok_number$/;"	v
 NumberExprAST	ast/NumberExprAST.h	/^    NumberExprAST(double Val) : Val(Val) {}$/;"	f	class:NumberExprAST
 NumberExprAST	ast/NumberExprAST.h	/^class NumberExprAST : public ExprAST {$/;"	c
-NumberExprAST	parser.cc	/^        NumberExprAST(double Val) : Val(Val) {}$/;"	f	class:__anon1::NumberExprAST
-NumberExprAST	parser.cc	/^    class NumberExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
 ObjectLayer	KaleidoscopeJIT.h	/^  ObjLayerT ObjectLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 ObjectLayer	include/KaleidoscopeJIT.h	/^  ObjLayerT ObjectLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 Op	ast/BinaryExprAST.h	/^    char Op;$/;"	m	class:BinaryExprAST
-Op	parser.cc	/^        int Op;$/;"	m	class:__anon1::BinaryExprAST	file:
+PARSER_H	parser/parser.h	2;"	d
 PLATFORM_ID	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	313;"	d	file:
 PLATFORM_ID	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	316;"	d	file:
 PLATFORM_ID	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	319;"	d	file:
@@ -1101,32 +1099,40 @@ PLATFORM_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	383;"
 PLATFORM_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	386;"	d	file:
 PLATFORM_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	390;"	d	file:
 PROTOTYPE_AST_H	ast/PrototypeAST.h	2;"	d
-ParseBinOpRHS	parser.cc	/^static std::unique_ptr<ExprAST> ParseBinOpRHS(int ExprPrec,$/;"	f	file:
-ParseDefinition	parser.cc	/^static std::unique_ptr<FunctionAST> ParseDefinition() {$/;"	f	file:
-ParseExpression	parser.cc	/^static std::unique_ptr<ExprAST> ParseExpression() {$/;"	f	file:
-ParseExtern	parser.cc	/^static std::unique_ptr<PrototypeAST> ParseExtern() {$/;"	f	file:
-ParseForExpr	parser.cc	/^static std::unique_ptr<ExprAST> ParseForExpr() {$/;"	f	file:
-ParseIdentifierExpr	parser.cc	/^static std::unique_ptr<ExprAST> ParseIdentifierExpr() {$/;"	f	file:
-ParseIfExpr	parser.cc	/^static std::unique_ptr<ExprAST> ParseIfExpr() {$/;"	f	file:
-ParseNumberExpr	parser.cc	/^static std::unique_ptr<ExprAST> ParseNumberExpr() {$/;"	f	file:
-ParseParenExpr	parser.cc	/^static std::unique_ptr<ExprAST> ParseParenExpr() {$/;"	f	file:
-ParsePrimary	parser.cc	/^static std::unique_ptr<ExprAST> ParsePrimary() {$/;"	f	file:
-ParsePrototype	parser.cc	/^static std::unique_ptr<PrototypeAST> ParsePrototype() {$/;"	f	file:
-ParseTopLevelExpr	parser.cc	/^static std::unique_ptr<FunctionAST> ParseTopLevelExpr() {$/;"	f	file:
+ParseBinOpRHS	parser/parser.cc	/^std::unique_ptr<ExprAST> ParseBinOpRHS(int ExprPrec, std::unique_ptr<ExprAST> LHS) {$/;"	f
+ParseDefintion	parser/parser.cc	/^std::unique_ptr<FunctionAST> ParseDefintion() {$/;"	f
+ParseExpression	parser/parser.cc	/^std::unique_ptr<ExprAST> ParseExpression() {$/;"	f
+ParseExtern	parser/parser.cc	/^std::unique_ptr<PrototypeAST> ParseExtern() {$/;"	f
+ParseIdentifierExpr	parser/parser.cc	/^std::unique_ptr<ExprAST> ParseIdentifierExpr() {$/;"	f
+ParseNumberExpr	parser/parser.cc	/^std::unique_ptr<ExprAST> ParseNumberExpr() {$/;"	f
+ParseParenExpr	parser/parser.cc	/^std::unique_ptr<ExprAST> ParseParenExpr() {$/;"	f
+ParsePrimary	parser/parser.cc	/^std::unique_ptr<ExprAST> ParsePrimary() {$/;"	f
+ParsePrototype	parser/parser.cc	/^std::unique_ptr<PrototypeAST> ParsePrototype() {$/;"	f
+ParseTopLevelExpr	parser/parser.cc	/^std::unique_ptr<FunctionAST> ParseTopLevelExpr() {$/;"	f
 Proto	ast/FunctionAST.h	/^    std::unique_ptr<PrototypeAST> Proto;$/;"	m	class:FunctionAST
-Proto	parser.cc	/^        std::unique_ptr<PrototypeAST> Proto;$/;"	m	class:__anon1::FunctionAST	file:
 PrototypeAST	ast/PrototypeAST.h	/^    PrototypeAST(const std::string &Name, std::vector<std::string> Args)$/;"	f	class:PrototypeAST
 PrototypeAST	ast/PrototypeAST.h	/^class PrototypeAST {$/;"	c
-PrototypeAST	parser.cc	/^        PrototypeAST(const std::string &Name, std::vector<std::string> Args)$/;"	f	class:__anon1::PrototypeAST
-PrototypeAST	parser.cc	/^    class PrototypeAST {$/;"	c	namespace:__anon1	file:
 RHS	ast/BinaryExprAST.h	/^    std::unique_ptr<ExprAST> LHS, RHS;$/;"	m	class:BinaryExprAST
-RHS	parser.cc	/^        std::unique_ptr<ExprAST> LHS, RHS;$/;"	m	class:__anon1::BinaryExprAST	file:
 RM	Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 RM	Release/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	ast/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	include/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	kaleidoscope/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	lexer/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	logger/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	parser/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	utils/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 Resolver	KaleidoscopeJIT.h	/^  std::shared_ptr<SymbolResolver> Resolver;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 Resolver	include/KaleidoscopeJIT.h	/^  std::shared_ptr<SymbolResolver> Resolver;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m
 SHELL	Release/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	ast/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	include/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	kaleidoscope/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	lexer/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	logger/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	parser/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	utils/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SIMULATE_ID	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	163;"	d	file:
 SIMULATE_ID	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	178;"	d	file:
 SIMULATE_ID	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	21;"	d	file:
@@ -1195,31 +1201,27 @@ STRINGIFY_HELPER	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	308;"	
 STRINGIFY_HELPER	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	293;"	d	file:
 SUFFIXES	Makefile	/^SUFFIXES =$/;"	m
 SUFFIXES	Release/Makefile	/^SUFFIXES =$/;"	m
-Start	parser.cc	/^        std::unique_ptr<ExprAST> Start, End, Step, Body;$/;"	m	class:__anon1::ForExprAST	file:
-Step	parser.cc	/^        std::unique_ptr<ExprAST> Start, End, Step, Body;$/;"	m	class:__anon1::ForExprAST	file:
+SUFFIXES	ast/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	include/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	kaleidoscope/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	lexer/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	logger/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	parser/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	utils/Makefile	/^SUFFIXES =$/;"	m
 TM	KaleidoscopeJIT.h	/^  std::unique_ptr<TargetMachine> TM;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 TM	include/KaleidoscopeJIT.h	/^  std::unique_ptr<TargetMachine> TM;$/;"	m	class:llvm::orc::KaleidoscopeJIT
-TheContext	parser.cc	/^static LLVMContext TheContext;$/;"	v	file:
-TheFPM	parser.cc	/^static std::unique_ptr<legacy::FunctionPassManager> TheFPM;$/;"	v	file:
-TheJIT	parser.cc	/^static std::unique_ptr<KaleidoscopeJIT> TheJIT;$/;"	v	file:
-TheModule	parser.cc	/^static std::unique_ptr<Module> TheModule;$/;"	v	file:
-Then	parser.cc	/^        std::unique_ptr<ExprAST> Cond, Then, Else;$/;"	m	class:__anon1::IfExprAST	file:
-Token	lexer.cc	/^enum Token {$/;"	g	file:
+TheContext	kaleidoscope/kaleidoscope.cc	/^llvm::LLVMContext TheContext;$/;"	v
+TheFPM	utils/functions.cc	/^std::unique_ptr<legacy::FunctionPassManager> TheFPM;$/;"	v
+TheModule	kaleidoscope/kaleidoscope.cc	/^std::unique_ptr<llvm::Module> TheModule;$/;"	v
 Token	lexer/token.h	/^enum Token {$/;"	g
 UTILS_H	utils/utils.h	2;"	d
 Val	ast/NumberExprAST.h	/^    double Val;$/;"	m	class:NumberExprAST
-Val	parser.cc	/^        double Val;$/;"	m	class:__anon1::NumberExprAST	file:
-VarName	parser.cc	/^        std::string VarName;$/;"	m	class:__anon1::ForExprAST	file:
 VariableExprAST	ast/VariableExprAST.h	/^    VariableExprAST(const std::string &Name): Name(Name) {}$/;"	f	class:VariableExprAST
 VariableExprAST	ast/VariableExprAST.h	/^class VariableExprAST : public ExprAST {$/;"	c
-VariableExprAST	parser.cc	/^        VariableExprAST(const std::string &Name) : Name(Name) {}$/;"	f	class:__anon1::VariableExprAST
-VariableExprAST	parser.cc	/^    class VariableExprAST : public ExprAST {$/;"	c	namespace:__anon1	file:
 __BINARY_EXPR_AST_H__	ast/BinaryExprAST.h	2;"	d
 __CALL_EXPR_AST_H__	ast/CallExprAST.h	2;"	d
-__EXPR_AST_H__	ast/ExprAST.h	2;"	d
 __LEXER_H__	lexer/lexer.h	2;"	d
 __NUMBER_EXPR_AST_H__	ast/NumberExprAST.h	2;"	d
-__PARSER_H__	parser/parser.h	2;"	d
 __TOKEN_H__	lexer/token.h	2;"	d
 __VARIABLE_EXPR_AST_H__	ast/VariableExprAST.h	2;"	d
 addModule	KaleidoscopeJIT.h	/^  VModuleKey addModule(std::unique_ptr<Module> M) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
@@ -1230,14 +1232,6 @@ codegen	ast/FunctionAST.cc	/^llvm::Function *FunctionAST::codegen() {$/;"	f	clas
 codegen	ast/NumberExprAST.cc	/^llvm::Value *NumberExprAST::codegen() {$/;"	f	class:NumberExprAST
 codegen	ast/PrototypeAST.cc	/^Function *PrototypeAST::codegen() {$/;"	f	class:PrototypeAST
 codegen	ast/VariableExprAST.cc	/^Value *VariableExprAST::codegen() {$/;"	f	class:VariableExprAST
-codegen	parser.cc	/^Function *FunctionAST::codegen() {$/;"	f	class:FunctionAST
-codegen	parser.cc	/^Function *PrototypeAST::codegen() {$/;"	f	class:PrototypeAST
-codegen	parser.cc	/^Value *BinaryExprAST::codegen() {$/;"	f	class:BinaryExprAST
-codegen	parser.cc	/^Value *CallExprAST::codegen() {$/;"	f	class:CallExprAST
-codegen	parser.cc	/^Value *ForExprAST::codegen() {$/;"	f	class:ForExprAST
-codegen	parser.cc	/^Value *IfExprAST::codegen() {$/;"	f	class:IfExprAST
-codegen	parser.cc	/^Value *NumberExprAST::codegen() {$/;"	f	class:NumberExprAST
-codegen	parser.cc	/^Value *VariableExprAST::codegen() {$/;"	f	class:VariableExprAST
 const	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
 const	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
 const	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
@@ -1249,14 +1243,10 @@ findMangledSymbol	KaleidoscopeJIT.h	/^  JITSymbol findMangledSymbol(const std::s
 findMangledSymbol	include/KaleidoscopeJIT.h	/^  JITSymbol findMangledSymbol(const std::string &Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 findSymbol	KaleidoscopeJIT.h	/^  JITSymbol findSymbol(const std::string Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 findSymbol	include/KaleidoscopeJIT.h	/^  JITSymbol findSymbol(const std::string Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
-getFunction	parser.cc	/^Function *getFunction(std::string Name) {$/;"	f
-getFunction	utils/functions.h	/^Function *getFunction(std::string Name) {$/;"	f
+getFunction	utils/functions.cc	/^Function *getFunction(std::string Name) {$/;"	f
 getName	ast/PrototypeAST.h	/^    const std::string &getName() const { return Name; }$/;"	f	class:PrototypeAST
-getName	parser.cc	/^        const std::string &getName() const { return Name; }$/;"	f	class:__anon1::PrototypeAST
-getNextToken	parser.cc	/^static int getNextToken() { return CurTok = gettok(); }$/;"	f	file:
 getTargetMachine	KaleidoscopeJIT.h	/^  TargetMachine &getTargetMachine() { return *TM; }$/;"	f	class:llvm::orc::KaleidoscopeJIT
 getTargetMachine	include/KaleidoscopeJIT.h	/^  TargetMachine &getTargetMachine() { return *TM; }$/;"	f	class:llvm::orc::KaleidoscopeJIT
-gettok	lexer.cc	/^static int gettok() {$/;"	f	file:
 gettok	lexer/lexer.cc	/^int gettok() {$/;"	f
 info_arch	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_arch	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
@@ -1310,7 +1300,6 @@ info_version_internal	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char co
 info_version_internal	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version_internal[] = {$/;"	v
 info_version_internal	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version_internal[] = {$/;"	v
 info_version_internal	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version_internal[] = {$/;"	v
-iscmp	lexer.cc	/^static bool iscmp(int c) {$/;"	f	file:
 iscmp	lexer/lexer.cc	/^static bool iscmp(int c) {$/;"	f	file:
 llvm	KaleidoscopeJIT.h	/^namespace llvm {$/;"	n
 llvm	include/KaleidoscopeJIT.h	/^namespace llvm {$/;"	n
@@ -1335,14 +1324,6 @@ orc	include/KaleidoscopeJIT.h	/^namespace orc {$/;"	n	namespace:llvm
 override	ast/BinaryExprAST.h	/^        llvm::Value *codegen() override;$/;"	m	class:BinaryExprAST
 override	ast/NumberExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:NumberExprAST
 override	ast/VariableExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:VariableExprAST
-override	parser.cc	/^        Value *codegen() override;$/;"	m	class:__anon1::BinaryExprAST	file:
-override	parser.cc	/^        Value *codegen() override;$/;"	m	class:__anon1::CallExprAST	file:
-override	parser.cc	/^        Value *codegen() override;$/;"	m	class:__anon1::ForExprAST	file:
-override	parser.cc	/^        Value *codegen() override;$/;"	m	class:__anon1::IfExprAST	file:
-override	parser.cc	/^        Value *codegen() override;$/;"	m	class:__anon1::NumberExprAST	file:
-override	parser.cc	/^        Value *codegen() override;$/;"	m	class:__anon1::VariableExprAST	file:
-printd	parser.cc	/^extern "C" DLLEXPORT double printd(double X) {$/;"	f
-putchard	parser.cc	/^extern "C" DLLEXPORT double putchard(double X) {$/;"	f
 qnxnto	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
@@ -1351,29 +1332,17 @@ qnxnto	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qn
 qnxnto	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 removeModule	KaleidoscopeJIT.h	/^  void removeModule(VModuleKey K) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 removeModule	include/KaleidoscopeJIT.h	/^  void removeModule(VModuleKey K) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
-tok_def	lexer.cc	/^    tok_def = -2,$/;"	e	enum:Token	file:
 tok_def	lexer/token.h	/^    tok_def = -2,$/;"	e	enum:Token
-tok_else	lexer.cc	/^    tok_else = -8,$/;"	e	enum:Token	file:
 tok_else	lexer/token.h	/^    tok_else = -8,$/;"	e	enum:Token
-tok_eof	lexer.cc	/^    tok_eof = -1,$/;"	e	enum:Token	file:
 tok_eof	lexer/token.h	/^    tok_eof = -1,$/;"	e	enum:Token
-tok_extern	lexer.cc	/^    tok_extern = -3,$/;"	e	enum:Token	file:
 tok_extern	lexer/token.h	/^    tok_extern = -3,$/;"	e	enum:Token
-tok_for	lexer.cc	/^    tok_for = -11,$/;"	e	enum:Token	file:
 tok_for	lexer/token.h	/^    tok_for = -11,$/;"	e	enum:Token
-tok_greatequal	lexer.cc	/^    tok_greatequal = -10,$/;"	e	enum:Token	file:
 tok_greatequal	lexer/token.h	/^    tok_greatequal = -10,$/;"	e	enum:Token
-tok_identifier	lexer.cc	/^    tok_identifier = -4,$/;"	e	enum:Token	file:
 tok_identifier	lexer/token.h	/^    tok_identifier = -4,$/;"	e	enum:Token
-tok_if	lexer.cc	/^    tok_if = -6,$/;"	e	enum:Token	file:
 tok_if	lexer/token.h	/^    tok_if = -6,$/;"	e	enum:Token
-tok_in	lexer.cc	/^    tok_in = -12,$/;"	e	enum:Token	file:
 tok_in	lexer/token.h	/^    tok_in = -12,$/;"	e	enum:Token
-tok_lessequal	lexer.cc	/^    tok_lessequal = -9,$/;"	e	enum:Token	file:
 tok_lessequal	lexer/token.h	/^    tok_lessequal = -9,$/;"	e	enum:Token
-tok_number	lexer.cc	/^    tok_number = -5,$/;"	e	enum:Token	file:
 tok_number	lexer/token.h	/^    tok_number = -5,$/;"	e	enum:Token
-tok_then	lexer.cc	/^    tok_then = -7,$/;"	e	enum:Token	file:
 tok_then	lexer/token.h	/^    tok_then = -7,$/;"	e	enum:Token
 volatile	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
 volatile	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:

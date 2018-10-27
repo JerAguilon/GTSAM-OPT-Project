@@ -1,5 +1,5 @@
-#ifndef __EXPR_AST_H__
-#define __EXPR_AST_H__
+#ifndef EXPR_AST_H
+#define EXPR_AST_H
 
 #include "llvm/IR/BasicBlock.h"
 

@@ -3,7 +3,7 @@
 
 #include "ast/ExprAST.h"
 
-class CallExprAST : public ExprAst {
+class CallExprAST : public ExprAST {
     std::string Callee;
     std::vector<std::unique_ptr<ExprAST>> Args;
 
