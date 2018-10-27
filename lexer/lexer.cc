@@ -1,6 +1,7 @@
 #include "lexer/lexer.h"
 #include "lexer/token.h"
 
+int CurTok;
 std::string IdentifierStr; // Filled in if tok_identifier
 double NumVal;             // Filled in if tok_number
 
@@ -88,3 +89,6 @@ int gettok() {
     return ThisChar;
 }
 
+int getNextToken() {
+    return CurTok = gettok();
+}

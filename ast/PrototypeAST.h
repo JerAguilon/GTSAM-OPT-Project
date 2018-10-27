@@ -2,7 +2,6 @@
 #define PROTOTYPE_AST_H
 
 #include "llvm/IR/IRBuilder.h"
-#include "utils/utils.h"
 
 using namespace llvm;
 

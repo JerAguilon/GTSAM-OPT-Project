@@ -1,6 +1,9 @@
 #include "ast/CallExprAST.h"
-#include "utils/functions.h"
+#include "kaleidoscope/kaleidoscope.h"
 #include "logger/logger.h"
+#include "utils/functions.h"
+
+#include "llvm/IR/Function.h"
 
 using namespace llvm;
 

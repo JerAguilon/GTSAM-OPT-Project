@@ -1,15 +1,54 @@
-#include "parser.cc"
+#include "lexer/lexer.h"
+#include "lexer/token.h"
 
-//===----------------------------------------------------------------------===//
-// Main driver code.
-//===----------------------------------------------------------------------===//
+#include "ast/BinaryExprAST.h"
+#include "ast/CallExprAST.h"
+#include "ast/ExprAST.h"
+#include "ast/FunctionAST.h"
+#include "ast/NumberExprAST.h"
+#include "ast/PrototypeAST.h"
+#include "ast/VariableExprAST.h"
+
+#include "parser/parser.h"
+
+#include "logger/logger.h"
+
+#include "utils/functions.h"
+
+#include "kaleidoscope/kaleidoscope.h"
+
+// LLVM headers
+#include "llvm/ADT/APFloat.h"
+#include "llvm/ADT/STLExtras.h"
+#include "llvm/IR/BasicBlock.h"
+#include "llvm/IR/Constants.h"
+#include "llvm/IR/DerivedTypes.h"
+#include "llvm/IR/Function.h"
+#include "llvm/IR/IRBuilder.h"
+#include "llvm/IR/LLVMContext.h"
+#include "llvm/IR/Module.h"
+#include "llvm/IR/Type.h"
+#include "llvm/IR/Verifier.h"
+#include "llvm/Support/TargetSelect.h"
+#include "llvm/Target/TargetMachine.h"
+
+#include "llvm/Transforms/InstCombine/InstCombine.h"
+#include "llvm/Transforms/Scalar.h"
+#include "llvm/Transforms/Scalar/GVN.h"
+#include "llvm/Transforms/Utils.h"
+
+// stdlib headers
+#include <algorithm>
+#include <cctype>
+#include <cstdio>
+#include <cstdlib>
+#include <map>
+#include <memory>
+#include <string>
+#include <vector>
 
 using namespace llvm;
 using namespace llvm::orc;
-
-//===----------------------------------------------------------------------===//
-// Top-Level parsing and JIT Driver
-//===----------------------------------------------------------------------===//
 
 static void InitializeModuleAndPassManager() {
   // Open a new module.
@@ -72,7 +111,7 @@ static void HandleTopLevelExpression() {
       InitializeModuleAndPassManager();
 
       // Search the JIT for the __anon_expr symbol.
-      auto ExprSymbol = TheJIT->findSymbol("__anon_expr");
+      auto ExprSymbol = TheJIT->findSymbol("anon_expr");
       assert(ExprSymbol && "Function not found");
 
       // Get the symbol's address and cast it to the right type (takes no
@@ -142,5 +181,3 @@ int main() {
 
   return 0;
 }
-
-

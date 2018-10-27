@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -fno-rtti -g   -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/include 
+CXX_INCLUDES = -I/usr/local/include -I/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation -I/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/ast -I/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/kaleidoscope -I/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/lexer -I/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/logger -I/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/parser -I/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/utils 
 

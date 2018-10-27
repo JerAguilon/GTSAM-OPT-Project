@@ -1,9 +1,11 @@
 #include "ast/FunctionAST.h"
 #include "logger/logger.h"
-#include "utils/utils.h"
+#include "kaleidoscope/kaleidoscope.h"
 #include "utils/functions.h"
 
-llvm::Function *FunctionAST::codegen() {
+using namespace llvm;
+
+Function *FunctionAST::codegen() {
     // Transfer ownership of the prototype to the FunctionProtos map, but keep a
     // reference to it for use below.
     auto &P = *Proto;

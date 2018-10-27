@@ -1,18 +1,27 @@
-#include  "ast/PrototypeAST.h"
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+
+#include "ast/PrototypeAST.h"
+
+#include "llvm/ADT/APFloat.h"
+#include "llvm/ADT/STLExtras.h"
+#include "llvm/IR/BasicBlock.h"
+#include "llvm/IR/Constants.h"
+#include "llvm/IR/DerivedTypes.h"
+#include "llvm/IR/Function.h"
+#include "llvm/IR/IRBuilder.h"
+#include "llvm/IR/LLVMContext.h"
+#include "llvm/IR/Module.h"
+#include "llvm/IR/Type.h"
+#include "llvm/IR/Verifier.h"
+
+#include "include/KaleidoscopeJIT.h"
 
 // TODO(jeremy): Create an instance that moves this out of global state
 extern std::map<std::string, std::unique_ptr<PrototypeAST>> FunctionProtos;
-Function *getFunction(std::string Name) {
-    // First, see if the function has already been added to the current module.
-    if (auto *F = TheModule->getFunction(Name))
-        return F;
+extern std::unique_ptr<legacy::FunctionPassManager> TheFPM;
+extern std::unique_ptr<llvm::orc::KaleidoscopeJIT> TheJIT;
 
-    // If not, check whether we can codegen the declaration from some existing
-    // prototype.
-    auto FI = FunctionProtos.find(Name);
-    if (FI != FunctionProtos.end())
-        return FI->second->codegen();
+Function *getFunction(std::string Name);
 
-    // If no existing prototype exists, return null.
-    return nullptr;
-}
+#endif
