@@ -11,7 +11,7 @@ extern std::string IdentifierStr;
 extern double NumVal;
 
 Token gettok();
-int getNextToken();
+Token getNextToken();
 
 std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fname, std::vector<TokenWrapper>& tokens);
 

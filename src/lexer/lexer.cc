@@ -116,7 +116,7 @@ Token gettok() {
     return t;
 }
 
-int getNextToken() {
+Token getNextToken() {
     return CurTok = gettok();
 }
 
