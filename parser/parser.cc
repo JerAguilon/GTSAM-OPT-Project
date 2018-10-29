@@ -6,13 +6,11 @@
 std::map<char, int> BinopPrecedence;
 
 static int GetTokPrecedence() {
-    if (!isascii(CurTok)) {
+    auto TokPrec = BinopPrecedence.find(CurTok);
+    if (TokPrec == BinopPrecedence.end()) {
         return -1;
     }
-
-    int TokPrec = BinopPrecedence[CurTok];
-    if (TokPrec <= 0) return -1;
-    return TokPrec;
+    return TokPrec->second;
 }
 
 
@@ -69,7 +67,8 @@ std::unique_ptr<ExprAST> ParseIdentifierExpr() {
 }
 
 std::unique_ptr<ExprAST> ParsePrimary() {
-    std::string default_error = "Unknown token when expecting an expression: " + CurTok;
+    std::string default_error = "Unknown token when expecting an expression: ";
+    default_error += CurTok;
     switch (CurTok) {
         default: return LogError(default_error.c_str());
         case tok_identifier: return ParseIdentifierExpr();

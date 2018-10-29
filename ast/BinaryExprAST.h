@@ -6,7 +6,7 @@
 #include "logger/logger.h"
 
 class BinaryExprAST : public ExprAST {
-    char Op;
+    int Op;
     std::unique_ptr<ExprAST> LHS, RHS;
 
     public:
