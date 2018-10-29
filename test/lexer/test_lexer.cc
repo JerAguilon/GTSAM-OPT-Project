@@ -55,4 +55,3 @@ BOOST_AUTO_TEST_CASE(PassTest)
         BOOST_CHECK(tokens[i] == expected[i]);
     }
 }
-

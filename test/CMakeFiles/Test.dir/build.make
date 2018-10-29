@@ -57,38 +57,38 @@ include test/CMakeFiles/Test.dir/progress.make
 # Include the compile flags for this target's objects.
 include test/CMakeFiles/Test.dir/flags.make
 
-test/CMakeFiles/Test.dir/test.cc.o: test/CMakeFiles/Test.dir/flags.make
-test/CMakeFiles/Test.dir/test.cc.o: test/test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/Test.dir/test.cc.o"
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/test.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/test.cc
+test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o: test/CMakeFiles/Test.dir/flags.make
+test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o: test/lexer/test_lexer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/lexer/test_lexer.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/lexer/test_lexer.cc
 
-test/CMakeFiles/Test.dir/test.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/test.cc.i"
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/test.cc > CMakeFiles/Test.dir/test.cc.i
+test/CMakeFiles/Test.dir/lexer/test_lexer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/lexer/test_lexer.cc.i"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/lexer/test_lexer.cc > CMakeFiles/Test.dir/lexer/test_lexer.cc.i
 
-test/CMakeFiles/Test.dir/test.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/test.cc.s"
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/test.cc -o CMakeFiles/Test.dir/test.cc.s
+test/CMakeFiles/Test.dir/lexer/test_lexer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/lexer/test_lexer.cc.s"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/lexer/test_lexer.cc -o CMakeFiles/Test.dir/lexer/test_lexer.cc.s
 
-test/CMakeFiles/Test.dir/test.cc.o.requires:
+test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.requires:
 
-.PHONY : test/CMakeFiles/Test.dir/test.cc.o.requires
+.PHONY : test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.requires
 
-test/CMakeFiles/Test.dir/test.cc.o.provides: test/CMakeFiles/Test.dir/test.cc.o.requires
-	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/test.cc.o.provides.build
-.PHONY : test/CMakeFiles/Test.dir/test.cc.o.provides
+test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.provides: test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.requires
+	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.provides.build
+.PHONY : test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.provides
 
-test/CMakeFiles/Test.dir/test.cc.o.provides.build: test/CMakeFiles/Test.dir/test.cc.o
+test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.provides.build: test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o
 
 
 # Object files for target Test
 Test_OBJECTS = \
-"CMakeFiles/Test.dir/test.cc.o"
+"CMakeFiles/Test.dir/lexer/test_lexer.cc.o"
 
 # External object files for target Test
 Test_EXTERNAL_OBJECTS =
 
-test/Test: test/CMakeFiles/Test.dir/test.cc.o
+test/Test: test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o
 test/Test: test/CMakeFiles/Test.dir/build.make
 test/Test: src/libsimple-parser.a
 test/Test: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
@@ -103,7 +103,7 @@ test/CMakeFiles/Test.dir/build: test/Test
 
 .PHONY : test/CMakeFiles/Test.dir/build
 
-test/CMakeFiles/Test.dir/requires: test/CMakeFiles/Test.dir/test.cc.o.requires
+test/CMakeFiles/Test.dir/requires: test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.requires
 
 .PHONY : test/CMakeFiles/Test.dir/requires
 

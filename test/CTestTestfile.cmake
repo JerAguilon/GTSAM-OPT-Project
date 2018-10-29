@@ -4,4 +4,4 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-add_test(MyTest "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/Test")
+add_test(ALL_UNIT_TESTS "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/Test")

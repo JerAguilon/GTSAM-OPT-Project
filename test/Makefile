@@ -136,32 +136,32 @@ Test/fast:
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/build
 .PHONY : Test/fast
 
-test.o: test.cc.o
+lexer/test_lexer.o: lexer/test_lexer.cc.o
 
-.PHONY : test.o
+.PHONY : lexer/test_lexer.o
 
 # target to build an object file
-test.cc.o:
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/test.cc.o
-.PHONY : test.cc.o
+lexer/test_lexer.cc.o:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o
+.PHONY : lexer/test_lexer.cc.o
 
-test.i: test.cc.i
+lexer/test_lexer.i: lexer/test_lexer.cc.i
 
-.PHONY : test.i
+.PHONY : lexer/test_lexer.i
 
 # target to preprocess a source file
-test.cc.i:
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/test.cc.i
-.PHONY : test.cc.i
+lexer/test_lexer.cc.i:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/lexer/test_lexer.cc.i
+.PHONY : lexer/test_lexer.cc.i
 
-test.s: test.cc.s
+lexer/test_lexer.s: lexer/test_lexer.cc.s
 
-.PHONY : test.s
+.PHONY : lexer/test_lexer.s
 
 # target to generate assembly for a file
-test.cc.s:
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/test.cc.s
-.PHONY : test.cc.s
+lexer/test_lexer.cc.s:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/lexer/test_lexer.cc.s
+.PHONY : lexer/test_lexer.cc.s
 
 # Help Target
 help:
@@ -173,9 +173,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... Test"
 	@echo "... test"
-	@echo "... test.o"
-	@echo "... test.i"
-	@echo "... test.s"
+	@echo "... lexer/test_lexer.o"
+	@echo "... lexer/test_lexer.i"
+	@echo "... lexer/test_lexer.s"
 .PHONY : help
 
 

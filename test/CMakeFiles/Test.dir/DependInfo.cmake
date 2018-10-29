@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/test.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/CMakeFiles/Test.dir/test.cc.o"
+  "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/lexer/test_lexer.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
