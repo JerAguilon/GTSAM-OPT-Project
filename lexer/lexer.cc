@@ -117,14 +117,8 @@ std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fnam
     while (std::getline(infile, line)) {
         line_number++;
         int i = 0;
-        bool in_line_comment = false;
 
         while (i < line.size()) {
-            if (in_line_comment) {
-                i++;
-                continue;
-            }
-
             char ch = line[i];
             if (std::isspace(ch)) {
                 i++;
@@ -148,8 +142,56 @@ std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fnam
                 if (symbol ==  "<") identifier = '<';
                 if (symbol ==  ">") identifier = '>';
 
-                TokenWrapper new_token = build_token(tokens, fname, identifier, line_number, i + 1);
+                build_token(tokens, fname, identifier, line_number, i + 1);
                 i++;
+                continue;
+            }
+
+            // identifier: [a-zA-Z][a-zA-Z0-9]*
+            if (isalpha(ch)) { 
+                std::string symbol;
+                symbol.push_back(ch);
+                while (i + 1 < line.size() && isalnum(line[i + 1])) {
+                    i++; 
+                    symbol.push_back(line[i]);
+                }
+
+                int token_type = -1000; // Temporary hack 
+                if (symbol == "def") {
+                    token_type = tok_def;
+                } else if (symbol == "extern") {
+                    token_type = tok_extern;
+                } else if (symbol == "if") {
+                    token_type = tok_if;
+                } else if (symbol == "then") {
+                    token_type = tok_then;
+                } else if (symbol == "else") {
+                    token_type = tok_else;
+                } else if (symbol == "for") {
+                    token_type = tok_for;
+                } else if (symbol == "in") {
+                    token_type = tok_in;
+                } else {
+                    token_type = tok_identifier;
+                }
+                TokenWrapper& tok = build_token(tokens, fname, token_type, line_number, i + 1);
+                if (token_type == tok_identifier) {
+                    tok.str_content = symbol;
+                }
+                i++;
+                continue;
+            }
+
+            if (isdigit(ch) || ch == '.') { // Number: [0-9.]+
+                std::string symbol;
+                symbol.push_back(ch);
+                while (i + 1 < line.size() && (isdigit(line[i + 1]) || ch == '.')) {
+                    i++; 
+                    symbol.push_back(line[i]);
+                }
+                TokenWrapper& tok = build_token(tokens, fname, tok_number, line_number, i + 1);
+                float val = strtod(symbol.c_str(), nullptr);
+                tok.value = val;
             }
             i++;
         }
