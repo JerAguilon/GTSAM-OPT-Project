@@ -19,12 +19,21 @@ enum Token {
     tok_then = -7,
     tok_else = -8,
 
+    // comparators
     tok_lessequal = -9,
     tok_greatequal = -10,
+    tok_less = -11,
+    tok_greater = -12,
+
+    // operators
+    tok_sub = -13,
+    tok_add = -14,
+    tok_div = -15,
+    tok_mul = -16,
 
     // loop controls
-    tok_for = -11,
-    tok_in = -12,
+    tok_for = -17,
+    tok_in = -18
 };
 
 

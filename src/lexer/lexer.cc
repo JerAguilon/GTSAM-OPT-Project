@@ -34,9 +34,9 @@ int gettok() {
         if (IdentifierStr == "<=")
             return tok_lessequal;
         if (IdentifierStr ==  "<")
-            return '<';
+            return tok_less;
         if (IdentifierStr ==  ">")
-            return '>';
+            return tok_greater;
     }
 
     if (isalpha(LastChar)) { // identifier: [a-zA-Z][a-zA-Z0-9]*
@@ -88,6 +88,25 @@ int gettok() {
 
     // Otherwise, just return the character as its ascii value.
     int ThisChar = LastChar;
+
+    Token t;
+    switch(ThisChar) {
+        case '+':
+            t = tok_add;
+            break;
+        case '-':
+            t = tok_sub;
+            break;
+        case '/':
+            t = tok_div;
+            break;
+        case '*':
+            t = tok_mul;
+            break;
+        default:
+            throw "Invalid state";
+    }
+
     LastChar = getchar();
     return ThisChar;
 }
@@ -139,8 +158,8 @@ std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fnam
                 }
                 if (symbol == ">=") identifier = tok_greatequal;
                 if (symbol == "<=") identifier = tok_lessequal;
-                if (symbol ==  "<") identifier = '<';
-                if (symbol ==  ">") identifier = '>';
+                if (symbol ==  "<") identifier = tok_less;
+                if (symbol ==  ">") identifier = tok_greater;
 
                 build_token(tokens, fname, identifier, line_number, i + 1);
                 i++;

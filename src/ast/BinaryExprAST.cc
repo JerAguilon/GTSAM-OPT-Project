@@ -11,19 +11,19 @@ Value *BinaryExprAST::codegen() {
         return nullptr;
 
     switch (Op) {
-        case '+':
+        case tok_add:
             return Builder.CreateFAdd(L, R, "addtmp");
-        case '-':
+        case tok_sub:
             return Builder.CreateFSub(L, R, "subtmp");
-        case '*':
+        case tok_mul:
             return Builder.CreateFMul(L, R, "multmp");
-        case '/':
+        case tok_div:
             return Builder.CreateFDiv(L, R, "multmp");
-        case '<':
+        case tok_less:
             L = Builder.CreateFCmpULT(L, R, "cmptmp");
             // Convert bool 0/1 to double 0.0 or 1.0
             return Builder.CreateUIToFP(L, Type::getDoubleTy(TheContext), "booltmp");
-        case '>':
+        case tok_greater:
             L = Builder.CreateFCmpULT(R, L, "cmptmp");
             // Convert bool 0/1 to double 0.0 or 1.0
             return Builder.CreateUIToFP(L, Type::getDoubleTy(TheContext), "booltmp");
