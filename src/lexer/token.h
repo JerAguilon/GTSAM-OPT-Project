@@ -33,7 +33,10 @@ enum Token {
 
     // loop controls
     tok_for = -17,
-    tok_in = -18
+    tok_in = -18,
+
+    // assignment
+    tok_equal = -19,
 };
 
 

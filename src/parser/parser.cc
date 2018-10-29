@@ -69,6 +69,7 @@ std::unique_ptr<ExprAST> ParseIdentifierExpr() {
 std::unique_ptr<ExprAST> ParsePrimary() {
     std::string default_error = "Unknown token when expecting an expression: ";
     default_error += CurTok;
+
     switch (CurTok) {
         default: return LogError(default_error.c_str());
         case tok_identifier: return ParseIdentifierExpr();

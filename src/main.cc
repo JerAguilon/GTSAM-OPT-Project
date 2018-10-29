@@ -158,15 +158,15 @@ int main() {
 
   // Install standard binary operators.
   // 1 is lowest precedence.
-  BinopPrecedence['='] = 2;
-  BinopPrecedence['<'] = 10;
-  BinopPrecedence['>'] = 10;
+  BinopPrecedence[tok_equal] = 2;
+  BinopPrecedence[tok_less] = 10;
+  BinopPrecedence[tok_greater] = 10;
   BinopPrecedence[tok_lessequal] = 10;
   BinopPrecedence[tok_greatequal] = 10;
-  BinopPrecedence['+'] = 20;
-  BinopPrecedence['-'] = 20;
-  BinopPrecedence['*'] = 40; // highest.
-  BinopPrecedence['/'] = 40; 
+  BinopPrecedence[tok_add] = 20;
+  BinopPrecedence[tok_sub] = 20;
+  BinopPrecedence[tok_mul] = 40; // highest.
+  BinopPrecedence[tok_div] = 40; 
 
   // Prime the first token.
   fprintf(stderr, "ready> ");

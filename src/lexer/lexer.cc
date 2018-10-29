@@ -1,5 +1,6 @@
 #include "lexer/lexer.h"
 #include "lexer/token.h"
+#include "logger/logger.h"
 
 #include <iostream>
 
@@ -89,7 +90,7 @@ int gettok() {
     // Otherwise, just return the character as its ascii value.
     int ThisChar = LastChar;
 
-    Token t;
+    int t;
     switch(ThisChar) {
         case '+':
             t = tok_add;
@@ -104,11 +105,12 @@ int gettok() {
             t = tok_mul;
             break;
         default:
-            throw "Invalid state";
+            t = ThisChar; // TODO: Do we log an error?
+            break;
     }
 
     LastChar = getchar();
-    return ThisChar;
+    return t;
 }
 
 int getNextToken() {
