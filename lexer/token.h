@@ -1,6 +1,8 @@
 #ifndef __TOKEN_H__
 #define __TOKEN_H__
 
+#include <string>
+
 enum Token {
     tok_eof = -1,
 
@@ -23,6 +25,17 @@ enum Token {
     // loop controls
     tok_for = -11,
     tok_in = -12,
+};
+
+
+
+struct TokenWrapper {
+    Token type;
+    float value;
+    std::string str_content;
+    char *filename;
+    int line_number;
+    int column_number;
 };
 
 #endif

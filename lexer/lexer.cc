@@ -92,3 +92,8 @@ int gettok() {
 int getNextToken() {
     return CurTok = gettok();
 }
+
+
+std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fname) {
+
+}
