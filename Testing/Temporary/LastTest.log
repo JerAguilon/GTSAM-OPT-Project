@@ -1,10 +1,10 @@
-Start testing: Oct 29 03:07 EDT
+Start testing: Oct 29 03:10 EDT
 ----------------------------------------------------------
 1/1 Testing: MyTest
 1/1 Test: MyTest
 Command: "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/Test"
 Directory: /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test
-"MyTest" start time: Oct 29 03:07 EDT
+"MyTest" start time: Oct 29 03:10 EDT
 Output:
 ----------------------------------------------------------
 Running 1 test case...
@@ -14,8 +14,8 @@ Running 1 test case...
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"MyTest" end time: Oct 29 03:07 EDT
+"MyTest" end time: Oct 29 03:10 EDT
 "MyTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 29 03:07 EDT
+End testing: Oct 29 03:10 EDT

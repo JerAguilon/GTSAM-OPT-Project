@@ -38,6 +38,4 @@ struct TokenWrapper {
     int column_number;
 };
 
-bool operator==(TokenWrapper a, TokenWrapper b);
-
 #endif
