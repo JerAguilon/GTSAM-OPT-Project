@@ -123,14 +123,18 @@ llvm/IR/Verifier.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/lexer/lexer.cc
 lexer/lexer.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/lexer/lexer/lexer.h
-lexer/token.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/lexer/lexer/token.h
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/lexer/lexer.h
+lexer/token.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/lexer/lexer/token.h
 string
+-
+vector
 -
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/lexer/token.h
+string
+-
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/logger/logger.cc
 logger/logger.h
@@ -3475,10 +3479,16 @@ llvm/IR/Verifier.h
 kaleidoscope/llvm/IR/Verifier.h
 
 lexer/lexer.h
+lexer/token.h
+lexer/lexer/token.h
 string
+-
+vector
 -
 
 lexer/token.h
+string
+-
 
 logger/logger.h
 ast/ExprAST.h

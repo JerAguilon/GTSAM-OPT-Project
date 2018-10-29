@@ -30,7 +30,7 @@ enum Token {
 
 
 struct TokenWrapper {
-    Token type;
+    int type; // TODO: replace this with type `Token`
     float value;
     std::string str_content;
     char *filename;
