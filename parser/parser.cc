@@ -1,6 +1,8 @@
 #include "parser/parser.h"
 #include "logger/logger.h"
 
+#include<string>
+
 std::map<char, int> BinopPrecedence;
 
 static int GetTokPrecedence() {
@@ -67,8 +69,9 @@ std::unique_ptr<ExprAST> ParseIdentifierExpr() {
 }
 
 std::unique_ptr<ExprAST> ParsePrimary() {
+    std::string default_error = "Unknown token when expecting an expression: " + CurTok;
     switch (CurTok) {
-        default: return LogError("Unknown token when expecting an expression");
+        default: return LogError(default_error.c_str());
         case tok_identifier: return ParseIdentifierExpr();
         case tok_number: return ParseNumberExpr();
         case '(': return ParseParenExpr();

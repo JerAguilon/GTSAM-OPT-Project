@@ -17,7 +17,6 @@ enum Token {
     tok_then = -7,
     tok_else = -8,
 
-    // TODO: custom control flows <= etc.
     tok_lessequal = -9,
     tok_greatequal = -10,
 
