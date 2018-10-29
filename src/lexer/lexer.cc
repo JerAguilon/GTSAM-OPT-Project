@@ -5,7 +5,7 @@
 #include <iostream>
 
 
-int CurTok;
+Token CurTok;
 std::string IdentifierStr; // Filled in if tok_identifier
 double NumVal;             // Filled in if tok_number
 
@@ -14,7 +14,7 @@ static bool iscmp(int c) {
 }
 
 /// gettok - Return the next token from standard input.
-int gettok() {
+Token gettok() {
     static int LastChar = ' ';
 
     // Skip any whitespace.
@@ -88,9 +88,9 @@ int gettok() {
         return tok_eof;
 
     // Otherwise, just return the character as its ascii value.
-    int ThisChar = LastChar;
+    char ThisChar = LastChar;
 
-    int t;
+    Token t;
     switch(ThisChar) {
         case '+':
             t = tok_add;
@@ -104,8 +104,11 @@ int gettok() {
         case '*':
             t = tok_mul;
             break;
+        case ';':
+            t = tok_semicolon;
+            break;
         default:
-            t = ThisChar; // TODO: Do we log an error?
+            LogError("Unknown token encountered");
             break;
     }
 
@@ -151,7 +154,7 @@ std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fnam
 
             // Test for <= or >=
             if (iscmp(ch)) {
-                int identifier; // Temporary hack
+                Token identifier; // Temporary hack
                 std::string symbol;
                 symbol.push_back(ch);
                 if (i + 1 < line.size() && line[i + 1] == '=') {

@@ -37,6 +37,8 @@ enum Token {
 
     // assignment
     tok_equal = -19,
+
+    tok_semicolon = -20,
 };
 
 

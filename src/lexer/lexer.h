@@ -6,11 +6,11 @@
 #include <string>
 #include <vector>
 
-extern int CurTok;
+extern Token CurTok;
 extern std::string IdentifierStr;
 extern double NumVal;
 
-int gettok();
+Token gettok();
 int getNextToken();
 
 std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fname, std::vector<TokenWrapper>& tokens);
