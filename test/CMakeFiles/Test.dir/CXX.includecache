@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/test.cc
+boost/test/unit_test.hpp
+-
+string
+-
+vector
+-
+iostream
+-
+lexer/lexer.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/lexer/lexer.h
+lexer/token.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/lexer/token.h
+
+src/lexer/lexer.h
+lexer/token.h
+src/lexer/lexer/token.h
+string
+-
+vector
+-
+
+src/lexer/token.h
+string
+-
+

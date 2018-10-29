@@ -67,10 +67,21 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,6 +122,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named demo
+
+# Build rule for target.
+demo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 demo
+.PHONY : demo
+
+# fast build rule for target.
+demo/fast:
+	$(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/build
+.PHONY : demo/fast
+
+#=============================================================================
 # Target rules for targets named intrinsics_gen
 
 # Build rule for target.
@@ -120,7 +144,7 @@ intrinsics_gen: cmake_check_build_system
 
 # fast build rule for target.
 intrinsics_gen/fast:
-	$(MAKE) -f CMakeFiles/intrinsics_gen.dir/build.make CMakeFiles/intrinsics_gen.dir/build
+	$(MAKE) -f src/CMakeFiles/intrinsics_gen.dir/build.make src/CMakeFiles/intrinsics_gen.dir/build
 .PHONY : intrinsics_gen/fast
 
 #=============================================================================
@@ -133,332 +157,21 @@ simple-parser: cmake_check_build_system
 
 # fast build rule for target.
 simple-parser/fast:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/build
+	$(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/build
 .PHONY : simple-parser/fast
 
-ast/BinaryExprAST.o: ast/BinaryExprAST.cc.o
-
-.PHONY : ast/BinaryExprAST.o
-
-# target to build an object file
-ast/BinaryExprAST.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/BinaryExprAST.cc.o
-.PHONY : ast/BinaryExprAST.cc.o
-
-ast/BinaryExprAST.i: ast/BinaryExprAST.cc.i
-
-.PHONY : ast/BinaryExprAST.i
-
-# target to preprocess a source file
-ast/BinaryExprAST.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/BinaryExprAST.cc.i
-.PHONY : ast/BinaryExprAST.cc.i
-
-ast/BinaryExprAST.s: ast/BinaryExprAST.cc.s
-
-.PHONY : ast/BinaryExprAST.s
-
-# target to generate assembly for a file
-ast/BinaryExprAST.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/BinaryExprAST.cc.s
-.PHONY : ast/BinaryExprAST.cc.s
-
-ast/CallExprAST.o: ast/CallExprAST.cc.o
-
-.PHONY : ast/CallExprAST.o
-
-# target to build an object file
-ast/CallExprAST.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/CallExprAST.cc.o
-.PHONY : ast/CallExprAST.cc.o
-
-ast/CallExprAST.i: ast/CallExprAST.cc.i
-
-.PHONY : ast/CallExprAST.i
-
-# target to preprocess a source file
-ast/CallExprAST.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/CallExprAST.cc.i
-.PHONY : ast/CallExprAST.cc.i
-
-ast/CallExprAST.s: ast/CallExprAST.cc.s
-
-.PHONY : ast/CallExprAST.s
-
-# target to generate assembly for a file
-ast/CallExprAST.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/CallExprAST.cc.s
-.PHONY : ast/CallExprAST.cc.s
-
-ast/FunctionAST.o: ast/FunctionAST.cc.o
-
-.PHONY : ast/FunctionAST.o
-
-# target to build an object file
-ast/FunctionAST.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/FunctionAST.cc.o
-.PHONY : ast/FunctionAST.cc.o
-
-ast/FunctionAST.i: ast/FunctionAST.cc.i
-
-.PHONY : ast/FunctionAST.i
-
-# target to preprocess a source file
-ast/FunctionAST.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/FunctionAST.cc.i
-.PHONY : ast/FunctionAST.cc.i
-
-ast/FunctionAST.s: ast/FunctionAST.cc.s
-
-.PHONY : ast/FunctionAST.s
-
-# target to generate assembly for a file
-ast/FunctionAST.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/FunctionAST.cc.s
-.PHONY : ast/FunctionAST.cc.s
-
-ast/NumberExprAST.o: ast/NumberExprAST.cc.o
-
-.PHONY : ast/NumberExprAST.o
-
-# target to build an object file
-ast/NumberExprAST.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/NumberExprAST.cc.o
-.PHONY : ast/NumberExprAST.cc.o
-
-ast/NumberExprAST.i: ast/NumberExprAST.cc.i
-
-.PHONY : ast/NumberExprAST.i
-
-# target to preprocess a source file
-ast/NumberExprAST.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/NumberExprAST.cc.i
-.PHONY : ast/NumberExprAST.cc.i
-
-ast/NumberExprAST.s: ast/NumberExprAST.cc.s
-
-.PHONY : ast/NumberExprAST.s
-
-# target to generate assembly for a file
-ast/NumberExprAST.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/NumberExprAST.cc.s
-.PHONY : ast/NumberExprAST.cc.s
-
-ast/PrototypeAST.o: ast/PrototypeAST.cc.o
-
-.PHONY : ast/PrototypeAST.o
-
-# target to build an object file
-ast/PrototypeAST.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/PrototypeAST.cc.o
-.PHONY : ast/PrototypeAST.cc.o
-
-ast/PrototypeAST.i: ast/PrototypeAST.cc.i
-
-.PHONY : ast/PrototypeAST.i
-
-# target to preprocess a source file
-ast/PrototypeAST.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/PrototypeAST.cc.i
-.PHONY : ast/PrototypeAST.cc.i
-
-ast/PrototypeAST.s: ast/PrototypeAST.cc.s
-
-.PHONY : ast/PrototypeAST.s
-
-# target to generate assembly for a file
-ast/PrototypeAST.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/PrototypeAST.cc.s
-.PHONY : ast/PrototypeAST.cc.s
-
-ast/VariableExprAST.o: ast/VariableExprAST.cc.o
-
-.PHONY : ast/VariableExprAST.o
-
-# target to build an object file
-ast/VariableExprAST.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/VariableExprAST.cc.o
-.PHONY : ast/VariableExprAST.cc.o
-
-ast/VariableExprAST.i: ast/VariableExprAST.cc.i
-
-.PHONY : ast/VariableExprAST.i
-
-# target to preprocess a source file
-ast/VariableExprAST.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/VariableExprAST.cc.i
-.PHONY : ast/VariableExprAST.cc.i
-
-ast/VariableExprAST.s: ast/VariableExprAST.cc.s
-
-.PHONY : ast/VariableExprAST.s
-
-# target to generate assembly for a file
-ast/VariableExprAST.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/VariableExprAST.cc.s
-.PHONY : ast/VariableExprAST.cc.s
-
-kaleidoscope/kaleidoscope.o: kaleidoscope/kaleidoscope.cc.o
-
-.PHONY : kaleidoscope/kaleidoscope.o
-
-# target to build an object file
-kaleidoscope/kaleidoscope.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o
-.PHONY : kaleidoscope/kaleidoscope.cc.o
-
-kaleidoscope/kaleidoscope.i: kaleidoscope/kaleidoscope.cc.i
-
-.PHONY : kaleidoscope/kaleidoscope.i
-
-# target to preprocess a source file
-kaleidoscope/kaleidoscope.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.i
-.PHONY : kaleidoscope/kaleidoscope.cc.i
-
-kaleidoscope/kaleidoscope.s: kaleidoscope/kaleidoscope.cc.s
-
-.PHONY : kaleidoscope/kaleidoscope.s
-
-# target to generate assembly for a file
-kaleidoscope/kaleidoscope.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.s
-.PHONY : kaleidoscope/kaleidoscope.cc.s
-
-lexer/lexer.o: lexer/lexer.cc.o
-
-.PHONY : lexer/lexer.o
-
-# target to build an object file
-lexer/lexer.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/lexer/lexer.cc.o
-.PHONY : lexer/lexer.cc.o
-
-lexer/lexer.i: lexer/lexer.cc.i
-
-.PHONY : lexer/lexer.i
-
-# target to preprocess a source file
-lexer/lexer.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/lexer/lexer.cc.i
-.PHONY : lexer/lexer.cc.i
-
-lexer/lexer.s: lexer/lexer.cc.s
-
-.PHONY : lexer/lexer.s
-
-# target to generate assembly for a file
-lexer/lexer.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/lexer/lexer.cc.s
-.PHONY : lexer/lexer.cc.s
-
-logger/logger.o: logger/logger.cc.o
-
-.PHONY : logger/logger.o
-
-# target to build an object file
-logger/logger.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/logger/logger.cc.o
-.PHONY : logger/logger.cc.o
-
-logger/logger.i: logger/logger.cc.i
-
-.PHONY : logger/logger.i
-
-# target to preprocess a source file
-logger/logger.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/logger/logger.cc.i
-.PHONY : logger/logger.cc.i
-
-logger/logger.s: logger/logger.cc.s
-
-.PHONY : logger/logger.s
-
-# target to generate assembly for a file
-logger/logger.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/logger/logger.cc.s
-.PHONY : logger/logger.cc.s
-
-main.o: main.cc.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/main.cc.o
-.PHONY : main.cc.o
-
-main.i: main.cc.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/main.cc.i
-.PHONY : main.cc.i
-
-main.s: main.cc.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/main.cc.s
-.PHONY : main.cc.s
-
-parser/parser.o: parser/parser.cc.o
-
-.PHONY : parser/parser.o
-
-# target to build an object file
-parser/parser.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/parser/parser.cc.o
-.PHONY : parser/parser.cc.o
-
-parser/parser.i: parser/parser.cc.i
-
-.PHONY : parser/parser.i
-
-# target to preprocess a source file
-parser/parser.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/parser/parser.cc.i
-.PHONY : parser/parser.cc.i
-
-parser/parser.s: parser/parser.cc.s
-
-.PHONY : parser/parser.s
-
-# target to generate assembly for a file
-parser/parser.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/parser/parser.cc.s
-.PHONY : parser/parser.cc.s
-
-utils/functions.o: utils/functions.cc.o
-
-.PHONY : utils/functions.o
-
-# target to build an object file
-utils/functions.cc.o:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/utils/functions.cc.o
-.PHONY : utils/functions.cc.o
-
-utils/functions.i: utils/functions.cc.i
-
-.PHONY : utils/functions.i
-
-# target to preprocess a source file
-utils/functions.cc.i:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/utils/functions.cc.i
-.PHONY : utils/functions.cc.i
-
-utils/functions.s: utils/functions.cc.s
-
-.PHONY : utils/functions.s
-
-# target to generate assembly for a file
-utils/functions.cc.s:
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/utils/functions.cc.s
-.PHONY : utils/functions.cc.s
+#=============================================================================
+# Target rules for targets named Test
+
+# Build rule for target.
+Test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test
+.PHONY : Test
+
+# fast build rule for target.
+Test/fast:
+	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/build
+.PHONY : Test/fast
 
 # Help Target
 help:
@@ -467,45 +180,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... demo"
 	@echo "... intrinsics_gen"
 	@echo "... simple-parser"
-	@echo "... ast/BinaryExprAST.o"
-	@echo "... ast/BinaryExprAST.i"
-	@echo "... ast/BinaryExprAST.s"
-	@echo "... ast/CallExprAST.o"
-	@echo "... ast/CallExprAST.i"
-	@echo "... ast/CallExprAST.s"
-	@echo "... ast/FunctionAST.o"
-	@echo "... ast/FunctionAST.i"
-	@echo "... ast/FunctionAST.s"
-	@echo "... ast/NumberExprAST.o"
-	@echo "... ast/NumberExprAST.i"
-	@echo "... ast/NumberExprAST.s"
-	@echo "... ast/PrototypeAST.o"
-	@echo "... ast/PrototypeAST.i"
-	@echo "... ast/PrototypeAST.s"
-	@echo "... ast/VariableExprAST.o"
-	@echo "... ast/VariableExprAST.i"
-	@echo "... ast/VariableExprAST.s"
-	@echo "... kaleidoscope/kaleidoscope.o"
-	@echo "... kaleidoscope/kaleidoscope.i"
-	@echo "... kaleidoscope/kaleidoscope.s"
-	@echo "... lexer/lexer.o"
-	@echo "... lexer/lexer.i"
-	@echo "... lexer/lexer.s"
-	@echo "... logger/logger.o"
-	@echo "... logger/logger.i"
-	@echo "... logger/logger.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... parser/parser.o"
-	@echo "... parser/parser.i"
-	@echo "... parser/parser.s"
-	@echo "... utils/functions.o"
-	@echo "... utils/functions.i"
-	@echo "... utils/functions.s"
+	@echo "... Test"
 .PHONY : help
 
 

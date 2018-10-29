@@ -1,0 +1,1 @@
+/usr/bin/c++       -o simple-tool /usr/local/lib/libLLVMSupport.a /usr/local/lib/libLLVMCore.a /usr/local/lib/libLLVMIRReader.a /usr/local/lib/libLLVMAsmParser.a /usr/local/lib/libLLVMBitReader.a /usr/local/lib/libLLVMCore.a /usr/local/lib/libLLVMBinaryFormat.a /usr/local/lib/libLLVMSupport.a -lz -lrt -ldl -ltinfo -lpthread -lm /usr/local/lib/libLLVMDemangle.a 
