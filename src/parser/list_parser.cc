@@ -2,6 +2,8 @@
 #include "parser/list_parser.h"
 #include "utils/operators.h"
 
+#include <boost/format.hpp>
+
 
 std::unique_ptr<ExprAST> ListParser::parse() {
 
@@ -61,7 +63,16 @@ std::unique_ptr<ExprAST> ListParser::parseIdentifierExpr() {
 }
 
 std::unique_ptr<ExprAST> ListParser::parsePrimary() {
-    
+    switch (tokens[curr_token].type) {
+        default: return LogError(
+            (boost::format("Unknown token when expecting an expression: %1%") % tokens[curr_token].type).str().c_str()
+        );
+        case tok_identifier: return parseIdentifierExpr();
+        case tok_number: return parseNumberExpr();
+        case tok_lparen: return parseParenExpr();
+        case tok_if: return parseIfExpr();
+        case tok_for: return parseForExpr();
+    }
 }
 
 std::unique_ptr<ExprAST> ListParser::parseBinOpRHS(int ExprPrec, std::unique_ptr<ExprAST> LHS) {
