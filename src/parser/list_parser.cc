@@ -147,15 +147,35 @@ std::unique_ptr<FunctionAST> ListParser::parseDefinition() {
 }
 
 std::unique_ptr<FunctionAST> ListParser::parseTopLevelExpr() {
-
+    if (auto expression = parseExpression()) {
+        auto prototype = llvm::make_unique<PrototypeAST>("anon_expr", std::vector<std::string>());
+        return llvm::make_unique<FunctionAST>(std::move(prototype), std::move(expression));
+    }
 }
 
 std::unique_ptr<PrototypeAST> ListParser::parseExtern() {
-
+    curr_token++; // eat the extern
+    return parsePrototype();
 }
 
 std::unique_ptr<ExprAST> ListParser::parseIfExpr() {
+    curr_token++; // eat the if
+    auto condition = parseExpression();
+    if (!condition) return nullptr;
 
+    if (tokens[curr_token].type = tok_then) return LogError("expected then");
+    curr_token++;
+    
+    auto then_expression = parseExpression();
+    if (!then_expression) return nullptr;
+
+    if (tokens[curr_token].type != tok_else) return LogError("Expected else");
+    curr_token++;
+
+    auto else_expression = parseExpression();
+    if (!else_expression) return nullptr; // todo: should we abstract this to have 0...n elses?
+
+    return llvm::make_unique<IfExprAST>(std::move(condition), std::move(then_expression), std::move(else_expression));
 }
 
 std::unique_ptr<ExprAST> ListParser::parseForExpr() {
