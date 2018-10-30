@@ -1,6 +1,8 @@
 #ifndef __CALL_EXPR_AST_H__
 #define __CALL_EXPR_AST_H__
 
+#include "llvm/IR/IRBuilder.h"
+
 #include "ast/ExprAST.h"
 
 class CallExprAST : public ExprAST {

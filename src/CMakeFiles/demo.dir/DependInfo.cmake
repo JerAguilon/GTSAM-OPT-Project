@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/BinaryExprAST.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/ast/BinaryExprAST.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/CallExprAST.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/ast/CallExprAST.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/FunctionAST.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/ast/FunctionAST.cc.o"
+  "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/IfExprAST.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/ast/IfExprAST.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/NumberExprAST.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/ast/NumberExprAST.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/PrototypeAST.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/ast/PrototypeAST.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/VariableExprAST.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/ast/VariableExprAST.cc.o"
@@ -16,19 +17,20 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/main.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/main.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/parser.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/parser/parser.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/utils/functions.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/utils/functions.cc.o"
+  "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/utils/operators.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/demo.dir/utils/operators.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/local/include"
-  "src"
-  "src/ast"
-  "src/kaleidoscope"
-  "src/lexer"
-  "src/logger"
-  "src/parser"
-  "src/utils"
+  "."
+  "ast"
+  "kaleidoscope"
+  "lexer"
+  "logger"
+  "parser"
+  "utils"
   )
 
 # Targets to which this target links.

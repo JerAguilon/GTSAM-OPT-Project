@@ -107,6 +107,15 @@ Token gettok() {
         case ';':
             t = tok_semicolon;
             break;
+        case '(':
+            t = tok_lparen;
+            break;
+        case ')':
+            t = tok_rparen;
+            break;
+        case ',':
+            t = tok_comma;
+            break;
         default:
             LogError("Unknown token encountered");
             break;

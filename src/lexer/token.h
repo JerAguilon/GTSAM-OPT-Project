@@ -39,6 +39,10 @@ enum Token {
     tok_equal = -19,
 
     tok_semicolon = -20,
+    tok_comma = -21,
+
+    tok_lparen = -22,
+    tok_rparen = -23,
 };
 
 
