@@ -209,6 +209,36 @@ ast/CallExprAST.cc.s:
 	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/CallExprAST.cc.s
 .PHONY : ast/CallExprAST.cc.s
 
+ast/ForExprAST.o: ast/ForExprAST.cc.o
+
+.PHONY : ast/ForExprAST.o
+
+# target to build an object file
+ast/ForExprAST.cc.o:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/ast/ForExprAST.cc.o
+	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/ForExprAST.cc.o
+.PHONY : ast/ForExprAST.cc.o
+
+ast/ForExprAST.i: ast/ForExprAST.cc.i
+
+.PHONY : ast/ForExprAST.i
+
+# target to preprocess a source file
+ast/ForExprAST.cc.i:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/ast/ForExprAST.cc.i
+	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/ForExprAST.cc.i
+.PHONY : ast/ForExprAST.cc.i
+
+ast/ForExprAST.s: ast/ForExprAST.cc.s
+
+.PHONY : ast/ForExprAST.s
+
+# target to generate assembly for a file
+ast/ForExprAST.cc.s:
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/ast/ForExprAST.cc.s
+	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/ast/ForExprAST.cc.s
+.PHONY : ast/ForExprAST.cc.s
+
 ast/FunctionAST.o: ast/FunctionAST.cc.o
 
 .PHONY : ast/FunctionAST.o
@@ -586,6 +616,9 @@ help:
 	@echo "... ast/CallExprAST.o"
 	@echo "... ast/CallExprAST.i"
 	@echo "... ast/CallExprAST.s"
+	@echo "... ast/ForExprAST.o"
+	@echo "... ast/ForExprAST.i"
+	@echo "... ast/ForExprAST.s"
 	@echo "... ast/FunctionAST.o"
 	@echo "... ast/FunctionAST.i"
 	@echo "... ast/FunctionAST.s"

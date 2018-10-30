@@ -23,5 +23,6 @@ extern std::unique_ptr<legacy::FunctionPassManager> TheFPM;
 extern std::unique_ptr<llvm::orc::KaleidoscopeJIT> TheJIT;
 
 Function *getFunction(std::string Name);
+AllocaInst *CreateEntryBlockAlloca(Function *TheFunction, const std::string &VarName);
 
 #endif

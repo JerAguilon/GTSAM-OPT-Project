@@ -6,6 +6,7 @@
 #include "ast/BinaryExprAST.h"
 #include "ast/CallExprAST.h"
 #include "ast/ExprAST.h"
+#include "ast/ForExprAST.h"
 #include "ast/FunctionAST.h"
 #include "ast/IfExprAST.h"
 #include "ast/NumberExprAST.h"
@@ -24,7 +25,7 @@ std::unique_ptr<PrototypeAST> ParsePrototype();
 std::unique_ptr<FunctionAST> ParseDefinition();
 std::unique_ptr<FunctionAST> ParseTopLevelExpr();
 std::unique_ptr<PrototypeAST> ParseExtern();
-static std::unique_ptr<ExprAST> ParseIfExpr();
-
+std::unique_ptr<ExprAST> ParseIfExpr();
+std::unique_ptr<ExprAST> ParseForExpr();
 
 #endif

@@ -105,9 +105,33 @@ CMakeFiles/demo.dir/ast/CallExprAST.cc.o.provides: CMakeFiles/demo.dir/ast/CallE
 CMakeFiles/demo.dir/ast/CallExprAST.cc.o.provides.build: CMakeFiles/demo.dir/ast/CallExprAST.cc.o
 
 
+CMakeFiles/demo.dir/ast/ForExprAST.cc.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/ast/ForExprAST.cc.o: ast/ForExprAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/ast/ForExprAST.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/ast/ForExprAST.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ForExprAST.cc
+
+CMakeFiles/demo.dir/ast/ForExprAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/ast/ForExprAST.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ForExprAST.cc > CMakeFiles/demo.dir/ast/ForExprAST.cc.i
+
+CMakeFiles/demo.dir/ast/ForExprAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/ast/ForExprAST.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ForExprAST.cc -o CMakeFiles/demo.dir/ast/ForExprAST.cc.s
+
+CMakeFiles/demo.dir/ast/ForExprAST.cc.o.requires:
+
+.PHONY : CMakeFiles/demo.dir/ast/ForExprAST.cc.o.requires
+
+CMakeFiles/demo.dir/ast/ForExprAST.cc.o.provides: CMakeFiles/demo.dir/ast/ForExprAST.cc.o.requires
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/ast/ForExprAST.cc.o.provides.build
+.PHONY : CMakeFiles/demo.dir/ast/ForExprAST.cc.o.provides
+
+CMakeFiles/demo.dir/ast/ForExprAST.cc.o.provides.build: CMakeFiles/demo.dir/ast/ForExprAST.cc.o
+
+
 CMakeFiles/demo.dir/ast/FunctionAST.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/ast/FunctionAST.cc.o: ast/FunctionAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/ast/FunctionAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo.dir/ast/FunctionAST.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/ast/FunctionAST.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/FunctionAST.cc
 
 CMakeFiles/demo.dir/ast/FunctionAST.cc.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/demo.dir/ast/FunctionAST.cc.o.provides.build: CMakeFiles/demo.dir/ast
 
 CMakeFiles/demo.dir/ast/IfExprAST.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/ast/IfExprAST.cc.o: ast/IfExprAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo.dir/ast/IfExprAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo.dir/ast/IfExprAST.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/ast/IfExprAST.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/IfExprAST.cc
 
 CMakeFiles/demo.dir/ast/IfExprAST.cc.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/demo.dir/ast/IfExprAST.cc.o.provides.build: CMakeFiles/demo.dir/ast/I
 
 CMakeFiles/demo.dir/ast/NumberExprAST.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/ast/NumberExprAST.cc.o: ast/NumberExprAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo.dir/ast/NumberExprAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/demo.dir/ast/NumberExprAST.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/ast/NumberExprAST.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/NumberExprAST.cc
 
 CMakeFiles/demo.dir/ast/NumberExprAST.cc.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/demo.dir/ast/NumberExprAST.cc.o.provides.build: CMakeFiles/demo.dir/a
 
 CMakeFiles/demo.dir/ast/PrototypeAST.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/ast/PrototypeAST.cc.o: ast/PrototypeAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/demo.dir/ast/PrototypeAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/demo.dir/ast/PrototypeAST.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/ast/PrototypeAST.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/PrototypeAST.cc
 
 CMakeFiles/demo.dir/ast/PrototypeAST.cc.i: cmake_force
@@ -203,7 +227,7 @@ CMakeFiles/demo.dir/ast/PrototypeAST.cc.o.provides.build: CMakeFiles/demo.dir/as
 
 CMakeFiles/demo.dir/ast/VariableExprAST.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/ast/VariableExprAST.cc.o: ast/VariableExprAST.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/demo.dir/ast/VariableExprAST.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/demo.dir/ast/VariableExprAST.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/ast/VariableExprAST.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/VariableExprAST.cc
 
 CMakeFiles/demo.dir/ast/VariableExprAST.cc.i: cmake_force
@@ -227,7 +251,7 @@ CMakeFiles/demo.dir/ast/VariableExprAST.cc.o.provides.build: CMakeFiles/demo.dir
 
 CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o: kaleidoscope/kaleidoscope.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/kaleidoscope.cc
 
 CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.i: cmake_force
@@ -251,7 +275,7 @@ CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o.provides.build: CMakeFiles/de
 
 CMakeFiles/demo.dir/lexer/lexer.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/lexer/lexer.cc.o: lexer/lexer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/demo.dir/lexer/lexer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/demo.dir/lexer/lexer.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/lexer/lexer.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/lexer.cc
 
 CMakeFiles/demo.dir/lexer/lexer.cc.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/demo.dir/lexer/lexer.cc.o.provides.build: CMakeFiles/demo.dir/lexer/l
 
 CMakeFiles/demo.dir/logger/logger.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/logger/logger.cc.o: logger/logger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/demo.dir/logger/logger.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/demo.dir/logger/logger.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/logger/logger.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/logger/logger.cc
 
 CMakeFiles/demo.dir/logger/logger.cc.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/demo.dir/logger/logger.cc.o.provides.build: CMakeFiles/demo.dir/logge
 
 CMakeFiles/demo.dir/main.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/main.cc.o: main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/demo.dir/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/demo.dir/main.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/main.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/main.cc
 
 CMakeFiles/demo.dir/main.cc.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/demo.dir/main.cc.o.provides.build: CMakeFiles/demo.dir/main.cc.o
 
 CMakeFiles/demo.dir/parser/parser.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/parser/parser.cc.o: parser/parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/demo.dir/parser/parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/demo.dir/parser/parser.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/parser/parser.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/parser.cc
 
 CMakeFiles/demo.dir/parser/parser.cc.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/demo.dir/parser/parser.cc.o.provides.build: CMakeFiles/demo.dir/parse
 
 CMakeFiles/demo.dir/utils/functions.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/utils/functions.cc.o: utils/functions.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/demo.dir/utils/functions.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/demo.dir/utils/functions.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/utils/functions.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/utils/functions.cc
 
 CMakeFiles/demo.dir/utils/functions.cc.i: cmake_force
@@ -371,7 +395,7 @@ CMakeFiles/demo.dir/utils/functions.cc.o.provides.build: CMakeFiles/demo.dir/uti
 
 CMakeFiles/demo.dir/utils/operators.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/utils/operators.cc.o: utils/operators.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/demo.dir/utils/operators.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/demo.dir/utils/operators.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/utils/operators.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/utils/operators.cc
 
 CMakeFiles/demo.dir/utils/operators.cc.i: cmake_force
@@ -397,6 +421,7 @@ CMakeFiles/demo.dir/utils/operators.cc.o.provides.build: CMakeFiles/demo.dir/uti
 demo_OBJECTS = \
 "CMakeFiles/demo.dir/ast/BinaryExprAST.cc.o" \
 "CMakeFiles/demo.dir/ast/CallExprAST.cc.o" \
+"CMakeFiles/demo.dir/ast/ForExprAST.cc.o" \
 "CMakeFiles/demo.dir/ast/FunctionAST.cc.o" \
 "CMakeFiles/demo.dir/ast/IfExprAST.cc.o" \
 "CMakeFiles/demo.dir/ast/NumberExprAST.cc.o" \
@@ -415,6 +440,7 @@ demo_EXTERNAL_OBJECTS =
 
 demo: CMakeFiles/demo.dir/ast/BinaryExprAST.cc.o
 demo: CMakeFiles/demo.dir/ast/CallExprAST.cc.o
+demo: CMakeFiles/demo.dir/ast/ForExprAST.cc.o
 demo: CMakeFiles/demo.dir/ast/FunctionAST.cc.o
 demo: CMakeFiles/demo.dir/ast/IfExprAST.cc.o
 demo: CMakeFiles/demo.dir/ast/NumberExprAST.cc.o
@@ -539,7 +565,7 @@ demo: /usr/local/lib/libLLVMDebugInfoMSF.a
 demo: /usr/local/lib/libLLVMSupport.a
 demo: /usr/local/lib/libLLVMDemangle.a
 demo: CMakeFiles/demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -549,6 +575,7 @@ CMakeFiles/demo.dir/build: demo
 
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/ast/BinaryExprAST.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/ast/CallExprAST.cc.o.requires
+CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/ast/ForExprAST.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/ast/FunctionAST.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/ast/IfExprAST.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/ast/NumberExprAST.cc.o.requires

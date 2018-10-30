@@ -2,10 +2,7 @@
 
 #include "ast/IfExprAST.h"
 #include "kaleidoscope/kaleidoscope.h"
-#include "logger/logger.h"
 #include "utils/functions.h"
-#include "ast/ExprAST.h"
-#include "logger/logger.h"
 
 Value *IfExprAST::codegen() {
     Value *CondV = Cond->codegen();

@@ -44,6 +44,14 @@ ast/ExprAST.h
 llvm/IR/BasicBlock.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/llvm/IR/BasicBlock.h
 
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ForExprAST.cc
+ast/ForExprAST.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ast/ForExprAST.h
+kaleidoscope/kaleidoscope.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/kaleidoscope/kaleidoscope.h
+utils/functions.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/utils/functions.h
+
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/FunctionAST.cc
 ast/FunctionAST.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ast/FunctionAST.h
@@ -67,14 +75,8 @@ ast/IfExprAST.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ast/IfExprAST.h
 kaleidoscope/kaleidoscope.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/kaleidoscope/kaleidoscope.h
-logger/logger.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/logger/logger.h
 utils/functions.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/utils/functions.h
-ast/ExprAST.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ast/ExprAST.h
-logger/logger.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/logger/logger.h
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/NumberExprAST.cc
 ast/NumberExprAST.h
@@ -267,6 +269,8 @@ ast/CallExprAST.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/ast/CallExprAST.h
 ast/ExprAST.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/ast/ExprAST.h
+ast/ForExprAST.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/ast/ForExprAST.h
 ast/FunctionAST.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/ast/FunctionAST.h
 ast/IfExprAST.h
@@ -3438,6 +3442,10 @@ ast/ExprAST.h
 llvm/IR/BasicBlock.h
 ast/llvm/IR/BasicBlock.h
 
+ast/ForExprAST.h
+ast/ExprAST.h
+ast/ast/ExprAST.h
+
 ast/FunctionAST.h
 ast/PrototypeAST.h
 ast/ast/PrototypeAST.h
@@ -3553,6 +3561,8 @@ ast/CallExprAST.h
 parser/ast/CallExprAST.h
 ast/ExprAST.h
 parser/ast/ExprAST.h
+ast/ForExprAST.h
+parser/ast/ForExprAST.h
 ast/FunctionAST.h
 parser/ast/FunctionAST.h
 ast/IfExprAST.h

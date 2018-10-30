@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/simple-parser.dir/ast/BinaryExprAST.cc.o"
   "CMakeFiles/simple-parser.dir/ast/CallExprAST.cc.o"
+  "CMakeFiles/simple-parser.dir/ast/ForExprAST.cc.o"
   "CMakeFiles/simple-parser.dir/ast/FunctionAST.cc.o"
   "CMakeFiles/simple-parser.dir/ast/IfExprAST.cc.o"
   "CMakeFiles/simple-parser.dir/ast/NumberExprAST.cc.o"
