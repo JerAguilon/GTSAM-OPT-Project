@@ -179,6 +179,47 @@ std::unique_ptr<ExprAST> ListParser::parseIfExpr() {
 }
 
 std::unique_ptr<ExprAST> ListParser::parseForExpr() {
+    curr_token++; // eat the for
 
+    if (tokens[curr_token].type != tok_identifier)
+        return LogError("expected identifier after for");
+
+    std::string identifier = tokens[curr_token].str_content;
+    curr_token++;
+
+    if (tokens[curr_token].type != tok_equal)
+        return LogError("expected '=' after for");
+    curr_token++;
+
+    auto start = parseExpression();
+    if (!start)
+        return nullptr;
+    if (tokens[curr_token].type != tok_comma)
+        return LogError("expected ',' after for start value");
+    curr_token++;
+
+    auto end = parseExpression();
+    if (!end)
+        return nullptr;
+
+    // The step value is optional.
+    std::unique_ptr<ExprAST> step;
+    if (tokens[curr_token].type == tok_comma) {
+        curr_token++;
+        step = parseExpression();
+        if (!step)
+            return nullptr;
+    }
+
+    if (tokens[curr_token].type != tok_in)
+        return LogError("expected 'in' after for");
+    curr_token++; // eat the 'in'
+
+    auto body = parseExpression();
+    if (!body)
+        return nullptr;
+
+    return llvm::make_unique<ForExprAST>(identifier, std::move(start), std::move(end),
+            std::move(step), std::move(body));
 }
 

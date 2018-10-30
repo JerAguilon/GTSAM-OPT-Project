@@ -177,14 +177,14 @@ std::unique_ptr<ExprAST> ParseForExpr() {
     std::string IdName = IdentifierStr;
     getNextToken(); // eat identifier.
 
-    if (CurTok != '=')
+    if (CurTok != tok_equal)
         return LogError("expected '=' after for");
     getNextToken(); // eat '='.
 
     auto Start = ParseExpression();
     if (!Start)
         return nullptr;
-    if (CurTok != ',')
+    if (CurTok != tok_comma)
         return LogError("expected ',' after for start value");
     getNextToken();
 
@@ -194,7 +194,7 @@ std::unique_ptr<ExprAST> ParseForExpr() {
 
     // The step value is optional.
     std::unique_ptr<ExprAST> Step;
-    if (CurTok == ',') {
+    if (CurTok == tok_comma) {
         getNextToken();
         Step = ParseExpression();
         if (!Step)
