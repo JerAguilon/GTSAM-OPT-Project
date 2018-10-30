@@ -297,9 +297,33 @@ CMakeFiles/demo.dir/lexer/lexer.cc.o.provides: CMakeFiles/demo.dir/lexer/lexer.c
 CMakeFiles/demo.dir/lexer/lexer.cc.o.provides.build: CMakeFiles/demo.dir/lexer/lexer.cc.o
 
 
+CMakeFiles/demo.dir/lexer/token.cc.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/lexer/token.cc.o: lexer/token.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/demo.dir/lexer/token.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/lexer/token.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/token.cc
+
+CMakeFiles/demo.dir/lexer/token.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/lexer/token.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/token.cc > CMakeFiles/demo.dir/lexer/token.cc.i
+
+CMakeFiles/demo.dir/lexer/token.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/lexer/token.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/token.cc -o CMakeFiles/demo.dir/lexer/token.cc.s
+
+CMakeFiles/demo.dir/lexer/token.cc.o.requires:
+
+.PHONY : CMakeFiles/demo.dir/lexer/token.cc.o.requires
+
+CMakeFiles/demo.dir/lexer/token.cc.o.provides: CMakeFiles/demo.dir/lexer/token.cc.o.requires
+	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/lexer/token.cc.o.provides.build
+.PHONY : CMakeFiles/demo.dir/lexer/token.cc.o.provides
+
+CMakeFiles/demo.dir/lexer/token.cc.o.provides.build: CMakeFiles/demo.dir/lexer/token.cc.o
+
+
 CMakeFiles/demo.dir/logger/logger.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/logger/logger.cc.o: logger/logger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/demo.dir/logger/logger.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/demo.dir/logger/logger.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/logger/logger.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/logger/logger.cc
 
 CMakeFiles/demo.dir/logger/logger.cc.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/demo.dir/logger/logger.cc.o.provides.build: CMakeFiles/demo.dir/logge
 
 CMakeFiles/demo.dir/main.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/main.cc.o: main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/demo.dir/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/demo.dir/main.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/main.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/main.cc
 
 CMakeFiles/demo.dir/main.cc.i: cmake_force
@@ -347,7 +371,7 @@ CMakeFiles/demo.dir/main.cc.o.provides.build: CMakeFiles/demo.dir/main.cc.o
 
 CMakeFiles/demo.dir/parser/parser.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/parser/parser.cc.o: parser/parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/demo.dir/parser/parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/demo.dir/parser/parser.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/parser/parser.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/parser.cc
 
 CMakeFiles/demo.dir/parser/parser.cc.i: cmake_force
@@ -371,7 +395,7 @@ CMakeFiles/demo.dir/parser/parser.cc.o.provides.build: CMakeFiles/demo.dir/parse
 
 CMakeFiles/demo.dir/utils/functions.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/utils/functions.cc.o: utils/functions.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/demo.dir/utils/functions.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/demo.dir/utils/functions.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/utils/functions.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/utils/functions.cc
 
 CMakeFiles/demo.dir/utils/functions.cc.i: cmake_force
@@ -395,7 +419,7 @@ CMakeFiles/demo.dir/utils/functions.cc.o.provides.build: CMakeFiles/demo.dir/uti
 
 CMakeFiles/demo.dir/utils/operators.cc.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/utils/operators.cc.o: utils/operators.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/demo.dir/utils/operators.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/demo.dir/utils/operators.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/utils/operators.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/utils/operators.cc
 
 CMakeFiles/demo.dir/utils/operators.cc.i: cmake_force
@@ -429,6 +453,7 @@ demo_OBJECTS = \
 "CMakeFiles/demo.dir/ast/VariableExprAST.cc.o" \
 "CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o" \
 "CMakeFiles/demo.dir/lexer/lexer.cc.o" \
+"CMakeFiles/demo.dir/lexer/token.cc.o" \
 "CMakeFiles/demo.dir/logger/logger.cc.o" \
 "CMakeFiles/demo.dir/main.cc.o" \
 "CMakeFiles/demo.dir/parser/parser.cc.o" \
@@ -448,6 +473,7 @@ demo: CMakeFiles/demo.dir/ast/PrototypeAST.cc.o
 demo: CMakeFiles/demo.dir/ast/VariableExprAST.cc.o
 demo: CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o
 demo: CMakeFiles/demo.dir/lexer/lexer.cc.o
+demo: CMakeFiles/demo.dir/lexer/token.cc.o
 demo: CMakeFiles/demo.dir/logger/logger.cc.o
 demo: CMakeFiles/demo.dir/main.cc.o
 demo: CMakeFiles/demo.dir/parser/parser.cc.o
@@ -565,7 +591,7 @@ demo: /usr/local/lib/libLLVMDebugInfoMSF.a
 demo: /usr/local/lib/libLLVMSupport.a
 demo: /usr/local/lib/libLLVMDemangle.a
 demo: CMakeFiles/demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -583,6 +609,7 @@ CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/ast/PrototypeAST.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/ast/VariableExprAST.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/lexer/lexer.cc.o.requires
+CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/lexer/token.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/logger/logger.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/main.cc.o.requires
 CMakeFiles/demo.dir/requires: CMakeFiles/demo.dir/parser/parser.cc.o.requires

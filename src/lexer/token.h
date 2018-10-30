@@ -43,17 +43,22 @@ enum Token {
 
     tok_lparen = -22,
     tok_rparen = -23,
+
+    tok_semicolon = -24,
 };
 
 
 
 struct TokenWrapper {
-    int type; // TODO: replace this with type `Token`
+    Token type; // TODO: replace this with type `Token`
     float value;
     std::string str_content;
     char *filename;
     int line_number;
     int column_number;
+
+public:
+    std::string to_string();
 };
 
 #endif

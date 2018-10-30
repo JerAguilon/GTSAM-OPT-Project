@@ -7,6 +7,9 @@ add_definitions(${LLVM_DEFINITIONS})
 include_directories(${LLVM_INCLUDE_DIRS})
 include_directories(${SimpleProject_SOURCE_DIR})
 
+find_package(Boost)
+include_directories(${Boost_INCLUDE_DIRS})
+
 message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
 message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
 
@@ -43,4 +46,5 @@ target_link_libraries(
     ${LLVM_LIBS}
     ${LLVM_AVAILABLE_LIBS}
     ${CMAKE_LIBRARY_LINK_C_FLAGS}
+    ${Boost_LIBRARIES}
 )

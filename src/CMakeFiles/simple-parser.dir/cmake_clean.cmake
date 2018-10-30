@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/simple-parser.dir/ast/VariableExprAST.cc.o"
   "CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o"
   "CMakeFiles/simple-parser.dir/lexer/lexer.cc.o"
+  "CMakeFiles/simple-parser.dir/lexer/token.cc.o"
   "CMakeFiles/simple-parser.dir/logger/logger.cc.o"
   "CMakeFiles/simple-parser.dir/main.cc.o"
   "CMakeFiles/simple-parser.dir/parser/parser.cc.o"
