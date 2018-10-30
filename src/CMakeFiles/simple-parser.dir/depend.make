@@ -1416,6 +1416,9 @@ src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.o: src/lexer/lexer.h
 src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.o: src/lexer/token.h
 src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.o: src/logger/logger.h
 
+src/CMakeFiles/simple-parser.dir/lexer/token.cc.o: src/lexer/token.cc
+src/CMakeFiles/simple-parser.dir/lexer/token.cc.o: src/lexer/token.h
+
 src/CMakeFiles/simple-parser.dir/logger/logger.cc.o: src/logger/logger.cc
 src/CMakeFiles/simple-parser.dir/logger/logger.cc.o: /usr/local/include/llvm-c/DataTypes.h
 src/CMakeFiles/simple-parser.dir/logger/logger.cc.o: /usr/local/include/llvm-c/Types.h

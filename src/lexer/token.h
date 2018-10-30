@@ -43,8 +43,6 @@ enum Token {
 
     tok_lparen = -22,
     tok_rparen = -23,
-
-    tok_semicolon = -24,
 };
 
 

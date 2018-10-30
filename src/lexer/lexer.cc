@@ -160,6 +160,11 @@ std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fnam
             if (ch == '#') {
                 break; // line comments go until the end of the line
             }
+            if (ch == ';') {
+                build_token(tokens, fname, tok_semicolon, line_number, i + 1);
+                i++;
+                continue;
+            }
 
             // Test for <= or >=
             if (iscmp(ch)) {

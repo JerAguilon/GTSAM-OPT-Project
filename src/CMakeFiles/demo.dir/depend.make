@@ -1416,6 +1416,9 @@ src/CMakeFiles/demo.dir/lexer/lexer.cc.o: src/lexer/lexer.h
 src/CMakeFiles/demo.dir/lexer/lexer.cc.o: src/lexer/token.h
 src/CMakeFiles/demo.dir/lexer/lexer.cc.o: src/logger/logger.h
 
+src/CMakeFiles/demo.dir/lexer/token.cc.o: src/lexer/token.cc
+src/CMakeFiles/demo.dir/lexer/token.cc.o: src/lexer/token.h
+
 src/CMakeFiles/demo.dir/logger/logger.cc.o: src/logger/logger.cc
 src/CMakeFiles/demo.dir/logger/logger.cc.o: /usr/local/include/llvm-c/DataTypes.h
 src/CMakeFiles/demo.dir/logger/logger.cc.o: /usr/local/include/llvm-c/Types.h

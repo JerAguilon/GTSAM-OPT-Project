@@ -472,8 +472,8 @@ lexer/token.o: lexer/token.cc.o
 
 # target to build an object file
 lexer/token.cc.o:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/lexer/token.cc.o
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/lexer/token.cc.o
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/lexer/token.cc.o
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/lexer/token.cc.o
 .PHONY : lexer/token.cc.o
 
 lexer/token.i: lexer/token.cc.i
@@ -482,8 +482,8 @@ lexer/token.i: lexer/token.cc.i
 
 # target to preprocess a source file
 lexer/token.cc.i:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/lexer/token.cc.i
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/lexer/token.cc.i
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/lexer/token.cc.i
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/lexer/token.cc.i
 .PHONY : lexer/token.cc.i
 
 lexer/token.s: lexer/token.cc.s
@@ -492,8 +492,8 @@ lexer/token.s: lexer/token.cc.s
 
 # target to generate assembly for a file
 lexer/token.cc.s:
-	$(MAKE) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/lexer/token.cc.s
-	$(MAKE) -f CMakeFiles/simple-parser.dir/build.make CMakeFiles/simple-parser.dir/lexer/token.cc.s
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/lexer/token.cc.s
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/lexer/token.cc.s
 .PHONY : lexer/token.cc.s
 
 logger/logger.o: logger/logger.cc.o
