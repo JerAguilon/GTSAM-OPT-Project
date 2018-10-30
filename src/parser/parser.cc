@@ -78,7 +78,7 @@ std::unique_ptr<ExprAST> ParseBinOpRHS(int ExprPrec, std::unique_ptr<ExprAST> LH
             return LHS;
         }
 
-        int BinOp = CurTok;
+        Token BinOp = CurTok;
         getNextToken();
 
         auto RHS = ParsePrimary();
