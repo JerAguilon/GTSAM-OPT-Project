@@ -466,6 +466,36 @@ lexer/lexer.cc.s:
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.s
 .PHONY : lexer/lexer.cc.s
 
+lexer/token.o: lexer/token.cc.o
+
+.PHONY : lexer/token.o
+
+# target to build an object file
+lexer/token.cc.o:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/lexer/token.cc.o
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/lexer/token.cc.o
+.PHONY : lexer/token.cc.o
+
+lexer/token.i: lexer/token.cc.i
+
+.PHONY : lexer/token.i
+
+# target to preprocess a source file
+lexer/token.cc.i:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/lexer/token.cc.i
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/lexer/token.cc.i
+.PHONY : lexer/token.cc.i
+
+lexer/token.s: lexer/token.cc.s
+
+.PHONY : lexer/token.s
+
+# target to generate assembly for a file
+lexer/token.cc.s:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/lexer/token.cc.s
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/lexer/token.cc.s
+.PHONY : lexer/token.cc.s
+
 logger/logger.o: logger/logger.cc.o
 
 .PHONY : logger/logger.o
@@ -658,6 +688,9 @@ help:
 	@echo "... lexer/lexer.o"
 	@echo "... lexer/lexer.i"
 	@echo "... lexer/lexer.s"
+	@echo "... lexer/token.o"
+	@echo "... lexer/token.i"
+	@echo "... lexer/token.s"
 	@echo "... logger/logger.o"
 	@echo "... logger/logger.i"
 	@echo "... logger/logger.s"

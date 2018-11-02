@@ -131,7 +131,7 @@ Token getNextToken() {
 
 
 static TokenWrapper& build_token(
-        std::vector<TokenWrapper>& tokens, const char *filename, int tok_type, int line_number, int column_number) {
+        std::vector<TokenWrapper>& tokens, const char *filename, Token tok_type, int line_number, int column_number) {
     tokens.emplace_back();
     TokenWrapper &tok = tokens.back();
 
@@ -159,6 +159,11 @@ std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fnam
             }
             if (ch == '#') {
                 break; // line comments go until the end of the line
+            }
+            if (ch == ';') {
+                build_token(tokens, fname, tok_semicolon, line_number, i + 1);
+                i++;
+                continue;
             }
 
             // Test for <= or >=
@@ -189,7 +194,7 @@ std::vector<TokenWrapper>& tokenizeStream(std::istream& infile, const char* fnam
                     symbol.push_back(line[i]);
                 }
 
-                int token_type = -1000; // Temporary hack 
+                Token token_type; // Temporary hack 
                 if (symbol == "def") {
                     token_type = tok_def;
                 } else if (symbol == "extern") {

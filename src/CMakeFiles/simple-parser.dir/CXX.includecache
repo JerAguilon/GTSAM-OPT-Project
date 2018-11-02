@@ -21,6 +21,8 @@ ast/ExprAST.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ast/ExprAST.h
 logger/logger.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/logger/logger.h
+lexer/token.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/lexer/token.h
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/CallExprAST.cc
 ast/CallExprAST.h
@@ -156,6 +158,12 @@ lexer/token.h
 string
 -
 vector
+-
+
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/token.cc
+lexer/token.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/lexer/token.h
+boost/format.hpp
 -
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/token.h
@@ -3431,6 +3439,8 @@ ast/ExprAST.h
 src/ast/ast/ExprAST.h
 logger/logger.h
 src/ast/logger/logger.h
+lexer/token.h
+src/ast/lexer/token.h
 
 src/ast/CallExprAST.h
 llvm/IR/IRBuilder.h

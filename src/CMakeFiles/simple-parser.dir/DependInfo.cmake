@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/VariableExprAST.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/simple-parser.dir/ast/VariableExprAST.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/kaleidoscope.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/lexer.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.o"
+  "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/token.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/simple-parser.dir/lexer/token.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/logger/logger.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/simple-parser.dir/logger/logger.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/main.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/simple-parser.dir/main.cc.o"
   "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/parser.cc" "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/CMakeFiles/simple-parser.dir/parser/parser.cc.o"

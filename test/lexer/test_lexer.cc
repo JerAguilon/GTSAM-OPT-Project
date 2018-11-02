@@ -36,7 +36,7 @@ BOOST_AUTO_TEST_CASE(PassTest)
 
     TokenWrapper e2 = {};
     e2.filename = (char *) "foobar.txt";
-    e2.type = '<';
+    e2.type = tok_less;
     e2.line_number = 1;
     e2.column_number = 3;
 
@@ -47,7 +47,13 @@ BOOST_AUTO_TEST_CASE(PassTest)
     e3.line_number = 1;
     e3.column_number = 5;
 
-    std::vector<TokenWrapper> expected {e1, e2, e3};
+    TokenWrapper e4 = {};
+    e4.filename = (char *) "foobar.txt";
+    e4.type = tok_semicolon;
+    e4.line_number = 1;
+    e4.column_number = 6;
+
+    std::vector<TokenWrapper> expected {e1, e2, e3, e4};
     tokenizeStream(stream, fname.c_str(), tokens);
 
     BOOST_CHECK_EQUAL(tokens.size(), expected.size());
