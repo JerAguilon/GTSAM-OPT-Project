@@ -42,8 +42,6 @@
 #include <cctype>
 #include <cstdio>
 #include <cstdlib>
-#include <iostream>
-#include <sstream>
 #include <map>
 #include <memory>
 #include <string>
@@ -53,132 +51,121 @@ using namespace llvm;
 using namespace llvm::orc;
 
 static void InitializeModuleAndPassManager() {
-    // Open a new module.
-    TheModule = llvm::make_unique<Module>("my cool jit", TheContext);
-    TheModule->setDataLayout(TheJIT->getTargetMachine().createDataLayout());
+  // Open a new module.
+  TheModule = llvm::make_unique<Module>("my cool jit", TheContext);
+  TheModule->setDataLayout(TheJIT->getTargetMachine().createDataLayout());
 
-    // Create a new pass manager attached to it.
-    TheFPM = llvm::make_unique<legacy::FunctionPassManager>(TheModule.get());
+  // Create a new pass manager attached to it.
+  TheFPM = llvm::make_unique<legacy::FunctionPassManager>(TheModule.get());
 
-    // Promot allocas to registers.
-    TheFPM->add(createPromoteMemoryToRegisterPass());
-    // Do simple "peephole" optimizations and bit-twiddling optzns.
-    TheFPM->add(createInstructionCombiningPass());
-    // Reassociate expressions.
-    TheFPM->add(createReassociatePass());
-    // Eliminate Common SubExpressions.
-    TheFPM->add(createGVNPass());
-    // Simplify the control flow graph (deleting unreachable blocks, etc).
-    TheFPM->add(createCFGSimplificationPass());
+  // Promot allocas to registers.
+  TheFPM->add(createPromoteMemoryToRegisterPass());
+  // Do simple "peephole" optimizations and bit-twiddling optzns.
+  TheFPM->add(createInstructionCombiningPass());
+  // Reassociate expressions.
+  TheFPM->add(createReassociatePass());
+  // Eliminate Common SubExpressions.
+  TheFPM->add(createGVNPass());
+  // Simplify the control flow graph (deleting unreachable blocks, etc).
+  TheFPM->add(createCFGSimplificationPass());
 
-    TheFPM->doInitialization();
+  TheFPM->doInitialization();
 }
 
 static void HandleDefinition() {
-    if (auto FnAST = ParseDefinition()) {
-        if (auto *FnIR = FnAST->codegen()) {
-            fprintf(stderr, "Read function definition:");
-            FnIR->print(errs());
-            fprintf(stderr, "\n");
-            TheJIT->addModule(std::move(TheModule));
-            InitializeModuleAndPassManager();
-        }
-    } else {
-        // Skip token for error recovery.
-        getNextToken();
+  if (auto FnAST = ParseDefinition()) {
+    if (auto *FnIR = FnAST->codegen()) {
+      fprintf(stderr, "Read function definition:");
+      FnIR->print(errs());
+      fprintf(stderr, "\n");
+      TheJIT->addModule(std::move(TheModule));
+      InitializeModuleAndPassManager();
     }
+  } else {
+    // Skip token for error recovery.
+    getNextToken();
+  }
 }
 
 static void HandleExtern() {
-    if (auto ProtoAST = ParseExtern()) {
-        if (auto *FnIR = ProtoAST->codegen()) {
-            fprintf(stderr, "Read extern: ");
-            FnIR->print(errs());
-            fprintf(stderr, "\n");
-            FunctionProtos[ProtoAST->getName()] = std::move(ProtoAST);
-        }
-    } else {
-        // Skip token for error recovery.
-        getNextToken();
+  if (auto ProtoAST = ParseExtern()) {
+    if (auto *FnIR = ProtoAST->codegen()) {
+      fprintf(stderr, "Read extern: ");
+      FnIR->print(errs());
+      fprintf(stderr, "\n");
+      FunctionProtos[ProtoAST->getName()] = std::move(ProtoAST);
     }
+  } else {
+    // Skip token for error recovery.
+    getNextToken();
+  }
 }
 
 static void HandleTopLevelExpression() {
-    // Evaluate a top-level expression into an anonymous function.
-    if (auto FnAST = ParseTopLevelExpr()) {
-        if (FnAST->codegen()) {
-            // JIT the module containing the anonymous expression, keeping a handle so
-            // we can free it later.
-            auto H = TheJIT->addModule(std::move(TheModule));
-            InitializeModuleAndPassManager();
+  // Evaluate a top-level expression into an anonymous function.
+  if (auto FnAST = ParseTopLevelExpr()) {
+    if (FnAST->codegen()) {
+      // JIT the module containing the anonymous expression, keeping a handle so
+      // we can free it later.
+      auto H = TheJIT->addModule(std::move(TheModule));
+      InitializeModuleAndPassManager();
 
-            // Search the JIT for the __anon_expr symbol.
-            auto ExprSymbol = TheJIT->findSymbol("anon_expr");
-            assert(ExprSymbol && "Function not found");
+      // Search the JIT for the __anon_expr symbol.
+      auto ExprSymbol = TheJIT->findSymbol("anon_expr");
+      assert(ExprSymbol && "Function not found");
 
-            // Get the symbol's address and cast it to the right type (takes no
-            // arguments, returns a double) so we can call it as a native function.
-            double (*FP)() = (double (*)())(intptr_t)cantFail(ExprSymbol.getAddress());
-            fprintf(stderr, "Evaluated to %f\n", FP());
+      // Get the symbol's address and cast it to the right type (takes no
+      // arguments, returns a double) so we can call it as a native function.
+      double (*FP)() = (double (*)())(intptr_t)cantFail(ExprSymbol.getAddress());
+      fprintf(stderr, "Evaluated to %f\n", FP());
 
-            // Delete the anonymous expression module from the JIT.
-            TheJIT->removeModule(H);
-        }
-    } else {
-        // Skip token for error recovery.
-        getNextToken();
+      // Delete the anonymous expression module from the JIT.
+      TheJIT->removeModule(H);
     }
+  } else {
+    // Skip token for error recovery.
+    getNextToken();
+  }
 }
 
 /// top ::= definition | external | expression | ';'
 static void MainLoop() {
-    while (true) {
-        fprintf(stderr, "ready> ");
-        /* switch (CurTok) { */
-        /* case tok_eof: */
-        /*   return; */
-        /* case tok_semicolon: */
-        /*   getNextToken(); */
-        /*   break; */
-        /* case tok_def: */
-        /*   HandleDefinition(); */
-        /*   break; */
-        /* case tok_extern: */
-        /*   HandleExtern(); */
-        /*   break; */
-        /* default: */
-        /*   HandleTopLevelExpression(); */
-        /*   break; */
-        /* } */
+  while (true) {
+    fprintf(stderr, "ready> ");
+    switch (CurTok) {
+    case tok_eof:
+      return;
+    case tok_semicolon:
+      getNextToken();
+      break;
+    case tok_def:
+      HandleDefinition();
+      break;
+    case tok_extern:
+      HandleExtern();
+      break;
+    default:
+      HandleTopLevelExpression();
+      break;
     }
+  }
 }
 
 int main() {
-    InitializeNativeTarget();
-    InitializeNativeTargetAsmPrinter();
-    InitializeNativeTargetAsmParser();
+  InitializeNativeTarget();
+  InitializeNativeTargetAsmPrinter();
+  InitializeNativeTargetAsmParser();
 
-    // Prime the first token.
-    fprintf(stderr, "ready> ");
-    std::string entered_code;
-    std::getline(std::cin, entered_code);
-    /* getNextToken(); */
-    std::cout << entered_code << std::endl;
+  // Prime the first token.
+  fprintf(stderr, "ready> ");
+  getNextToken();
 
-    std::istringstream stream(entered_code);                                                                                    
-    std::vector<TokenWrapper> tokens;
-    tokenizeStream(stream, "", tokens);
+  TheJIT = llvm::make_unique<KaleidoscopeJIT>();
 
-    for (TokenWrapper& t : tokens) {
-        std::cout << t.to_string() << std::endl;
-    }
+  InitializeModuleAndPassManager();
 
-    TheJIT = llvm::make_unique<KaleidoscopeJIT>();
+  // Run the main "interpreter loop" now.
+  MainLoop();
 
-    InitializeModuleAndPassManager();
-
-    // Run the main "interpreter loop" now.
-    /* MainLoop(); */
-
-    return 0;
+  return 0;
 }
