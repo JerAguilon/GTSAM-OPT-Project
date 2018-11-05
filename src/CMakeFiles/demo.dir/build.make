@@ -273,28 +273,28 @@ src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.provides: src/CMakeFiles/d
 src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.provides.build: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o
 
 
-src/CMakeFiles/demo.dir/built_ins/pose.cc.o: src/CMakeFiles/demo.dir/flags.make
-src/CMakeFiles/demo.dir/built_ins/pose.cc.o: src/built_ins/pose.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/demo.dir/built_ins/pose.cc.o"
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/built_ins/pose.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/built_ins/pose.cc
+src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o: src/CMakeFiles/demo.dir/flags.make
+src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o: src/built_ins/BuiltInTypes.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/built_ins/BuiltInTypes.cc
 
-src/CMakeFiles/demo.dir/built_ins/pose.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/built_ins/pose.cc.i"
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/built_ins/pose.cc > CMakeFiles/demo.dir/built_ins/pose.cc.i
+src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.i"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/built_ins/BuiltInTypes.cc > CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.i
 
-src/CMakeFiles/demo.dir/built_ins/pose.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/built_ins/pose.cc.s"
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/built_ins/pose.cc -o CMakeFiles/demo.dir/built_ins/pose.cc.s
+src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.s"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/built_ins/BuiltInTypes.cc -o CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.s
 
-src/CMakeFiles/demo.dir/built_ins/pose.cc.o.requires:
+src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o.requires:
 
-.PHONY : src/CMakeFiles/demo.dir/built_ins/pose.cc.o.requires
+.PHONY : src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o.requires
 
-src/CMakeFiles/demo.dir/built_ins/pose.cc.o.provides: src/CMakeFiles/demo.dir/built_ins/pose.cc.o.requires
-	$(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/built_ins/pose.cc.o.provides.build
-.PHONY : src/CMakeFiles/demo.dir/built_ins/pose.cc.o.provides
+src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o.provides: src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o.requires
+	$(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o.provides.build
+.PHONY : src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o.provides
 
-src/CMakeFiles/demo.dir/built_ins/pose.cc.o.provides.build: src/CMakeFiles/demo.dir/built_ins/pose.cc.o
+src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o.provides.build: src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o
 
 
 src/CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o: src/CMakeFiles/demo.dir/flags.make
@@ -524,7 +524,7 @@ demo_OBJECTS = \
 "CMakeFiles/demo.dir/ast/PrototypeAST.cc.o" \
 "CMakeFiles/demo.dir/ast/VariableExprAST.cc.o" \
 "CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o" \
-"CMakeFiles/demo.dir/built_ins/pose.cc.o" \
+"CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o" \
 "CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o" \
 "CMakeFiles/demo.dir/lexer/lexer.cc.o" \
 "CMakeFiles/demo.dir/lexer/token.cc.o" \
@@ -547,7 +547,7 @@ src/demo: src/CMakeFiles/demo.dir/ast/NumberExprAST.cc.o
 src/demo: src/CMakeFiles/demo.dir/ast/PrototypeAST.cc.o
 src/demo: src/CMakeFiles/demo.dir/ast/VariableExprAST.cc.o
 src/demo: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o
-src/demo: src/CMakeFiles/demo.dir/built_ins/pose.cc.o
+src/demo: src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o
 src/demo: src/CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o
 src/demo: src/CMakeFiles/demo.dir/lexer/lexer.cc.o
 src/demo: src/CMakeFiles/demo.dir/lexer/token.cc.o
@@ -686,7 +686,7 @@ src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/NumberExprAST.cc.o
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/PrototypeAST.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/VariableExprAST.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.requires
-src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/built_ins/pose.cc.o.requires
+src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/lexer/lexer.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/lexer/token.cc.o.requires

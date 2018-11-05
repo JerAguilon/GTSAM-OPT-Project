@@ -8,7 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/demo.dir/ast/PrototypeAST.cc.o"
   "CMakeFiles/demo.dir/ast/VariableExprAST.cc.o"
   "CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o"
-  "CMakeFiles/demo.dir/built_ins/pose.cc.o"
+  "CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o"
   "CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o"
   "CMakeFiles/demo.dir/lexer/lexer.cc.o"
   "CMakeFiles/demo.dir/lexer/token.cc.o"

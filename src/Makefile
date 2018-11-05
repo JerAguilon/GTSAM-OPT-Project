@@ -436,35 +436,35 @@ ast/built_ins/Pose2dExpr.cc.s:
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExpr.cc.s
 .PHONY : ast/built_ins/Pose2dExpr.cc.s
 
-built_ins/pose.o: built_ins/pose.cc.o
+built_ins/BuiltInTypes.o: built_ins/BuiltInTypes.cc.o
 
-.PHONY : built_ins/pose.o
+.PHONY : built_ins/BuiltInTypes.o
 
 # target to build an object file
-built_ins/pose.cc.o:
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/built_ins/pose.cc.o
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/built_ins/pose.cc.o
-.PHONY : built_ins/pose.cc.o
+built_ins/BuiltInTypes.cc.o:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o
+.PHONY : built_ins/BuiltInTypes.cc.o
 
-built_ins/pose.i: built_ins/pose.cc.i
+built_ins/BuiltInTypes.i: built_ins/BuiltInTypes.cc.i
 
-.PHONY : built_ins/pose.i
+.PHONY : built_ins/BuiltInTypes.i
 
 # target to preprocess a source file
-built_ins/pose.cc.i:
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/built_ins/pose.cc.i
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/built_ins/pose.cc.i
-.PHONY : built_ins/pose.cc.i
+built_ins/BuiltInTypes.cc.i:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.i
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.i
+.PHONY : built_ins/BuiltInTypes.cc.i
 
-built_ins/pose.s: built_ins/pose.cc.s
+built_ins/BuiltInTypes.s: built_ins/BuiltInTypes.cc.s
 
-.PHONY : built_ins/pose.s
+.PHONY : built_ins/BuiltInTypes.s
 
 # target to generate assembly for a file
-built_ins/pose.cc.s:
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/built_ins/pose.cc.s
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/built_ins/pose.cc.s
-.PHONY : built_ins/pose.cc.s
+built_ins/BuiltInTypes.cc.s:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.s
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.s
+.PHONY : built_ins/BuiltInTypes.cc.s
 
 kaleidoscope/kaleidoscope.o: kaleidoscope/kaleidoscope.cc.o
 
@@ -775,9 +775,9 @@ help:
 	@echo "... ast/built_ins/Pose2dExpr.o"
 	@echo "... ast/built_ins/Pose2dExpr.i"
 	@echo "... ast/built_ins/Pose2dExpr.s"
-	@echo "... built_ins/pose.o"
-	@echo "... built_ins/pose.i"
-	@echo "... built_ins/pose.s"
+	@echo "... built_ins/BuiltInTypes.o"
+	@echo "... built_ins/BuiltInTypes.i"
+	@echo "... built_ins/BuiltInTypes.s"
 	@echo "... kaleidoscope/kaleidoscope.o"
 	@echo "... kaleidoscope/kaleidoscope.i"
 	@echo "... kaleidoscope/kaleidoscope.s"
