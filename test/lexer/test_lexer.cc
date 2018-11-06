@@ -1,4 +1,3 @@
-#define BOOST_TEST_MODULE SqrTests
 #include <boost/test/unit_test.hpp>
 
 #include <string>
@@ -7,6 +6,8 @@
 
 #include "lexer/lexer.h"
 #include "lexer/token.h"
+
+BOOST_AUTO_TEST_SUITE( TestLexer )
 
 bool operator==(const TokenWrapper a, const TokenWrapper b) {
     return (
@@ -20,7 +21,7 @@ bool operator==(const TokenWrapper a, const TokenWrapper b) {
 }
 
 
-BOOST_AUTO_TEST_CASE(PassTest)
+BOOST_AUTO_TEST_CASE(TestingLessThan)
 {
     std::string line = "1 < 3;";
     std::istringstream stream(line);
@@ -61,3 +62,5 @@ BOOST_AUTO_TEST_CASE(PassTest)
         BOOST_CHECK(tokens[i] == expected[i]);
     }
 }
+
+BOOST_AUTO_TEST_SUITE_END()

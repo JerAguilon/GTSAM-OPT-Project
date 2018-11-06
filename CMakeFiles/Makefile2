@@ -87,7 +87,7 @@ src/preinstall:
 src/CMakeFiles/demo.dir/all:
 	$(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/depend
 	$(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22 "Built target demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24 "Built target demo"
 .PHONY : src/CMakeFiles/demo.dir/all
 
 # Include target in all.
@@ -156,7 +156,7 @@ clean: src/CMakeFiles/intrinsics_gen.dir/clean
 src/CMakeFiles/simple-parser.dir/all:
 	$(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/depend
 	$(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42 "Built target simple-parser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44 "Built target simple-parser"
 .PHONY : src/CMakeFiles/simple-parser.dir/all
 
 # Include target in all.
@@ -211,7 +211,7 @@ test/preinstall:
 test/CMakeFiles/Test.dir/all: src/CMakeFiles/simple-parser.dir/all
 	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/depend
 	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=1,2 "Built target Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=1,2,3,4 "Built target Test"
 .PHONY : test/CMakeFiles/Test.dir/all
 
 # Include target in all.
@@ -221,7 +221,7 @@ all: test/CMakeFiles/Test.dir/all
 
 # Build rule for subdir invocation for target.
 test/CMakeFiles/Test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles 24
 	$(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/Test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles 0
 .PHONY : test/CMakeFiles/Test.dir/rule

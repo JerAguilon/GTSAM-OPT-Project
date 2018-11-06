@@ -249,28 +249,28 @@ src/CMakeFiles/demo.dir/ast/VariableExprAST.cc.o.provides: src/CMakeFiles/demo.d
 src/CMakeFiles/demo.dir/ast/VariableExprAST.cc.o.provides.build: src/CMakeFiles/demo.dir/ast/VariableExprAST.cc.o
 
 
-src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o: src/CMakeFiles/demo.dir/flags.make
-src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o: src/ast/built_ins/Pose2dExpr.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o"
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/Pose2dExpr.cc
+src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o: src/CMakeFiles/demo.dir/flags.make
+src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o: src/ast/built_ins/Pose2dExprAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/Pose2dExprAST.cc
 
-src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.i"
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/Pose2dExpr.cc > CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.i
+src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.i"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/Pose2dExprAST.cc > CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.i
 
-src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.s"
-	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/Pose2dExpr.cc -o CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.s
+src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.s"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/Pose2dExprAST.cc -o CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.s
 
-src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.requires:
+src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o.requires:
 
-.PHONY : src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.requires
+.PHONY : src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o.requires
 
-src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.provides: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.requires
-	$(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.provides.build
-.PHONY : src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.provides
+src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o.provides: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o.requires
+	$(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o.provides.build
+.PHONY : src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o.provides
 
-src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.provides.build: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o
+src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o.provides.build: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o
 
 
 src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o: src/CMakeFiles/demo.dir/flags.make
@@ -523,7 +523,7 @@ demo_OBJECTS = \
 "CMakeFiles/demo.dir/ast/NumberExprAST.cc.o" \
 "CMakeFiles/demo.dir/ast/PrototypeAST.cc.o" \
 "CMakeFiles/demo.dir/ast/VariableExprAST.cc.o" \
-"CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o" \
+"CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o" \
 "CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o" \
 "CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o" \
 "CMakeFiles/demo.dir/lexer/lexer.cc.o" \
@@ -546,7 +546,7 @@ src/demo: src/CMakeFiles/demo.dir/ast/IfExprAST.cc.o
 src/demo: src/CMakeFiles/demo.dir/ast/NumberExprAST.cc.o
 src/demo: src/CMakeFiles/demo.dir/ast/PrototypeAST.cc.o
 src/demo: src/CMakeFiles/demo.dir/ast/VariableExprAST.cc.o
-src/demo: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o
+src/demo: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o
 src/demo: src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o
 src/demo: src/CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o
 src/demo: src/CMakeFiles/demo.dir/lexer/lexer.cc.o
@@ -685,7 +685,7 @@ src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/IfExprAST.cc.o.req
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/NumberExprAST.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/PrototypeAST.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/VariableExprAST.cc.o.requires
-src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExpr.cc.o.requires
+src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/ast/built_ins/Pose2dExprAST.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/built_ins/BuiltInTypes.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/kaleidoscope/kaleidoscope.cc.o.requires
 src/CMakeFiles/demo.dir/requires: src/CMakeFiles/demo.dir/lexer/lexer.cc.o.requires

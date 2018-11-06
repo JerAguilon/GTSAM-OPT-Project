@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o"
   "CMakeFiles/Test.dir/lexer/test_lexer.cc.o"
+  "CMakeFiles/Test.dir/main_test.cc.o"
   "Test.pdb"
   "Test"
 )

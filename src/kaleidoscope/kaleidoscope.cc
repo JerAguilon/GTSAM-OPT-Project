@@ -1,5 +1,16 @@
 #include "kaleidoscope.h"
 
+void registerPose2Struct() {
+    llvm::Type* doubleType = llvm::Type::getFloatTy(TheContext);
+    llvm::StructType *structType = llvm::StructType::create(
+        TheContext,
+        {doubleType, doubleType, doubleType},
+        "Pose2d",
+        false
+    );
+    pose2Type = structType;
+}
+
 // This is an object that owns LLVM core data structures
 llvm::LLVMContext TheContext;
 
@@ -11,3 +22,6 @@ std::unique_ptr<llvm::Module> TheModule;
 
 // This map keeps track of which values are defined in the current scope
 std::map<std::string, llvm::Value *> NamedValues;
+
+// This is a native data type: a 2d pose
+llvm::StructType *pose2Type;

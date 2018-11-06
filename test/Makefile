@@ -136,6 +136,33 @@ Test/fast:
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/build
 .PHONY : Test/fast
 
+ast/built_ins/test_Pose2dExpr.o: ast/built_ins/test_Pose2dExpr.cc.o
+
+.PHONY : ast/built_ins/test_Pose2dExpr.o
+
+# target to build an object file
+ast/built_ins/test_Pose2dExpr.cc.o:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
+.PHONY : ast/built_ins/test_Pose2dExpr.cc.o
+
+ast/built_ins/test_Pose2dExpr.i: ast/built_ins/test_Pose2dExpr.cc.i
+
+.PHONY : ast/built_ins/test_Pose2dExpr.i
+
+# target to preprocess a source file
+ast/built_ins/test_Pose2dExpr.cc.i:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.i
+.PHONY : ast/built_ins/test_Pose2dExpr.cc.i
+
+ast/built_ins/test_Pose2dExpr.s: ast/built_ins/test_Pose2dExpr.cc.s
+
+.PHONY : ast/built_ins/test_Pose2dExpr.s
+
+# target to generate assembly for a file
+ast/built_ins/test_Pose2dExpr.cc.s:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.s
+.PHONY : ast/built_ins/test_Pose2dExpr.cc.s
+
 lexer/test_lexer.o: lexer/test_lexer.cc.o
 
 .PHONY : lexer/test_lexer.o
@@ -163,6 +190,33 @@ lexer/test_lexer.cc.s:
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/lexer/test_lexer.cc.s
 .PHONY : lexer/test_lexer.cc.s
 
+main_test.o: main_test.cc.o
+
+.PHONY : main_test.o
+
+# target to build an object file
+main_test.cc.o:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/main_test.cc.o
+.PHONY : main_test.cc.o
+
+main_test.i: main_test.cc.i
+
+.PHONY : main_test.i
+
+# target to preprocess a source file
+main_test.cc.i:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/main_test.cc.i
+.PHONY : main_test.cc.i
+
+main_test.s: main_test.cc.s
+
+.PHONY : main_test.s
+
+# target to generate assembly for a file
+main_test.cc.s:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/main_test.cc.s
+.PHONY : main_test.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -173,9 +227,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... Test"
 	@echo "... test"
+	@echo "... ast/built_ins/test_Pose2dExpr.o"
+	@echo "... ast/built_ins/test_Pose2dExpr.i"
+	@echo "... ast/built_ins/test_Pose2dExpr.s"
 	@echo "... lexer/test_lexer.o"
 	@echo "... lexer/test_lexer.i"
 	@echo "... lexer/test_lexer.s"
+	@echo "... main_test.o"
+	@echo "... main_test.i"
+	@echo "... main_test.s"
 .PHONY : help
 
 
