@@ -7,7 +7,7 @@
 #include "ast/ExprAST.h"
 #include "llvm/IR/IRBuilder.h"
 
-class Pose2dExprAST : ExprAST{
+class Pose2dExprAST : public ExprAST{
     double x, y, theta;  
     std::string name;
 

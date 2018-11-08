@@ -4,11 +4,16 @@
 test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
  /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_Pose2dExpr.cc
  /usr/local/include/llvm-c/DataTypes.h
+ /usr/local/include/llvm-c/Error.h
+ /usr/local/include/llvm-c/ExecutionEngine.h
+ /usr/local/include/llvm-c/Target.h
+ /usr/local/include/llvm-c/TargetMachine.h
  /usr/local/include/llvm-c/Types.h
  /usr/local/include/llvm/ADT/APFloat.h
  /usr/local/include/llvm/ADT/APInt.h
  /usr/local/include/llvm/ADT/Any.h
  /usr/local/include/llvm/ADT/ArrayRef.h
+ /usr/local/include/llvm/ADT/BitmaskEnum.h
  /usr/local/include/llvm/ADT/DenseMap.h
  /usr/local/include/llvm/ADT/DenseMapInfo.h
  /usr/local/include/llvm/ADT/DenseSet.h
@@ -24,9 +29,12 @@ test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
  /usr/local/include/llvm/ADT/SmallPtrSet.h
  /usr/local/include/llvm/ADT/SmallString.h
  /usr/local/include/llvm/ADT/SmallVector.h
+ /usr/local/include/llvm/ADT/StringExtras.h
  /usr/local/include/llvm/ADT/StringMap.h
  /usr/local/include/llvm/ADT/StringRef.h
+ /usr/local/include/llvm/ADT/StringSwitch.h
  /usr/local/include/llvm/ADT/TinyPtrVector.h
+ /usr/local/include/llvm/ADT/Triple.h
  /usr/local/include/llvm/ADT/Twine.h
  /usr/local/include/llvm/ADT/ilist.h
  /usr/local/include/llvm/ADT/ilist_base.h
@@ -37,8 +45,31 @@ test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
  /usr/local/include/llvm/ADT/iterator.h
  /usr/local/include/llvm/ADT/iterator_range.h
  /usr/local/include/llvm/ADT/simple_ilist.h
+ /usr/local/include/llvm/BinaryFormat/Dwarf.def
+ /usr/local/include/llvm/BinaryFormat/Magic.h
+ /usr/local/include/llvm/Config/AsmParsers.def
+ /usr/local/include/llvm/Config/AsmPrinters.def
+ /usr/local/include/llvm/Config/Disassemblers.def
+ /usr/local/include/llvm/Config/Targets.def
  /usr/local/include/llvm/Config/abi-breaking.h
  /usr/local/include/llvm/Config/llvm-config.h
+ /usr/local/include/llvm/DebugInfo/DIContext.h
+ /usr/local/include/llvm/ExecutionEngine/ExecutionEngine.h
+ /usr/local/include/llvm/ExecutionEngine/JITSymbol.h
+ /usr/local/include/llvm/ExecutionEngine/ObjectCache.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/CompileUtils.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/Core.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/IRCompileLayer.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/JITTargetMachineBuilder.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/LambdaResolver.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/Layer.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/Legacy.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/RTDyldObjectLinkingLayer.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/SymbolStringPool.h
+ /usr/local/include/llvm/ExecutionEngine/Orc/ThreadSafeModule.h
+ /usr/local/include/llvm/ExecutionEngine/RTDyldMemoryManager.h
+ /usr/local/include/llvm/ExecutionEngine/RuntimeDyld.h
+ /usr/local/include/llvm/ExecutionEngine/SectionMemoryManager.h
  /usr/local/include/llvm/IR/Argument.h
  /usr/local/include/llvm/IR/Attributes.h
  /usr/local/include/llvm/IR/Attributes.inc
@@ -67,6 +98,8 @@ test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
  /usr/local/include/llvm/IR/IntrinsicEnums.inc
  /usr/local/include/llvm/IR/Intrinsics.h
  /usr/local/include/llvm/IR/LLVMContext.h
+ /usr/local/include/llvm/IR/LegacyPassManager.h
+ /usr/local/include/llvm/IR/Mangler.h
  /usr/local/include/llvm/IR/Metadata.def
  /usr/local/include/llvm/IR/Metadata.h
  /usr/local/include/llvm/IR/Module.h
@@ -85,6 +118,12 @@ test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
  /usr/local/include/llvm/IR/ValueHandle.h
  /usr/local/include/llvm/IR/Verifier.h
  /usr/local/include/llvm/InitializePasses.h
+ /usr/local/include/llvm/MC/MCTargetOptions.h
+ /usr/local/include/llvm/MC/SubtargetFeature.h
+ /usr/local/include/llvm/Object/Binary.h
+ /usr/local/include/llvm/Object/Error.h
+ /usr/local/include/llvm/Object/ObjectFile.h
+ /usr/local/include/llvm/Object/SymbolicFile.h
  /usr/local/include/llvm/Pass.h
  /usr/local/include/llvm/PassAnalysisSupport.h
  /usr/local/include/llvm/PassInfo.h
@@ -96,31 +135,52 @@ test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
  /usr/local/include/llvm/Support/AtomicOrdering.h
  /usr/local/include/llvm/Support/CBindingWrapping.h
  /usr/local/include/llvm/Support/Casting.h
+ /usr/local/include/llvm/Support/Chrono.h
  /usr/local/include/llvm/Support/CodeGen.h
  /usr/local/include/llvm/Support/CommandLine.h
  /usr/local/include/llvm/Support/Compiler.h
  /usr/local/include/llvm/Support/DataTypes.h
  /usr/local/include/llvm/Support/Debug.h
+ /usr/local/include/llvm/Support/DynamicLibrary.h
  /usr/local/include/llvm/Support/Endian.h
+ /usr/local/include/llvm/Support/Error.h
  /usr/local/include/llvm/Support/ErrorHandling.h
+ /usr/local/include/llvm/Support/ErrorOr.h
+ /usr/local/include/llvm/Support/FileSystem.h
+ /usr/local/include/llvm/Support/Format.h
+ /usr/local/include/llvm/Support/FormatProviders.h
+ /usr/local/include/llvm/Support/FormatVariadicDetails.h
  /usr/local/include/llvm/Support/Host.h
  /usr/local/include/llvm/Support/MD5.h
  /usr/local/include/llvm/Support/ManagedStatic.h
  /usr/local/include/llvm/Support/MathExtras.h
  /usr/local/include/llvm/Support/MemAlloc.h
+ /usr/local/include/llvm/Support/Memory.h
+ /usr/local/include/llvm/Support/MemoryBuffer.h
+ /usr/local/include/llvm/Support/Mutex.h
+ /usr/local/include/llvm/Support/NativeFormatting.h
  /usr/local/include/llvm/Support/Options.h
  /usr/local/include/llvm/Support/PointerLikeTypeTraits.h
  /usr/local/include/llvm/Support/RWMutex.h
  /usr/local/include/llvm/Support/ReverseIteration.h
+ /usr/local/include/llvm/Support/SmallVectorMemoryBuffer.h
  /usr/local/include/llvm/Support/SwapByteOrder.h
+ /usr/local/include/llvm/Support/TargetSelect.h
  /usr/local/include/llvm/Support/Threading.h
  /usr/local/include/llvm/Support/TypeName.h
  /usr/local/include/llvm/Support/raw_ostream.h
  /usr/local/include/llvm/Support/type_traits.h
+ /usr/local/include/llvm/Target/TargetMachine.h
+ /usr/local/include/llvm/Target/TargetOptions.h
  src/ast/ExprAST.h
+ src/ast/FunctionAST.h
  src/ast/NumberExprAST.h
+ src/ast/PrototypeAST.h
  src/ast/built_ins/Pose2dExprAST.h
+ src/include/KaleidoscopeJIT.h
+ src/kaleidoscope/environment.h
  src/kaleidoscope/kaleidoscope.h
+ src/utils/functions.h
 test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o
  /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/lexer/test_lexer.cc
  src/lexer/lexer.h

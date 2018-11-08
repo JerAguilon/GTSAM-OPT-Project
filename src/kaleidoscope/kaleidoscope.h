@@ -25,6 +25,13 @@ extern std::unique_ptr<llvm::Module> TheModule;
 // This map keeps track of which values are defined in the current scope
 extern std::map<std::string, llvm::Value *> NamedValues;
 
+
+struct Pose2d {
+    double x;
+    double y;
+    double theta;
+};
+
 extern llvm::StructType *pose2Type;
 
 void registerPose2Struct();

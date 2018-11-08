@@ -466,6 +466,36 @@ built_ins/BuiltInTypes.cc.s:
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.s
 .PHONY : built_ins/BuiltInTypes.cc.s
 
+kaleidoscope/environment.o: kaleidoscope/environment.cc.o
+
+.PHONY : kaleidoscope/environment.o
+
+# target to build an object file
+kaleidoscope/environment.cc.o:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/kaleidoscope/environment.cc.o
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o
+.PHONY : kaleidoscope/environment.cc.o
+
+kaleidoscope/environment.i: kaleidoscope/environment.cc.i
+
+.PHONY : kaleidoscope/environment.i
+
+# target to preprocess a source file
+kaleidoscope/environment.cc.i:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/kaleidoscope/environment.cc.i
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.i
+.PHONY : kaleidoscope/environment.cc.i
+
+kaleidoscope/environment.s: kaleidoscope/environment.cc.s
+
+.PHONY : kaleidoscope/environment.s
+
+# target to generate assembly for a file
+kaleidoscope/environment.cc.s:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/kaleidoscope/environment.cc.s
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.s
+.PHONY : kaleidoscope/environment.cc.s
+
 kaleidoscope/kaleidoscope.o: kaleidoscope/kaleidoscope.cc.o
 
 .PHONY : kaleidoscope/kaleidoscope.o
@@ -778,6 +808,9 @@ help:
 	@echo "... built_ins/BuiltInTypes.o"
 	@echo "... built_ins/BuiltInTypes.i"
 	@echo "... built_ins/BuiltInTypes.s"
+	@echo "... kaleidoscope/environment.o"
+	@echo "... kaleidoscope/environment.i"
+	@echo "... kaleidoscope/environment.s"
 	@echo "... kaleidoscope/kaleidoscope.o"
 	@echo "... kaleidoscope/kaleidoscope.i"
 	@echo "... kaleidoscope/kaleidoscope.s"

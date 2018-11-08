@@ -877,7 +877,7 @@ IF_EXPR_AST_H	ast/IfExprAST.h	2;"	d
 IdentifierStr	lexer/lexer.cc	/^std::string IdentifierStr; \/\/ Filled in if tok_identifier$/;"	v
 IfExprAST	ast/IfExprAST.h	/^    IfExprAST(std::unique_ptr<ExprAST> Cond, std::unique_ptr<ExprAST> Then, std::unique_ptr<ExprAST> Else) :$/;"	f	class:IfExprAST
 IfExprAST	ast/IfExprAST.h	/^class IfExprAST : public ExprAST {$/;"	c
-InitializeModuleAndPassManager	main.cc	/^static void InitializeModuleAndPassManager() {$/;"	f	file:
+InitializeModuleAndPassManager	kaleidoscope/environment.cc	/^static void InitializeModuleAndPassManager() {$/;"	f	file:
 KALEIDOSCOPE_H	kaleidoscope/kaleidoscope.h	2;"	d
 KaleidoscopeJIT	include/KaleidoscopeJIT.h	/^  KaleidoscopeJIT()$/;"	f	class:llvm::orc::KaleidoscopeJIT
 KaleidoscopeJIT	include/KaleidoscopeJIT.h	/^class KaleidoscopeJIT {$/;"	c	namespace:llvm::orc
@@ -1103,7 +1103,7 @@ ParsePrimary	parser/parser.cc	/^std::unique_ptr<ExprAST> ParsePrimary() {$/;"	f
 ParsePrototype	parser/parser.cc	/^std::unique_ptr<PrototypeAST> ParsePrototype() {$/;"	f
 ParseTopLevelExpr	parser/parser.cc	/^std::unique_ptr<FunctionAST> ParseTopLevelExpr() {$/;"	f
 Pose2dExprAST	ast/built_ins/Pose2dExprAST.h	/^    Pose2dExprAST(double x, double y, double theta, std::string name) :$/;"	f	class:Pose2dExprAST
-Pose2dExprAST	ast/built_ins/Pose2dExprAST.h	/^class Pose2dExprAST : ExprAST{$/;"	c
+Pose2dExprAST	ast/built_ins/Pose2dExprAST.h	/^class Pose2dExprAST : public ExprAST{$/;"	c
 Proto	ast/FunctionAST.h	/^    std::unique_ptr<PrototypeAST> Proto;$/;"	m	class:FunctionAST
 PrototypeAST	ast/PrototypeAST.h	/^    PrototypeAST(const std::string &Name, std::vector<std::string> Args)$/;"	f	class:PrototypeAST
 PrototypeAST	ast/PrototypeAST.h	/^class PrototypeAST {$/;"	c
@@ -1330,14 +1330,14 @@ parseParenExpr	parser/list_parser.cc	/^std::unique_ptr<ExprAST> ListParser::pars
 parsePrimary	parser/list_parser.cc	/^std::unique_ptr<ExprAST> ListParser::parsePrimary() {$/;"	f	class:ListParser
 parsePrototype	parser/list_parser.cc	/^std::unique_ptr<PrototypeAST> ListParser::parsePrototype() {$/;"	f	class:ListParser
 parseTopLevelExpr	parser/list_parser.cc	/^std::unique_ptr<FunctionAST> ListParser::parseTopLevelExpr() {$/;"	f	class:ListParser
-pose2Type	kaleidoscope/kaleidoscope.cc	/^llvm::StructType *pose2Type = registerPose2Struct();$/;"	v
+pose2Type	kaleidoscope/kaleidoscope.cc	/^llvm::StructType *pose2Type;$/;"	v
 qnxnto	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
-registerPose2Struct	kaleidoscope/kaleidoscope.cc	/^static llvm::StructType *registerPose2Struct() {$/;"	f	file:
+registerPose2Struct	kaleidoscope/kaleidoscope.cc	/^void registerPose2Struct() {$/;"	f
 removeModule	include/KaleidoscopeJIT.h	/^  void removeModule(VModuleKey K) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 str_content	lexer/token.h	/^    std::string str_content;$/;"	m	struct:TokenWrapper
 theta	ast/built_ins/Pose2dExprAST.h	/^    double x, y, theta;  $/;"	m	class:Pose2dExprAST

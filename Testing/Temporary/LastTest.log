@@ -1,26 +1,30 @@
-Start testing: Nov 06 00:43 EST
+Start testing: Nov 07 23:08 EST
 ----------------------------------------------------------
 1/1 Testing: ALL_UNIT_TESTS
 1/1 Test: ALL_UNIT_TESTS
 Command: "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/Test"
 Directory: /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test
-"ALL_UNIT_TESTS" start time: Nov 06 00:43 EST
+"ALL_UNIT_TESTS" start time: Nov 07 23:08 EST
 Output:
 ----------------------------------------------------------
-Running 2 test cases...
-RESULT TEST: 
-double 3.000000e+00
-0
-unknown location(0): fatal error: in "TestPose2dExpr/TestingPose": memory access violation at address: 0x00000038: no mapping at fault address
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_Pose2dExpr.cc(13): last checkpoint: "TestingPose" test entry
 
-*** 1 failure is detected in the test module "AllTests"
+define %Pose2d @tmp_proto() {
+entry:
+  ret %Pose2d { double 2.000000e+00, double 3.000000e+00, double 4.000000e+00 }
+}
+
+Evaluated to 0.000000
+Evaluated to 0.000000
+Evaluated to 0.000000
+Running 2 test cases...
+
+*** No errors detected
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
-Test Failed.
-"ALL_UNIT_TESTS" end time: Nov 06 00:43 EST
+Test Passed.
+"ALL_UNIT_TESTS" end time: Nov 07 23:08 EST
 "ALL_UNIT_TESTS" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 06 00:43 EST
+End testing: Nov 07 23:08 EST
