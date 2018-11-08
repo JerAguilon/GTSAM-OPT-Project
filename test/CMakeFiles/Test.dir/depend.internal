@@ -176,6 +176,7 @@ test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
  src/ast/FunctionAST.h
  src/ast/NumberExprAST.h
  src/ast/PrototypeAST.h
+ src/ast/VariableExprAST.h
  src/ast/built_ins/Pose2dExprAST.h
  src/include/KaleidoscopeJIT.h
  src/kaleidoscope/environment.h

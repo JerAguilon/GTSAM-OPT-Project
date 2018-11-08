@@ -1,37 +1,34 @@
-Start testing: Nov 08 00:00 EST
+Start testing: Nov 08 01:16 EST
 ----------------------------------------------------------
 1/1 Testing: ALL_UNIT_TESTS
 1/1 Test: ALL_UNIT_TESTS
 Command: "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/Test"
 Directory: /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test
-"ALL_UNIT_TESTS" start time: Nov 08 00:00 EST
+"ALL_UNIT_TESTS" start time: Nov 08 01:16 EST
 Output:
 ----------------------------------------------------------
 
-define %Pose2d* @tmp_proto() {
+define void @tmp_proto(%Pose2d* %dst) {
 entry:
-  %tmp_pose = alloca %Pose2d, align 8
-  %gep_pose2_x = getelementptr inbounds %Pose2d, %Pose2d* %tmp_pose, i64 0, i32 0
+  %gep_pose2_x = getelementptr %Pose2d, %Pose2d* %dst, i64 0, i32 0
   store double 2.000000e+00, double* %gep_pose2_x, align 8
-  %gep_pose2_y = getelementptr inbounds %Pose2d, %Pose2d* %tmp_pose, i64 0, i32 1
+  %gep_pose2_y = getelementptr inbounds %Pose2d, %Pose2d* %dst, i64 0, i32 1
   store double 3.000000e+00, double* %gep_pose2_y, align 8
-  %gep_pose2_theta = getelementptr inbounds %Pose2d, %Pose2d* %tmp_pose, i64 0, i32 2
+  %gep_pose2_theta = getelementptr inbounds %Pose2d, %Pose2d* %dst, i64 0, i32 2
   store double 4.000000e+00, double* %gep_pose2_theta, align 8
-  ret %Pose2d* %tmp_pose
+  ret void
+  ret void <badref>
 }
 
 Running 2 test cases...
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_Pose2dExpr.cc(62): error: in "TestPose2dExpr/TestingPose": check FP()->x == 2 has failed [4.6676984629445143e-310 != 2]
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_Pose2dExpr.cc(63): error: in "TestPose2dExpr/TestingPose": check FP()->y == 3 has failed [4.6676970939687471e-310 != 3]
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_Pose2dExpr.cc(64): error: in "TestPose2dExpr/TestingPose": check FP()->theta == 4 has failed [6.9527237199437408e-310 != 4]
-
-*** 3 failures are detected in the test module "AllTests"
+unknown location(0): fatal error: in "TestPose2dExpr/TestingPose": signal: SIGSEGV, si_code: 0 (memory access violation at address: 0x00000080)
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_Pose2dExpr.cc(26): last checkpoint
 <end of output>
-Test time =   0.01 sec
+Test time =   0.13 sec
 ----------------------------------------------------------
 Test Failed.
-"ALL_UNIT_TESTS" end time: Nov 08 00:00 EST
+"ALL_UNIT_TESTS" end time: Nov 08 01:16 EST
 "ALL_UNIT_TESTS" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 08 00:00 EST
+End testing: Nov 08 01:16 EST

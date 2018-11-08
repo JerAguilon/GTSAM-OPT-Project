@@ -1304,6 +1304,7 @@ src/CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExprAST.cc.o
  /usr/local/include/llvm/Support/raw_ostream.h
  /usr/local/include/llvm/Support/type_traits.h
  src/ast/ExprAST.h
+ src/ast/VariableExprAST.h
  src/ast/built_ins/Pose2dExprAST.h
  src/built_ins/BuiltInTypes.h
  src/kaleidoscope/kaleidoscope.h

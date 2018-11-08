@@ -38,7 +38,7 @@ BOOST_AUTO_TEST_CASE(TestingPose)
     auto pose = llvm::make_unique<Pose2dExprAST>(2, 3, 4, std::move(destination));
     auto proto = llvm::make_unique<PrototypeAST>(
             "tmp_proto",
-            std::vector<std::string>{"copy_ptr"},
+            std::vector<std::string>{"dst"},
             llvm::Type::getVoidTy(TheContext),
             std::vector<llvm::Type*>{llvm::PointerType::get(pose2Type, 0)}
     );
@@ -47,13 +47,10 @@ BOOST_AUTO_TEST_CASE(TestingPose)
     llvm::Value* result = function->codegen();
     result->print(llvm::errs());
     fprintf(stderr, "\n");
-    ///////////
-    // JIT the module containing the anonymous expression, keeping a handle so
-    // we can free it later.
+
     auto H = TheJIT->addModule(std::move(TheModule));
     InitializeModuleAndPassManager();
 
-    // Search the JIT for the __anon_expr symbol.
     auto ExprSymbol = TheJIT->findSymbol("tmp_proto");
     assert(ExprSymbol && "Function not found");
 
@@ -70,13 +67,6 @@ BOOST_AUTO_TEST_CASE(TestingPose)
 
     // Delete the anonymous expression module from the JIT.
     TheJIT->removeModule(H);
-    ///////////
-
-    /* auto function_symbol = TheJIT->findSymbol("tmp_proto"); */
-    /* testfunc_t the_function = (testfunc_t) cantFail(function_symbol.getAddress()); */
-
-    /* auto initialized_object = the_function(); */
-    /* fprintf(stderr, "Evaluated to %f\n", initialized_object); */
 }
 
 

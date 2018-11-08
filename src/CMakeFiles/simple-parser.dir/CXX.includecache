@@ -3517,6 +3517,8 @@ kaleidoscope/kaleidoscope.h
 src/ast/built_ins/kaleidoscope/kaleidoscope.h
 ast/ExprAST.h
 src/ast/built_ins/ast/ExprAST.h
+ast/VariableExprAST.h
+src/ast/built_ins/ast/VariableExprAST.h
 llvm/IR/IRBuilder.h
 src/ast/built_ins/llvm/IR/IRBuilder.h
 
