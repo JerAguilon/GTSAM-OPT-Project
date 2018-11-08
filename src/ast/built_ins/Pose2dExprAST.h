@@ -5,15 +5,17 @@
 
 #include "kaleidoscope/kaleidoscope.h"
 #include "ast/ExprAST.h"
+#include "ast/VariableExprAST.h"
 #include "llvm/IR/IRBuilder.h"
 
-class Pose2dExprAST : public ExprAST{
+class Pose2dExprAST : public ExprAST {
     double x, y, theta;  
     std::string name;
+    std::unique_ptr<VariableExprAST> destination;
 
 public:
-    Pose2dExprAST(double x, double y, double theta, std::string name) :
-        x(x), y(y), theta(theta), name(name)
+    Pose2dExprAST(double x, double y, double theta, std::unique_ptr<VariableExprAST> destination) :
+        x(x), y(y), theta(theta), destination(std::move(destination))
     {
     }
     llvm::Value *codegen() override;

@@ -3,6 +3,8 @@
 #include <iostream>
 
 llvm::Value *Pose2dExprAST::codegen() {
+    llvm::Value* dst_address =  destination->codegen();
+    
     auto ptr_x = llvm::ConstantFP::get(TheContext, llvm::APFloat(x));
     auto ptr_y = llvm::ConstantFP::get(TheContext, llvm::APFloat(y));
     auto ptr_theta = llvm::ConstantFP::get(TheContext, llvm::APFloat(theta));
@@ -48,6 +50,6 @@ llvm::Value *Pose2dExprAST::codegen() {
         "gep_pose2_theta"
     );
     Builder.CreateStore(ptr_theta, gep_theta);
-    auto return_ptr = Builder.CreateLoad(instance, "output");
-    return return_ptr;
+    Builder.CreateMemCpy(dst_address, 0, instance, 0, /*size=*/sizeof(Pose2d));
+    return Builder.CreateRetVoid();
 }
