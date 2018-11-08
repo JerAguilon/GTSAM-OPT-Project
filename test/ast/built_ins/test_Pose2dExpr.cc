@@ -58,12 +58,12 @@ BOOST_AUTO_TEST_CASE(TestingPose)
     // arguments, returns a double) so we can call it as a native function.
     testfunc_t FP = (testfunc_t) cantFail(ExprSymbol.getAddress());
 
-    Pose2d *my_pose;
-    FP(my_pose);
+    Pose2d my_pose;
+    FP(&my_pose);
 
-    BOOST_CHECK_EQUAL(my_pose->x, 2);
-    BOOST_CHECK_EQUAL(my_pose->y, 3);
-    BOOST_CHECK_EQUAL(my_pose->theta, 4);
+    BOOST_CHECK_EQUAL(my_pose.x, 2);
+    BOOST_CHECK_EQUAL(my_pose.y, 3);
+    BOOST_CHECK_EQUAL(my_pose.theta, 4);
 
     // Delete the anonymous expression module from the JIT.
     TheJIT->removeModule(H);
