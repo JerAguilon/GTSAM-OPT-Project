@@ -7,6 +7,6 @@ Value *VariableExprAST::codegen() {
     Value *V = NamedValues[Name];
     if (!V)
         return LogErrorV(("Unknown variable name: " + Name).c_str());
-    return V;
+    return Builder.CreateLoad(V, Name.c_str());
 }
 

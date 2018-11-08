@@ -20,8 +20,12 @@ Function *FunctionAST::codegen() {
 
     // Record the function arguments in the NamedValues map.
     NamedValues.clear();
-    for (auto &Arg : TheFunction->args())
-        NamedValues[Arg.getName()] = &Arg;
+    for (auto &Arg : TheFunction->args()) {
+        AllocaInst *Alloca = CreateEntryBlockAlloca(TheFunction, Arg.getName());
+
+        Builder.CreateStore(&Arg, Alloca);
+        NamedValues[Arg.getName()] = Alloca;
+    }
 
     if (Value *RetVal = Body->codegen()) {
         // Finish off the function.

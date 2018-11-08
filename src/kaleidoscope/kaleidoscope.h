@@ -23,7 +23,7 @@ extern llvm::IRBuilder<> Builder;
 extern std::unique_ptr<llvm::Module> TheModule;
 
 // This map keeps track of which values are defined in the current scope
-extern std::map<std::string, llvm::Value *> NamedValues;
+extern std::map<std::string, llvm::AllocaInst *> NamedValues;
 
 
 struct Pose2d {

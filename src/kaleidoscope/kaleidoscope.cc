@@ -22,7 +22,7 @@ llvm::IRBuilder<> Builder(TheContext);
 std::unique_ptr<llvm::Module> TheModule;
 
 // This map keeps track of which values are defined in the current scope
-std::map<std::string, llvm::Value *> NamedValues;
+std::map<std::string, llvm::AllocaInst *> NamedValues;
 
 // This is a native data type: a 2d pose
 llvm::StructType *pose2Type;
