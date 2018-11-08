@@ -95,10 +95,10 @@ ast/ExprAST.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/PrototypeAST.cc
 ast/PrototypeAST.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ast/PrototypeAST.h
-kaleidoscope/kaleidoscope.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/kaleidoscope/kaleidoscope.h
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/PrototypeAST.h
+kaleidoscope/kaleidoscope.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/kaleidoscope/kaleidoscope.h
 llvm/IR/IRBuilder.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/llvm/IR/IRBuilder.h
 
@@ -114,17 +114,31 @@ kaleidoscope/kaleidoscope.h
 ast/ExprAST.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/ast/ExprAST.h
 
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/Pose2dExpr.cc
-ast/built_ins/Pose2dExpr.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/ast/built_ins/Pose2dExpr.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/Pose2dExprAST.cc
+ast/built_ins/Pose2dExprAST.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/ast/built_ins/Pose2dExprAST.h
 built_ins/BuiltInTypes.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/built_ins/BuiltInTypes.h
+iostream
+-
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/built_ins/BuiltInTypes.cc
-vector
--
-built_ins/BuiltInTypes.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/built_ins/built_ins/BuiltInTypes.h
+
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/environment.cc
+kaleidoscope/kaleidoscope.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/kaleidoscope/kaleidoscope.h
+utils/functions.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/utils/functions.h
+llvm/Transforms/InstCombine/InstCombine.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/llvm/Transforms/InstCombine/InstCombine.h
+llvm/Transforms/Scalar.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/llvm/Transforms/Scalar.h
+llvm/Transforms/Scalar/GVN.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/llvm/Transforms/Scalar/GVN.h
+llvm/Transforms/Utils.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/llvm/Transforms/Utils.h
+
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/environment.h
 
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/kaleidoscope.cc
 kaleidoscope.h
@@ -219,6 +233,8 @@ utils/functions.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/utils/functions.h
 kaleidoscope/kaleidoscope.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/kaleidoscope.h
+kaleidoscope/environment.h
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/environment.h
 llvm/ADT/APFloat.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/llvm/ADT/APFloat.h
 llvm/ADT/STLExtras.h
@@ -245,14 +261,6 @@ llvm/Support/TargetSelect.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/llvm/Support/TargetSelect.h
 llvm/Target/TargetMachine.h
 /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/llvm/Target/TargetMachine.h
-llvm/Transforms/InstCombine/InstCombine.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/llvm/Transforms/InstCombine/InstCombine.h
-llvm/Transforms/Scalar.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/llvm/Transforms/Scalar.h
-llvm/Transforms/Scalar/GVN.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/llvm/Transforms/Scalar/GVN.h
-llvm/Transforms/Utils.h
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/llvm/Transforms/Utils.h
 algorithm
 -
 cctype
@@ -3493,6 +3501,8 @@ ast/ExprAST.h
 src/ast/ast/ExprAST.h
 
 src/ast/PrototypeAST.h
+kaleidoscope/kaleidoscope.h
+src/ast/kaleidoscope/kaleidoscope.h
 llvm/IR/IRBuilder.h
 src/ast/llvm/IR/IRBuilder.h
 
@@ -3500,21 +3510,19 @@ src/ast/VariableExprAST.h
 ast/ExprAST.h
 src/ast/ast/ExprAST.h
 
-src/ast/built_ins/Pose2dExpr.h
+src/ast/built_ins/Pose2dExprAST.h
 string
 -
 kaleidoscope/kaleidoscope.h
 src/ast/built_ins/kaleidoscope/kaleidoscope.h
-ast/CallExprAST.h
-src/ast/built_ins/ast/CallExprAST.h
+ast/ExprAST.h
+src/ast/built_ins/ast/ExprAST.h
+ast/VariableExprAST.h
+src/ast/built_ins/ast/VariableExprAST.h
 llvm/IR/IRBuilder.h
 src/ast/built_ins/llvm/IR/IRBuilder.h
 
 src/built_ins/BuiltInTypes.h
-kaleidoscope/kaleidoscope.h
-src/built_ins/kaleidoscope/kaleidoscope.h
-llvm/IR/DerivedTypes.h
-src/built_ins/llvm/IR/DerivedTypes.h
 
 src/include/KaleidoscopeJIT.h
 llvm/ADT/STLExtras.h

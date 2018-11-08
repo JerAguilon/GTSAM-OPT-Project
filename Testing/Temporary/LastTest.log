@@ -1,21 +1,34 @@
-Start testing: Nov 05 03:28 EST
+Start testing: Nov 08 01:16 EST
 ----------------------------------------------------------
 1/1 Testing: ALL_UNIT_TESTS
 1/1 Test: ALL_UNIT_TESTS
 Command: "/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/Test"
 Directory: /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test
-"ALL_UNIT_TESTS" start time: Nov 05 03:28 EST
+"ALL_UNIT_TESTS" start time: Nov 08 01:16 EST
 Output:
 ----------------------------------------------------------
-Running 1 test case...
 
-*** No errors detected
+define void @tmp_proto(%Pose2d* %dst) {
+entry:
+  %gep_pose2_x = getelementptr %Pose2d, %Pose2d* %dst, i64 0, i32 0
+  store double 2.000000e+00, double* %gep_pose2_x, align 8
+  %gep_pose2_y = getelementptr inbounds %Pose2d, %Pose2d* %dst, i64 0, i32 1
+  store double 3.000000e+00, double* %gep_pose2_y, align 8
+  %gep_pose2_theta = getelementptr inbounds %Pose2d, %Pose2d* %dst, i64 0, i32 2
+  store double 4.000000e+00, double* %gep_pose2_theta, align 8
+  ret void
+  ret void <badref>
+}
+
+Running 2 test cases...
+unknown location(0): fatal error: in "TestPose2dExpr/TestingPose": signal: SIGSEGV, si_code: 0 (memory access violation at address: 0x00000080)
+/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_Pose2dExpr.cc(26): last checkpoint
 <end of output>
-Test time =   0.01 sec
+Test time =   0.13 sec
 ----------------------------------------------------------
-Test Passed.
-"ALL_UNIT_TESTS" end time: Nov 05 03:28 EST
+Test Failed.
+"ALL_UNIT_TESTS" end time: Nov 08 01:16 EST
 "ALL_UNIT_TESTS" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Nov 05 03:28 EST
+End testing: Nov 08 01:16 EST
