@@ -22,9 +22,12 @@ Function *getFunction(std::string Name) {
     return nullptr;
 }
 
-AllocaInst *CreateEntryBlockAlloca(Function *TheFunction, const std::string &VarName) {
+AllocaInst *CreateEntryBlockAlloca(Function *TheFunction, const std::string &VarName, Type* type) {
     IRBuilder<> TmpB(&TheFunction->getEntryBlock(),
             TheFunction->getEntryBlock().begin());
-    return TmpB.CreateAlloca(Type::getDoubleTy(TheContext), 0,
-            VarName.c_str());
+    if (!type) {
+        return TmpB.CreateAlloca(Type::getDoubleTy(TheContext), 0, VarName.c_str());
+    } else {
+        return TmpB.CreateAlloca(type, 0, VarName.c_str());
+    }
 }

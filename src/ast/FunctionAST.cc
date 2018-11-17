@@ -21,26 +21,26 @@ Function *FunctionAST::codegen() {
     // Record the function arguments in the NamedValues map.
     NamedValues.clear();
     for (auto &Arg : TheFunction->args()) {
-        AllocaInst *Alloca = CreateEntryBlockAlloca(TheFunction, Arg.getName());
+        AllocaInst *Alloca = CreateEntryBlockAlloca(TheFunction, Arg.getName(), Arg.getType());
 
         Builder.CreateStore(&Arg, Alloca);
         NamedValues[Arg.getName()] = Alloca;
     }
 
-    if (Value *RetVal = Body->codegen()) {
-        // Finish off the function.
+    Value *RetVal = Body->codegen();
+    // Finish off the function.
+
+    if (RetVal) {
         Builder.CreateRet(RetVal);
-
-        // Validate the generated code, checking for consistency.
-        verifyFunction(*TheFunction);
-
-        // Run the optimizer on the function.
-        TheFPM->run(*TheFunction);
-
-        return TheFunction;
+    } else {
+        Builder.CreateRetVoid();
     }
 
-    // Error reading body, remove function.
-    TheFunction->eraseFromParent();
-    return nullptr;
+    // Validate the generated code, checking for consistency.
+    verifyFunction(*TheFunction);
+
+    // Run the optimizer on the function.
+    TheFPM->run(*TheFunction);
+
+    return TheFunction;
 }

@@ -16,6 +16,8 @@
 #include "kaleidoscope/kaleidoscope.h"
 #include "utils/functions.h"
 
+#include <iostream>
+
 using namespace llvm;
 using namespace llvm::orc;
 
@@ -33,6 +35,7 @@ BOOST_AUTO_TEST_CASE(TestingPose)
     InitializeModuleAndPassManager();
 
     registerPose2Struct();
+    std::cout << "POSE2D TYPE: " << pose2Type << std::endl;
 
     auto destination = llvm::make_unique<VariableExprAST>("dst");
     auto pose = llvm::make_unique<Pose2dExprAST>(2, 3, 4, std::move(destination));
@@ -58,9 +61,13 @@ BOOST_AUTO_TEST_CASE(TestingPose)
     // arguments, returns a double) so we can call it as a native function.
     testfunc_t FP = (testfunc_t) cantFail(ExprSymbol.getAddress());
 
-    Pose2d my_pose;
-    FP(&my_pose);
+    Pose2d my_pose = {0,0,0};
+    auto ptr = &my_pose;
+    FP(ptr);
 
+    BOOST_CHECK_EQUAL(ptr->x, 2);
+    BOOST_CHECK_EQUAL(ptr->y, 3);
+    BOOST_CHECK_EQUAL(ptr->theta, 4);
     BOOST_CHECK_EQUAL(my_pose.x, 2);
     BOOST_CHECK_EQUAL(my_pose.y, 3);
     BOOST_CHECK_EQUAL(my_pose.theta, 4);
