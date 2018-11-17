@@ -4,9 +4,9 @@
 
 llvm::Value *Pose2dExprAST::codegen() {
 
-    auto ptr_x = x->codegen();//llvm::ConstantFP::get(TheContext, llvm::APFloat(x));
-    auto ptr_y = y->codegen();//llvm::ConstantFP::get(TheContext, llvm::APFloat(y));
-    auto ptr_theta = theta->codegen(); //llvm::ConstantFP::get(TheContext, llvm::APFloat(theta));
+    auto ptr_x = x->codegen();
+    auto ptr_y = y->codegen();
+    auto ptr_theta = theta->codegen();
 
     llvm::AllocaInst* instance = (llvm::AllocaInst*) destination->codegen();
 
