@@ -32,8 +32,15 @@ struct Pose2d {
     double theta;
 };
 
+struct PriorFactor {
+    Pose2d* prior;
+    double noise_model;
+};
+
 extern llvm::StructType *pose2Type;
+extern llvm::StructType *priorFactorType;
 
 void registerPose2Struct();
+void registerPriorFactorStruct();
 
 #endif

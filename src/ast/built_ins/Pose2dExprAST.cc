@@ -46,5 +46,5 @@ llvm::Value *Pose2dExprAST::codegen() {
         "gep_pose2_theta"
     );
     Builder.CreateStore(ptr_theta, gep_theta);
-    return nullptr;
+    return instance;
 }

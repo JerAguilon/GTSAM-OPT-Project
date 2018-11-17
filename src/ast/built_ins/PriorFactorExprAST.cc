@@ -9,12 +9,12 @@ llvm::Value *PriorFactorExprAST::codegen() {
 
     llvm::APInt zero(32, 0);
     llvm::APInt one(32, 1);
-    llvm::APInt two(32, 2);
 
     std::vector<llvm::Value *> prior_pos {
         llvm::Constant::getIntegerValue(llvm::Type::getInt32Ty(TheContext), zero),
         llvm::Constant::getIntegerValue(llvm::Type::getInt32Ty(TheContext), zero)
     };
+
     std::vector<llvm::Value *> noise_model_pos {
         llvm::Constant::getIntegerValue(llvm::Type::getInt32Ty(TheContext), zero),
         llvm::Constant::getIntegerValue(llvm::Type::getInt32Ty(TheContext), one)
@@ -34,5 +34,5 @@ llvm::Value *PriorFactorExprAST::codegen() {
     );
     Builder.CreateStore(ptr_noise_model, gep_y);
 
-    return nullptr;
+    return instance;
 }
