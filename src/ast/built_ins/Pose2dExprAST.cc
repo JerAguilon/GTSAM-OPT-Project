@@ -1,6 +1,5 @@
 #include "ast/built_ins/Pose2dExprAST.h"
 #include "built_ins/BuiltInTypes.h"
-#include <iostream>
 
 llvm::Value *Pose2dExprAST::codegen() {
 
@@ -48,5 +47,4 @@ llvm::Value *Pose2dExprAST::codegen() {
     );
     Builder.CreateStore(ptr_theta, gep_theta);
     return nullptr;
-    return Builder.CreateRetVoid();
 }
