@@ -9,13 +9,18 @@
 #include "llvm/IR/IRBuilder.h"
 
 class Pose2dExprAST : public ExprAST {
-    double x, y, theta;  
+    std::unique_ptr<ExprAST> x, y, theta;  
     std::string name;
     std::unique_ptr<VariableExprAST> destination;
 
 public:
-    Pose2dExprAST(double x, double y, double theta, std::unique_ptr<VariableExprAST> destination) :
-        x(x), y(y), theta(theta), destination(std::move(destination))
+    Pose2dExprAST(
+        std::unique_ptr<ExprAST> x,
+        std::unique_ptr<ExprAST> y,
+        std::unique_ptr<ExprAST> theta,
+        std::unique_ptr<VariableExprAST> destination
+    ) :
+        x(std::move(x)), y(std::move(y)), theta(std::move(theta)), destination(std::move(destination))
     {
     }
     llvm::Value *codegen() override;

@@ -38,7 +38,10 @@ BOOST_AUTO_TEST_CASE(TestingPose)
     std::cout << "POSE2D TYPE: " << pose2Type << std::endl;
 
     auto destination = llvm::make_unique<VariableExprAST>("dst");
-    auto pose = llvm::make_unique<Pose2dExprAST>(2, 3, 4, std::move(destination));
+    auto x = llvm::make_unique<NumberExprAST>(2);
+    auto y = llvm::make_unique<NumberExprAST>(3);
+    auto theta = llvm::make_unique<NumberExprAST>(4);
+    auto pose = llvm::make_unique<Pose2dExprAST>(std::move(x), std::move(y), std::move(theta), std::move(destination));
     auto proto = llvm::make_unique<PrototypeAST>(
             "tmp_proto",
             std::vector<std::string>{"dst"},
