@@ -11,6 +11,17 @@ void registerPose2Struct() {
     pose2Type = structType;
 }
 
+void registerPriorFactorStruct() {
+    llvm::Type* doubleType = llvm::Type::getDoubleTy(TheContext);
+    llvm::StructType *structType = llvm::StructType::create(
+        TheContext,
+        {doubleType, pose2Type},
+        "PriorFactor",
+        false
+    );
+    priorFactorType = structType;
+}
+
 
 // This is an object that owns LLVM core data structures
 llvm::LLVMContext TheContext;
@@ -27,3 +38,5 @@ std::map<std::string, llvm::AllocaInst *> NamedValues;
 // This is a native data type: a 2d pose
 llvm::StructType *pose2Type;
 
+// This is a native data type: a prior factor
+llvm::StructType *priorFactorType;

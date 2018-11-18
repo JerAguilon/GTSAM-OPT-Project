@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/simple-parser.dir/ast/PrototypeAST.cc.o"
   "CMakeFiles/simple-parser.dir/ast/VariableExprAST.cc.o"
   "CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExprAST.cc.o"
+  "CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o"
   "CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o"
   "CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o"
   "CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o"

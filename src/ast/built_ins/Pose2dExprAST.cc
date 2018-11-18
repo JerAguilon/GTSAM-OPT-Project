@@ -1,12 +1,10 @@
 #include "ast/built_ins/Pose2dExprAST.h"
 #include "built_ins/BuiltInTypes.h"
-#include <iostream>
 
 llvm::Value *Pose2dExprAST::codegen() {
-
     auto ptr_x = x->codegen();
     auto ptr_y = y->codegen();
-    auto ptr_theta = kheta->codegen();
+    auto ptr_theta = theta->codegen();
 
     llvm::AllocaInst* instance = (llvm::AllocaInst*) destination->codegen();
 
@@ -47,6 +45,5 @@ llvm::Value *Pose2dExprAST::codegen() {
         "gep_pose2_theta"
     );
     Builder.CreateStore(ptr_theta, gep_theta);
-    return nullptr;
-    return Builder.CreateRetVoid();
+    return instance;
 }

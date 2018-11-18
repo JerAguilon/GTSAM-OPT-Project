@@ -163,6 +163,33 @@ ast/built_ins/test_Pose2dExpr.cc.s:
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.s
 .PHONY : ast/built_ins/test_Pose2dExpr.cc.s
 
+ast/built_ins/test_PriorFactorExprAST.o: ast/built_ins/test_PriorFactorExprAST.cc.o
+
+.PHONY : ast/built_ins/test_PriorFactorExprAST.o
+
+# target to build an object file
+ast/built_ins/test_PriorFactorExprAST.cc.o:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o
+.PHONY : ast/built_ins/test_PriorFactorExprAST.cc.o
+
+ast/built_ins/test_PriorFactorExprAST.i: ast/built_ins/test_PriorFactorExprAST.cc.i
+
+.PHONY : ast/built_ins/test_PriorFactorExprAST.i
+
+# target to preprocess a source file
+ast/built_ins/test_PriorFactorExprAST.cc.i:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.i
+.PHONY : ast/built_ins/test_PriorFactorExprAST.cc.i
+
+ast/built_ins/test_PriorFactorExprAST.s: ast/built_ins/test_PriorFactorExprAST.cc.s
+
+.PHONY : ast/built_ins/test_PriorFactorExprAST.s
+
+# target to generate assembly for a file
+ast/built_ins/test_PriorFactorExprAST.cc.s:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.s
+.PHONY : ast/built_ins/test_PriorFactorExprAST.cc.s
+
 lexer/test_lexer.o: lexer/test_lexer.cc.o
 
 .PHONY : lexer/test_lexer.o
@@ -230,6 +257,9 @@ help:
 	@echo "... ast/built_ins/test_Pose2dExpr.o"
 	@echo "... ast/built_ins/test_Pose2dExpr.i"
 	@echo "... ast/built_ins/test_Pose2dExpr.s"
+	@echo "... ast/built_ins/test_PriorFactorExprAST.o"
+	@echo "... ast/built_ins/test_PriorFactorExprAST.i"
+	@echo "... ast/built_ins/test_PriorFactorExprAST.s"
 	@echo "... lexer/test_lexer.o"
 	@echo "... lexer/test_lexer.i"
 	@echo "... lexer/test_lexer.s"
