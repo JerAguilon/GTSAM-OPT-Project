@@ -81,9 +81,33 @@ test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o.provides: test/CMake
 test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o.provides.build: test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
 
 
+test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o: test/CMakeFiles/Test.dir/flags.make
+test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o: test/ast/built_ins/test_PriorFactorExprAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_PriorFactorExprAST.cc
+
+test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.i"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_PriorFactorExprAST.cc > CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.i
+
+test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.s"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/ast/built_ins/test_PriorFactorExprAST.cc -o CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.s
+
+test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o.requires:
+
+.PHONY : test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o.requires
+
+test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o.provides: test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o.requires
+	$(MAKE) -f test/CMakeFiles/Test.dir/build.make test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o.provides.build
+.PHONY : test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o.provides
+
+test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o.provides.build: test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o
+
+
 test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o: test/CMakeFiles/Test.dir/flags.make
 test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o: test/lexer/test_lexer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/lexer/test_lexer.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/lexer/test_lexer.cc
 
 test/CMakeFiles/Test.dir/lexer/test_lexer.cc.i: cmake_force
@@ -107,7 +131,7 @@ test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.provides.build: test/CMakeFiles/T
 
 test/CMakeFiles/Test.dir/main_test.cc.o: test/CMakeFiles/Test.dir/flags.make
 test/CMakeFiles/Test.dir/main_test.cc.o: test/main_test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/CMakeFiles/Test.dir/main_test.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/CMakeFiles/Test.dir/main_test.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test.dir/main_test.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/main_test.cc
 
 test/CMakeFiles/Test.dir/main_test.cc.i: cmake_force
@@ -132,6 +156,7 @@ test/CMakeFiles/Test.dir/main_test.cc.o.provides.build: test/CMakeFiles/Test.dir
 # Object files for target Test
 Test_OBJECTS = \
 "CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o" \
+"CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o" \
 "CMakeFiles/Test.dir/lexer/test_lexer.cc.o" \
 "CMakeFiles/Test.dir/main_test.cc.o"
 
@@ -139,6 +164,7 @@ Test_OBJECTS = \
 Test_EXTERNAL_OBJECTS =
 
 test/Test: test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o
+test/Test: test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o
 test/Test: test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o
 test/Test: test/CMakeFiles/Test.dir/main_test.cc.o
 test/Test: test/CMakeFiles/Test.dir/build.make
@@ -257,7 +283,7 @@ test/Test: /usr/local/lib/libLLVMDebugInfoMSF.a
 test/Test: /usr/local/lib/libLLVMSupport.a
 test/Test: /usr/local/lib/libLLVMDemangle.a
 test/Test: test/CMakeFiles/Test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable Test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable Test"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -266,6 +292,7 @@ test/CMakeFiles/Test.dir/build: test/Test
 .PHONY : test/CMakeFiles/Test.dir/build
 
 test/CMakeFiles/Test.dir/requires: test/CMakeFiles/Test.dir/ast/built_ins/test_Pose2dExpr.cc.o.requires
+test/CMakeFiles/Test.dir/requires: test/CMakeFiles/Test.dir/ast/built_ins/test_PriorFactorExprAST.cc.o.requires
 test/CMakeFiles/Test.dir/requires: test/CMakeFiles/Test.dir/lexer/test_lexer.cc.o.requires
 test/CMakeFiles/Test.dir/requires: test/CMakeFiles/Test.dir/main_test.cc.o.requires
 

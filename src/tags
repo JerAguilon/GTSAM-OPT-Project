@@ -98,6 +98,7 @@ ARCHITECTURE_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	4
 ARCHITECTURE_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	447;"	d	file:
 ARCHITECTURE_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	450;"	d	file:
 ARCHITECTURE_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	453;"	d	file:
+ArgTypes	ast/PrototypeAST.h	/^    std::vector<llvm::Type *> ArgTypes;$/;"	m	class:PrototypeAST
 Args	ast/CallExprAST.h	/^    std::vector<std::unique_ptr<ExprAST>> Args;$/;"	m	class:CallExprAST
 Args	ast/PrototypeAST.h	/^    std::vector<std::string> Args;$/;"	m	class:PrototypeAST
 BinaryExprAST	ast/BinaryExprAST.h	/^        BinaryExprAST(Token op, std::unique_ptr<ExprAST> LHS, std::unique_ptr<ExprAST> RHS) :$/;"	f	class:BinaryExprAST
@@ -834,7 +835,7 @@ CallExprAST	ast/CallExprAST.h	/^class CallExprAST : public ExprAST {$/;"	c
 Callee	ast/CallExprAST.h	/^    std::string Callee;$/;"	m	class:CallExprAST
 CompileLayer	include/KaleidoscopeJIT.h	/^  CompileLayerT CompileLayer;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 Cond	ast/IfExprAST.h	/^    std::unique_ptr<ExprAST> Cond, Then, Else;$/;"	m	class:IfExprAST
-CreateEntryBlockAlloca	utils/functions.cc	/^AllocaInst *CreateEntryBlockAlloca(Function *TheFunction, const std::string &VarName) {$/;"	f
+CreateEntryBlockAlloca	utils/functions.cc	/^AllocaInst *CreateEntryBlockAlloca(Function *TheFunction, const std::string &VarName, Type* type) {$/;"	f
 CurTok	lexer/lexer.cc	/^Token CurTok;$/;"	v
 DEC	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	472;"	d	file:
 DEC	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	457;"	d	file:
@@ -843,6 +844,7 @@ DEC	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	438;"	d	file:
 DEC	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	472;"	d	file:
 DEC	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	457;"	d	file:
 DL	include/KaleidoscopeJIT.h	/^  const DataLayout DL;$/;"	m	class:llvm::orc::KaleidoscopeJIT
+ENVIRONMENT_H	kaleidoscope/environment.h	2;"	d
 EQUALS	Makefile	/^EQUALS = =$/;"	m
 EQUALS	Release/Makefile	/^EQUALS = =$/;"	m
 EQUALS	ast/Makefile	/^EQUALS = =$/;"	m
@@ -877,7 +879,7 @@ IF_EXPR_AST_H	ast/IfExprAST.h	2;"	d
 IdentifierStr	lexer/lexer.cc	/^std::string IdentifierStr; \/\/ Filled in if tok_identifier$/;"	v
 IfExprAST	ast/IfExprAST.h	/^    IfExprAST(std::unique_ptr<ExprAST> Cond, std::unique_ptr<ExprAST> Then, std::unique_ptr<ExprAST> Else) :$/;"	f	class:IfExprAST
 IfExprAST	ast/IfExprAST.h	/^class IfExprAST : public ExprAST {$/;"	c
-InitializeModuleAndPassManager	kaleidoscope/environment.cc	/^static void InitializeModuleAndPassManager() {$/;"	f	file:
+InitializeModuleAndPassManager	kaleidoscope/environment.cc	/^void InitializeModuleAndPassManager() {$/;"	f
 KALEIDOSCOPE_H	kaleidoscope/kaleidoscope.h	2;"	d
 KaleidoscopeJIT	include/KaleidoscopeJIT.h	/^  KaleidoscopeJIT()$/;"	f	class:llvm::orc::KaleidoscopeJIT
 KaleidoscopeJIT	include/KaleidoscopeJIT.h	/^class KaleidoscopeJIT {$/;"	c	namespace:llvm::orc
@@ -894,7 +896,7 @@ MainLoop	main.cc	/^static void MainLoop() {$/;"	f	file:
 ModuleKeys	include/KaleidoscopeJIT.h	/^  std::vector<VModuleKey> ModuleKeys;$/;"	m	class:llvm::orc::KaleidoscopeJIT
 Name	ast/PrototypeAST.h	/^    std::string Name;$/;"	m	class:PrototypeAST
 Name	ast/VariableExprAST.h	/^    std::string Name;$/;"	m	class:VariableExprAST
-NamedValues	kaleidoscope/kaleidoscope.cc	/^std::map<std::string, llvm::Value *> NamedValues;$/;"	v
+NamedValues	kaleidoscope/kaleidoscope.cc	/^std::map<std::string, llvm::AllocaInst *> NamedValues;$/;"	v
 NumVal	lexer/lexer.cc	/^double NumVal;             \/\/ Filled in if tok_number$/;"	v
 NumberExprAST	ast/NumberExprAST.h	/^    NumberExprAST(double Val) : Val(Val) {}$/;"	f	class:NumberExprAST
 NumberExprAST	ast/NumberExprAST.h	/^class NumberExprAST : public ExprAST {$/;"	c
@@ -1089,6 +1091,7 @@ PLATFORM_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	383;"
 PLATFORM_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	386;"	d	file:
 PLATFORM_ID	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	390;"	d	file:
 POSE_2d_EXPR_H	ast/built_ins/Pose2dExprAST.h	2;"	d
+PRIOR_FACTOR_EXPR_AST_H	ast/built_ins/PriorFactorExprAST.h	2;"	d
 PROTOTYPE_AST_H	ast/PrototypeAST.h	2;"	d
 ParseBinOpRHS	parser/parser.cc	/^std::unique_ptr<ExprAST> ParseBinOpRHS(int ExprPrec, std::unique_ptr<ExprAST> LHS) {$/;"	f
 ParseDefinition	parser/parser.cc	/^std::unique_ptr<FunctionAST> ParseDefinition() {$/;"	f
@@ -1102,10 +1105,14 @@ ParseParenExpr	parser/parser.cc	/^std::unique_ptr<ExprAST> ParseParenExpr() {$/;
 ParsePrimary	parser/parser.cc	/^std::unique_ptr<ExprAST> ParsePrimary() {$/;"	f
 ParsePrototype	parser/parser.cc	/^std::unique_ptr<PrototypeAST> ParsePrototype() {$/;"	f
 ParseTopLevelExpr	parser/parser.cc	/^std::unique_ptr<FunctionAST> ParseTopLevelExpr() {$/;"	f
-Pose2dExprAST	ast/built_ins/Pose2dExprAST.h	/^    Pose2dExprAST(double x, double y, double theta, std::string name) :$/;"	f	class:Pose2dExprAST
-Pose2dExprAST	ast/built_ins/Pose2dExprAST.h	/^class Pose2dExprAST : public ExprAST{$/;"	c
+Pose2d	kaleidoscope/kaleidoscope.h	/^struct Pose2d {$/;"	s
+Pose2dExprAST	ast/built_ins/Pose2dExprAST.h	/^    Pose2dExprAST($/;"	f	class:Pose2dExprAST
+Pose2dExprAST	ast/built_ins/Pose2dExprAST.h	/^class Pose2dExprAST : public ExprAST {$/;"	c
+PriorFactor	kaleidoscope/kaleidoscope.h	/^struct PriorFactor {$/;"	s
+PriorFactorExprAST	ast/built_ins/PriorFactorExprAST.h	/^    PriorFactorExprAST($/;"	f	class:PriorFactorExprAST
+PriorFactorExprAST	ast/built_ins/PriorFactorExprAST.h	/^class PriorFactorExprAST : public ExprAST {$/;"	c
 Proto	ast/FunctionAST.h	/^    std::unique_ptr<PrototypeAST> Proto;$/;"	m	class:FunctionAST
-PrototypeAST	ast/PrototypeAST.h	/^    PrototypeAST(const std::string &Name, std::vector<std::string> Args)$/;"	f	class:PrototypeAST
+PrototypeAST	ast/PrototypeAST.h	/^    PrototypeAST(const std::string &Name, std::vector<std::string> Args, Type* ReturnType=Type::getDoubleTy(TheContext), std::vector<llvm::Type*> ArgTypes={})$/;"	f	class:PrototypeAST
 PrototypeAST	ast/PrototypeAST.h	/^class PrototypeAST {$/;"	c
 RHS	ast/BinaryExprAST.h	/^    std::unique_ptr<ExprAST> LHS, RHS;$/;"	m	class:BinaryExprAST
 RM	Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
@@ -1114,6 +1121,7 @@ RM	ast/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 RM	include/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 RM	kaleidoscope/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
 Resolver	include/KaleidoscopeJIT.h	/^  std::shared_ptr<SymbolResolver> Resolver;$/;"	m	class:llvm::orc::KaleidoscopeJIT
+ReturnType	ast/PrototypeAST.h	/^    Type* ReturnType;$/;"	m	class:PrototypeAST
 SHELL	Makefile	/^SHELL = \/bin\/sh$/;"	m
 SHELL	Release/Makefile	/^SHELL = \/bin\/sh$/;"	m
 SHELL	ast/Makefile	/^SHELL = \/bin\/sh$/;"	m
@@ -1214,18 +1222,21 @@ addModule	include/KaleidoscopeJIT.h	/^  VModuleKey addModule(std::unique_ptr<Mod
 build_token	lexer/lexer.cc	/^static TokenWrapper& build_token($/;"	f	file:
 codegen	ast/BinaryExprAST.cc	/^Value *BinaryExprAST::codegen() {$/;"	f	class:BinaryExprAST
 codegen	ast/CallExprAST.cc	/^Value *CallExprAST::codegen() {$/;"	f	class:CallExprAST
-codegen	ast/ForExprAST.cc	/^llvm::Value *ForExprAST::codegen() {$/;"	f	class:ForExprAST
+codegen	ast/ForExprAST.cc	/^Value *ForExprAST::codegen() {$/;"	f	class:ForExprAST
 codegen	ast/FunctionAST.cc	/^Function *FunctionAST::codegen() {$/;"	f	class:FunctionAST
 codegen	ast/IfExprAST.cc	/^Value *IfExprAST::codegen() {$/;"	f	class:IfExprAST
 codegen	ast/NumberExprAST.cc	/^llvm::Value *NumberExprAST::codegen() {$/;"	f	class:NumberExprAST
 codegen	ast/PrototypeAST.cc	/^Function *PrototypeAST::codegen() {$/;"	f	class:PrototypeAST
 codegen	ast/VariableExprAST.cc	/^Value *VariableExprAST::codegen() {$/;"	f	class:VariableExprAST
 codegen	ast/built_ins/Pose2dExprAST.cc	/^llvm::Value *Pose2dExprAST::codegen() {$/;"	f	class:Pose2dExprAST
+codegen	ast/built_ins/PriorFactorExprAST.cc	/^llvm::Value *PriorFactorExprAST::codegen() {$/;"	f	class:PriorFactorExprAST
 column_number	lexer/token.h	/^    int column_number;$/;"	m	struct:TokenWrapper
 const	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
 const	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
 const	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	10;"	d	file:
 curr_token	parser/list_parser.h	/^    int curr_token;$/;"	m	class:ListParser
+destination	ast/built_ins/Pose2dExprAST.h	/^    std::unique_ptr<VariableExprAST> destination;$/;"	m	class:Pose2dExprAST
+destination	ast/built_ins/PriorFactorExprAST.h	/^    std::unique_ptr<VariableExprAST> destination;$/;"	m	class:PriorFactorExprAST
 features	CMakeFiles/feature_tests.c	/^  const char features[] = {"\\n"$/;"	v
 features	CMakeFiles/feature_tests.cxx	/^  const char features[] = {"\\n"$/;"	v
 features	Release/CMakeFiles/feature_tests.c	/^  const char features[] = {"\\n"$/;"	v
@@ -1310,6 +1321,8 @@ main	Release/CMakeFiles/feature_tests.cxx	/^int main(int argc, char** argv) { (v
 main	main.cc	/^int main() {$/;"	f
 mangle	include/KaleidoscopeJIT.h	/^  std::string mangle(const std::string &Name) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 name	ast/built_ins/Pose2dExprAST.h	/^    std::string name;$/;"	m	class:Pose2dExprAST
+noise_model	ast/built_ins/PriorFactorExprAST.h	/^    std::unique_ptr<ExprAST> noise_model;  $/;"	m	class:PriorFactorExprAST
+noise_model	kaleidoscope/kaleidoscope.h	/^    double noise_model;$/;"	m	struct:PriorFactor
 orc	include/KaleidoscopeJIT.h	/^namespace orc {$/;"	n	namespace:llvm
 override	ast/BinaryExprAST.h	/^        llvm::Value *codegen() override;$/;"	m	class:BinaryExprAST
 override	ast/ForExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:ForExprAST
@@ -1317,6 +1330,7 @@ override	ast/IfExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:IfEx
 override	ast/NumberExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:NumberExprAST
 override	ast/VariableExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:VariableExprAST
 override	ast/built_ins/Pose2dExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:Pose2dExprAST
+override	ast/built_ins/PriorFactorExprAST.h	/^    llvm::Value *codegen() override;$/;"	m	class:PriorFactorExprAST
 parse	parser/list_parser.cc	/^std::unique_ptr<ExprAST> ListParser::parse() {$/;"	f	class:ListParser
 parseBinOpRHS	parser/list_parser.cc	/^std::unique_ptr<ExprAST> ListParser::parseBinOpRHS(int expression_precedence, std::unique_ptr<ExprAST> left_side) {$/;"	f	class:ListParser
 parseDefinition	parser/list_parser.cc	/^std::unique_ptr<FunctionAST> ListParser::parseDefinition() {$/;"	f	class:ListParser
@@ -1331,6 +1345,9 @@ parsePrimary	parser/list_parser.cc	/^std::unique_ptr<ExprAST> ListParser::parseP
 parsePrototype	parser/list_parser.cc	/^std::unique_ptr<PrototypeAST> ListParser::parsePrototype() {$/;"	f	class:ListParser
 parseTopLevelExpr	parser/list_parser.cc	/^std::unique_ptr<FunctionAST> ListParser::parseTopLevelExpr() {$/;"	f	class:ListParser
 pose2Type	kaleidoscope/kaleidoscope.cc	/^llvm::StructType *pose2Type;$/;"	v
+prior	ast/built_ins/PriorFactorExprAST.h	/^    std::unique_ptr<ExprAST> prior;  $/;"	m	class:PriorFactorExprAST
+prior	kaleidoscope/kaleidoscope.h	/^    Pose2d* prior;$/;"	m	struct:PriorFactor
+priorFactorType	kaleidoscope/kaleidoscope.cc	/^llvm::StructType *priorFactorType;$/;"	v
 qnxnto	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
@@ -1338,9 +1355,11 @@ qnxnto	CMakeFiles/3.9.1/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnt
 qnxnto	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 qnxnto	Release/CMakeFiles/3.10.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto[]";$/;"	v
 registerPose2Struct	kaleidoscope/kaleidoscope.cc	/^void registerPose2Struct() {$/;"	f
+registerPriorFactorStruct	kaleidoscope/kaleidoscope.cc	/^void registerPriorFactorStruct() {$/;"	f
 removeModule	include/KaleidoscopeJIT.h	/^  void removeModule(VModuleKey K) {$/;"	f	class:llvm::orc::KaleidoscopeJIT
 str_content	lexer/token.h	/^    std::string str_content;$/;"	m	struct:TokenWrapper
-theta	ast/built_ins/Pose2dExprAST.h	/^    double x, y, theta;  $/;"	m	class:Pose2dExprAST
+theta	ast/built_ins/Pose2dExprAST.h	/^    std::unique_ptr<ExprAST> x, y, theta;  $/;"	m	class:Pose2dExprAST
+theta	kaleidoscope/kaleidoscope.h	/^    double theta;$/;"	m	struct:Pose2d
 to_string	lexer/token.cc	/^std::string TokenWrapper::to_string() {$/;"	f	class:TokenWrapper
 tok_add	lexer/token.h	/^    tok_add = -14,$/;"	e	enum:Token
 tok_comma	lexer/token.h	/^    tok_comma = -21,$/;"	e	enum:Token
@@ -1372,6 +1391,8 @@ value	lexer/token.h	/^    float value;$/;"	m	struct:TokenWrapper
 volatile	CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
 volatile	CMakeFiles/3.9.1/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
 volatile	Release/CMakeFiles/3.10.2/CompilerIdC/CMakeCCompilerId.c	11;"	d	file:
-x	ast/built_ins/Pose2dExprAST.h	/^    double x, y, theta;  $/;"	m	class:Pose2dExprAST
-y	ast/built_ins/Pose2dExprAST.h	/^    double x, y, theta;  $/;"	m	class:Pose2dExprAST
+x	ast/built_ins/Pose2dExprAST.h	/^    std::unique_ptr<ExprAST> x, y, theta;  $/;"	m	class:Pose2dExprAST
+x	kaleidoscope/kaleidoscope.h	/^    double x;$/;"	m	struct:Pose2d
+y	ast/built_ins/Pose2dExprAST.h	/^    std::unique_ptr<ExprAST> x, y, theta;  $/;"	m	class:Pose2dExprAST
+y	kaleidoscope/kaleidoscope.h	/^    double y;$/;"	m	struct:Pose2d
 ~ExprAST	ast/ExprAST.h	/^    virtual ~ExprAST() {}$/;"	f	class:ExprAST

@@ -33,8 +33,8 @@ struct Pose2d {
 };
 
 struct PriorFactor {
-    Pose2d* prior;
     double noise_model;
+    Pose2d* prior;
 };
 
 extern llvm::StructType *pose2Type;

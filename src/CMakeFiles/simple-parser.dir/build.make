@@ -273,9 +273,33 @@ src/CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExprAST.cc.o.provides: src/
 src/CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExprAST.cc.o.provides.build: src/CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExprAST.cc.o
 
 
+src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
+src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o: src/ast/built_ins/PriorFactorExprAST.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/PriorFactorExprAST.cc
+
+src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.i"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/PriorFactorExprAST.cc > CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.i
+
+src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.s"
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/ast/built_ins/PriorFactorExprAST.cc -o CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.s
+
+src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o.requires:
+
+.PHONY : src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o.requires
+
+src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o.provides: src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o.requires
+	$(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o.provides.build
+.PHONY : src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o.provides
+
+src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o.provides.build: src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o
+
+
 src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o: src/built_ins/BuiltInTypes.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/built_ins/BuiltInTypes.cc
 
 src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.i: cmake_force
@@ -299,7 +323,7 @@ src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o.provides.build: src
 
 src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o: src/kaleidoscope/environment.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/environment.cc
 
 src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.i: cmake_force
@@ -323,7 +347,7 @@ src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o.provides.build: s
 
 src/CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o: src/kaleidoscope/kaleidoscope.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/kaleidoscope/kaleidoscope.cc
 
 src/CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.i: cmake_force
@@ -347,7 +371,7 @@ src/CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o.provides.build: 
 
 src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.o: src/lexer/lexer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/lexer/lexer.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/lexer.cc
 
 src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.i: cmake_force
@@ -371,7 +395,7 @@ src/CMakeFiles/simple-parser.dir/lexer/lexer.cc.o.provides.build: src/CMakeFiles
 
 src/CMakeFiles/simple-parser.dir/lexer/token.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/lexer/token.cc.o: src/lexer/token.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/CMakeFiles/simple-parser.dir/lexer/token.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/simple-parser.dir/lexer/token.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/lexer/token.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/lexer/token.cc
 
 src/CMakeFiles/simple-parser.dir/lexer/token.cc.i: cmake_force
@@ -395,7 +419,7 @@ src/CMakeFiles/simple-parser.dir/lexer/token.cc.o.provides.build: src/CMakeFiles
 
 src/CMakeFiles/simple-parser.dir/logger/logger.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/logger/logger.cc.o: src/logger/logger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/CMakeFiles/simple-parser.dir/logger/logger.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/simple-parser.dir/logger/logger.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/logger/logger.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/logger/logger.cc
 
 src/CMakeFiles/simple-parser.dir/logger/logger.cc.i: cmake_force
@@ -419,7 +443,7 @@ src/CMakeFiles/simple-parser.dir/logger/logger.cc.o.provides.build: src/CMakeFil
 
 src/CMakeFiles/simple-parser.dir/main.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/main.cc.o: src/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/CMakeFiles/simple-parser.dir/main.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/simple-parser.dir/main.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/main.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/main.cc
 
 src/CMakeFiles/simple-parser.dir/main.cc.i: cmake_force
@@ -443,7 +467,7 @@ src/CMakeFiles/simple-parser.dir/main.cc.o.provides.build: src/CMakeFiles/simple
 
 src/CMakeFiles/simple-parser.dir/parser/list_parser.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/parser/list_parser.cc.o: src/parser/list_parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/CMakeFiles/simple-parser.dir/parser/list_parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/simple-parser.dir/parser/list_parser.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/parser/list_parser.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/list_parser.cc
 
 src/CMakeFiles/simple-parser.dir/parser/list_parser.cc.i: cmake_force
@@ -467,7 +491,7 @@ src/CMakeFiles/simple-parser.dir/parser/list_parser.cc.o.provides.build: src/CMa
 
 src/CMakeFiles/simple-parser.dir/parser/parser.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/parser/parser.cc.o: src/parser/parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/CMakeFiles/simple-parser.dir/parser/parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/simple-parser.dir/parser/parser.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/parser/parser.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/parser/parser.cc
 
 src/CMakeFiles/simple-parser.dir/parser/parser.cc.i: cmake_force
@@ -491,7 +515,7 @@ src/CMakeFiles/simple-parser.dir/parser/parser.cc.o.provides.build: src/CMakeFil
 
 src/CMakeFiles/simple-parser.dir/utils/functions.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/utils/functions.cc.o: src/utils/functions.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/CMakeFiles/simple-parser.dir/utils/functions.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/simple-parser.dir/utils/functions.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/utils/functions.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/utils/functions.cc
 
 src/CMakeFiles/simple-parser.dir/utils/functions.cc.i: cmake_force
@@ -515,7 +539,7 @@ src/CMakeFiles/simple-parser.dir/utils/functions.cc.o.provides.build: src/CMakeF
 
 src/CMakeFiles/simple-parser.dir/utils/operators.cc.o: src/CMakeFiles/simple-parser.dir/flags.make
 src/CMakeFiles/simple-parser.dir/utils/operators.cc.o: src/utils/operators.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/CMakeFiles/simple-parser.dir/utils/operators.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/CMakeFiles/simple-parser.dir/utils/operators.cc.o"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simple-parser.dir/utils/operators.cc.o -c /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src/utils/operators.cc
 
 src/CMakeFiles/simple-parser.dir/utils/operators.cc.i: cmake_force
@@ -548,6 +572,7 @@ simple__parser_OBJECTS = \
 "CMakeFiles/simple-parser.dir/ast/PrototypeAST.cc.o" \
 "CMakeFiles/simple-parser.dir/ast/VariableExprAST.cc.o" \
 "CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExprAST.cc.o" \
+"CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o" \
 "CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o" \
 "CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o" \
 "CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o" \
@@ -572,6 +597,7 @@ src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/ast/NumberExprAST.cc.o
 src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/ast/PrototypeAST.cc.o
 src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/ast/VariableExprAST.cc.o
 src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExprAST.cc.o
+src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o
 src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o
 src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o
 src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o
@@ -585,7 +611,7 @@ src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/utils/functions.cc.o
 src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/utils/operators.cc.o
 src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/build.make
 src/libsimple-parser.a: src/CMakeFiles/simple-parser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking CXX static library libsimple-parser.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX static library libsimple-parser.a"
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && $(CMAKE_COMMAND) -P CMakeFiles/simple-parser.dir/cmake_clean_target.cmake
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simple-parser.dir/link.txt --verbose=$(VERBOSE)
 
@@ -603,6 +629,7 @@ src/CMakeFiles/simple-parser.dir/requires: src/CMakeFiles/simple-parser.dir/ast/
 src/CMakeFiles/simple-parser.dir/requires: src/CMakeFiles/simple-parser.dir/ast/PrototypeAST.cc.o.requires
 src/CMakeFiles/simple-parser.dir/requires: src/CMakeFiles/simple-parser.dir/ast/VariableExprAST.cc.o.requires
 src/CMakeFiles/simple-parser.dir/requires: src/CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExprAST.cc.o.requires
+src/CMakeFiles/simple-parser.dir/requires: src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o.requires
 src/CMakeFiles/simple-parser.dir/requires: src/CMakeFiles/simple-parser.dir/built_ins/BuiltInTypes.cc.o.requires
 src/CMakeFiles/simple-parser.dir/requires: src/CMakeFiles/simple-parser.dir/kaleidoscope/environment.cc.o.requires
 src/CMakeFiles/simple-parser.dir/requires: src/CMakeFiles/simple-parser.dir/kaleidoscope/kaleidoscope.cc.o.requires

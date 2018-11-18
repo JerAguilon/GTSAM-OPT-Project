@@ -21,7 +21,7 @@
 using namespace llvm;
 using namespace llvm::orc;
 
-typedef void (*testfunc_t)(Pose2d*);
+typedef Pose2d* (*testfunc_t)(Pose2d*);
 
 BOOST_AUTO_TEST_SUITE( TestPose2dExpr )
 
@@ -45,7 +45,7 @@ BOOST_AUTO_TEST_CASE(TestingPose)
     auto proto = llvm::make_unique<PrototypeAST>(
             "tmp_proto",
             std::vector<std::string>{"dst"},
-            llvm::Type::getVoidTy(TheContext),
+            llvm::PointerType::get(pose2Type, 0),
             std::vector<llvm::Type*>{llvm::PointerType::get(pose2Type, 0)}
     );
     auto function = llvm::make_unique<FunctionAST>(std::move(proto), std::move(pose));

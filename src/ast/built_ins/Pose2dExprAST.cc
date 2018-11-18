@@ -2,7 +2,6 @@
 #include "built_ins/BuiltInTypes.h"
 
 llvm::Value *Pose2dExprAST::codegen() {
-
     auto ptr_x = x->codegen();
     auto ptr_y = y->codegen();
     auto ptr_theta = theta->codegen();

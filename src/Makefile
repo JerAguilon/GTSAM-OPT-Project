@@ -436,6 +436,36 @@ ast/built_ins/Pose2dExprAST.cc.s:
 	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/ast/built_ins/Pose2dExprAST.cc.s
 .PHONY : ast/built_ins/Pose2dExprAST.cc.s
 
+ast/built_ins/PriorFactorExprAST.o: ast/built_ins/PriorFactorExprAST.cc.o
+
+.PHONY : ast/built_ins/PriorFactorExprAST.o
+
+# target to build an object file
+ast/built_ins/PriorFactorExprAST.cc.o:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/ast/built_ins/PriorFactorExprAST.cc.o
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.o
+.PHONY : ast/built_ins/PriorFactorExprAST.cc.o
+
+ast/built_ins/PriorFactorExprAST.i: ast/built_ins/PriorFactorExprAST.cc.i
+
+.PHONY : ast/built_ins/PriorFactorExprAST.i
+
+# target to preprocess a source file
+ast/built_ins/PriorFactorExprAST.cc.i:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/ast/built_ins/PriorFactorExprAST.cc.i
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.i
+.PHONY : ast/built_ins/PriorFactorExprAST.cc.i
+
+ast/built_ins/PriorFactorExprAST.s: ast/built_ins/PriorFactorExprAST.cc.s
+
+.PHONY : ast/built_ins/PriorFactorExprAST.s
+
+# target to generate assembly for a file
+ast/built_ins/PriorFactorExprAST.cc.s:
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/demo.dir/build.make src/CMakeFiles/demo.dir/ast/built_ins/PriorFactorExprAST.cc.s
+	cd /home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation && $(MAKE) -f src/CMakeFiles/simple-parser.dir/build.make src/CMakeFiles/simple-parser.dir/ast/built_ins/PriorFactorExprAST.cc.s
+.PHONY : ast/built_ins/PriorFactorExprAST.cc.s
+
 built_ins/BuiltInTypes.o: built_ins/BuiltInTypes.cc.o
 
 .PHONY : built_ins/BuiltInTypes.o
@@ -805,6 +835,9 @@ help:
 	@echo "... ast/built_ins/Pose2dExprAST.o"
 	@echo "... ast/built_ins/Pose2dExprAST.i"
 	@echo "... ast/built_ins/Pose2dExprAST.s"
+	@echo "... ast/built_ins/PriorFactorExprAST.o"
+	@echo "... ast/built_ins/PriorFactorExprAST.i"
+	@echo "... ast/built_ins/PriorFactorExprAST.s"
 	@echo "... built_ins/BuiltInTypes.o"
 	@echo "... built_ins/BuiltInTypes.i"
 	@echo "... built_ins/BuiltInTypes.s"

@@ -16,7 +16,7 @@ class PriorFactorExprAST : public ExprAST {
 public:
     PriorFactorExprAST(
         std::unique_ptr<ExprAST> prior,
-        std::unique_ptr<ExprAST> noiseModel,
+        std::unique_ptr<ExprAST> noise_model,
         std::unique_ptr<VariableExprAST> destination
     ) :
         prior(std::move(prior)), noise_model(std::move(noise_model)), destination(std::move(destination))

@@ -15,7 +15,7 @@ void registerPriorFactorStruct() {
     llvm::Type* doubleType = llvm::Type::getDoubleTy(TheContext);
     llvm::StructType *structType = llvm::StructType::create(
         TheContext,
-        {pose2Type, doubleType},
+        {doubleType, pose2Type},
         "PriorFactor",
         false
     );
