@@ -1,4 +1,0 @@
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/Release/CMakeFiles/rebuild_cache.dir
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/Release/CMakeFiles/edit_cache.dir
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/Release/CMakeFiles/intrinsics_gen.dir
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/Release/CMakeFiles/simple-parser.dir

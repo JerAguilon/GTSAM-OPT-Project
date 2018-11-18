@@ -1,3 +1,0 @@
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/CMakeFiles/rebuild_cache.dir
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/CMakeFiles/Test.dir
-/home/jeremy/Documents/repositories/LLVM-Basic-Code-Generation/test/CMakeFiles/edit_cache.dir

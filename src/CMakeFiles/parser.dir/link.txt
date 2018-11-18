@@ -1,1 +1,0 @@
-/usr/bin/c++       -o parser /usr/lib/llvm-4.0/lib/libLLVMSupport.a /usr/lib/llvm-4.0/lib/libLLVMCore.a /usr/lib/llvm-4.0/lib/libLLVMIRReader.a /usr/lib/llvm-4.0/lib/libLLVMAsmParser.a /usr/lib/llvm-4.0/lib/libLLVMBitReader.a /usr/lib/llvm-4.0/lib/libLLVMCore.a /usr/lib/llvm-4.0/lib/libLLVMSupport.a -lrt -ldl -ltinfo -lpthread -lz -lm /usr/lib/llvm-4.0/lib/libLLVMDemangle.a 

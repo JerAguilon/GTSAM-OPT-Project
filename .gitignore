@@ -31,5 +31,7 @@
 *.out
 *.app
 
-CMakeFiles/*
+**/CMakeFiles/*
+**/Makefile
 CMakeCache.txt
+**/Testing/
