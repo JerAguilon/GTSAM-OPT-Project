@@ -55,8 +55,6 @@ BOOST_AUTO_TEST_CASE(TestingPriorFactor)
     auto function = llvm::make_unique<FunctionAST>(std::move(proto), std::move(prior_factor));
 
     llvm::Value* result = function->codegen();
-    result->print(llvm::errs());
-    fprintf(stderr, "\n");
 
     auto H = TheJIT->addModule(std::move(TheModule));
     InitializeModuleAndPassManager();
